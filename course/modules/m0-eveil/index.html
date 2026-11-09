@@ -176,23 +176,34 @@ O-101,potion,2</code></pre>
         <details class="hint-box"><summary>Indice 1</summary><p>Une URL d'API se passe à <code>get_json</code> et sa réponse est un objet Python.</p></details>
         <details class="hint-box"><summary>Indice 2</summary><p>La ressource renvoie les données dans une clé nommée <code>data</code>. Vérifie aussi la catégorie.</p></details>
         <details class="hint-box"><summary>Indice 3</summary><p>Une liste absente peut être traitée comme une liste vide avec <code>entry.get("drops") or []</code>.</p></details>
-        <details class="hint-box"><summary>Solution commentée</summary><pre><code>response_data = await get_json(url)
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>url = "https://api.hyrule-compendium.com/v3/compendium/entry/white-maned_lynel"
+response_data = await get_json(url)
 entry = response_data["data"]
+
+category = entry["category"]
 drops = entry.get("drops") or []
-result = f"{entry['category']}|{len(drops)}"</code></pre></details>
+print("Catégorie :", category)
+print("Nombre de butins :", len(drops))
+result = f"{category}|{len(drops)}"</code></pre></details>
       </article>
 
       <article class="exercise-card">
         <div class="exercise-heading"><span>E0.2 · 15 XP</span><h3>Compter les catégories</h3></div>
         <p>Lis le snapshot local et compte combien d'entrées appartiennent à chaque catégorie.</p>
         <div id="exercise-E0.2" class="exercise-root"></div>
-        <details class="hint-box"><summary>Indice 1</summary><p>Utilise le module standard <code>json</code> et ouvre le chemin fourni dans le code de départ.</p></details>
-        <details class="hint-box"><summary>Indice 2</summary><p>Parcours <code>snapshot["entries"]</code>, puis lis la clé <code>category</code> de chaque entrée.</p></details>
+        <details class="hint-box"><summary>Indice 1</summary><p>Utilise le module standard <code>json</code> pour ouvrir le snapshot fourni avec l'exercice.</p></details>
+        <details class="hint-box"><summary>Indice 2</summary><p>Ouvre le snapshot JSON fourni avec l'exercice, puis parcours <code>snapshot["entries"]</code> et lis la clé <code>category</code>.</p></details>
         <details class="hint-box"><summary>Indice 3</summary><p>Un dictionnaire peut stocker un compteur par catégorie avec <code>counts.get(category, 0) + 1</code>.</p></details>
-        <details class="hint-box"><summary>Solution commentée</summary><pre><code>counts = {}
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>import json
+
+with open("/data/compendium_snapshot.json", encoding="utf-8") as file:
+    snapshot = json.load(file)
+
+counts = {}
 for entry in snapshot["entries"]:
     category = entry["category"]
     counts[category] = counts.get(category, 0) + 1
+print(counts)
 result = sum(counts.values())</code></pre></details>
       </article>
 
@@ -203,11 +214,21 @@ result = sum(counts.values())</code></pre></details>
         <details class="hint-box"><summary>Indice 1</summary><p>Filtre les entrées dont la catégorie est <code>monsters</code>.</p></details>
         <details class="hint-box"><summary>Indice 2</summary><p>Utilise <code>entry.get("common_locations") or []</code> avant de compter.</p></details>
         <details class="hint-box"><summary>Indice 3</summary><p>Pour un tri décroissant par nombre puis alphabétique, la clé peut être <code>(-nombre, nom)</code>.</p></details>
-        <details class="hint-box"><summary>Solution commentée</summary><pre><code>ranked = sorted(
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>import json
+
+with open("/data/compendium_snapshot.json", encoding="utf-8") as file:
+    snapshot = json.load(file)
+
+monsters = [
+    entry for entry in snapshot["entries"]
+    if entry["category"] == "monsters"
+]
+ranked = sorted(
     monsters,
     key=lambda entry: (-len(entry.get("common_locations") or []), entry["name"]),
 )
 top_five = [entry["name"] for entry in ranked[:5]]
+print(top_five)
 result = json.dumps(top_five, ensure_ascii=False)</code></pre></details>
       </article>
     </section>

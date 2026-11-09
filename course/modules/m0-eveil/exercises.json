@@ -6,7 +6,6 @@
       "xp": 10,
       "title": "Interroger le Compendium",
       "prompt": "Appelle l'entrée white-maned_lynel avec get_json. Affiche sa catégorie et le nombre de butins, puis construis result au format catégorie|nombre.",
-      "starter_code": "url = \"https://api.hyrule-compendium.com/v3/compendium/entry/white-maned_lynel\"\nresponse_data = await get_json(url)\nentry = response_data[\"data\"]\n\ncategory = entry[\"category\"]\ndrops = entry.get(\"drops\") or []\nprint(\"Catégorie :\", category)\nprint(\"Nombre de butins :\", len(drops))\nresult = f\"{category}|{len(drops)}\"",
       "answer_expression": "result",
       "result_kind": "text",
       "tests": "assert entry[\"name\"] == \"white-maned lynel\"\nassert category == \"monsters\"\nassert isinstance(drops, list)"
@@ -17,7 +16,6 @@
       "xp": 15,
       "title": "Compter les entrées par catégorie",
       "prompt": "Lis compendium_snapshot.json. Compte les entrées de chaque catégorie et stocke dans result la somme de ces comptes.",
-      "starter_code": "import json\n\nwith open(\"/data/compendium_snapshot.json\", encoding=\"utf-8\") as file:\n    snapshot = json.load(file)\n\ncounts = {}\nfor entry in snapshot[\"entries\"]:\n    category = entry[\"category\"]\n    counts[category] = counts.get(category, 0) + 1\n\nprint(counts)\nresult = sum(counts.values())",
       "answer_expression": "result",
       "result_kind": "num",
       "tests": "assert counts\nassert sum(counts.values()) == len(snapshot[\"entries\"])"
@@ -28,7 +26,6 @@
       "xp": 15,
       "title": "Trouver les monstres les plus localisés",
       "prompt": "À partir du snapshot, trouve les cinq monstres ayant le plus de lieux. Traite les valeurs nulles comme une liste vide, départage les égalités par nom et stocke les noms triés dans result sous forme de JSON.",
-      "starter_code": "import json\n\nwith open(\"/data/compendium_snapshot.json\", encoding=\"utf-8\") as file:\n    snapshot = json.load(file)\n\nmonsters = [\n    entry for entry in snapshot[\"entries\"]\n    if entry[\"category\"] == \"monsters\"\n]\nranked = sorted(\n    monsters,\n    key=lambda entry: (-len(entry.get(\"common_locations\") or []), entry[\"name\"]),\n)\ntop_five = [entry[\"name\"] for entry in ranked[:5]]\nprint(top_five)\nresult = json.dumps(top_five, ensure_ascii=False)",
       "answer_expression": "result",
       "result_kind": "text",
       "tests": "assert len(top_five) == 5\nassert len(set(top_five)) == 5\nassert all(isinstance(name, str) for name in top_five)"

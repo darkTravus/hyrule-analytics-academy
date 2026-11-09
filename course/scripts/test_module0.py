@@ -25,6 +25,11 @@ def test_module0_content_and_question_bank():
     assert manifest["id"] == "m0"
     assert len(manifest["lessons"]) == 7
     assert [exercise["id"] for exercise in exercises["exercises"]] == ["E0.1", "E0.2", "E0.3"]
+    assert all(not exercise.get("starter_code") for exercise in exercises["exercises"])
+    assert page.count("<summary>Solution commentée</summary>") == 3
+    assert 'await get_json(url)' in page
+    assert 'result = sum(counts.values())' in page
+    assert 'result = json.dumps(top_five, ensure_ascii=False)' in page
     assert len(quiz["questions"]) == 20
     assert {level: sum(question["difficulty"] == level for question in quiz["questions"])
             for level in (1, 2, 3)} == {1: 8, 2: 8, 3: 4}
