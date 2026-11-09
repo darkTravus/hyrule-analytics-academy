@@ -1,0 +1,486 @@
+{
+  "exercises": [
+    {
+      "id": "E2.1",
+      "xp": 10,
+      "title": "Joueurs par plateforme",
+      "prompt": "Compte les joueurs de chaque plateforme. Retourne une ligne par plateforme et le total décroissant.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "La table players contient une ligne par joueur.",
+        "Regroupe par platform.",
+        "COUNT(*) compte les lignes de chaque groupe."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.2",
+      "xp": 10,
+      "title": "Sessions par mois",
+      "prompt": "Compte les sessions par mois civil au format AAAA-MM, du plus ancien au plus récent.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "La date est dans start_ts.",
+        "strftime('%Y-%m', ...) extrait l'année et le mois.",
+        "Trie l'étiquette AAAA-MM par ordre croissant."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.3",
+      "xp": 10,
+      "title": "Les cinq pays les plus représentés",
+      "prompt": "Affiche les cinq pays qui comptent le plus de joueurs, avec leur effectif.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Un pays est une catégorie de players.",
+        "Compte les joueurs et regroupe par country.",
+        "Applique LIMIT après le tri décroissant."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.4",
+      "xp": 10,
+      "title": "Morts avant et après le patch",
+      "prompt": "Calcule la moyenne de deaths par session avant le 10 avril 2026 et à partir de cette date. Donne aussi le nombre de sessions de chaque période.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Compare start_ts au début du 10 avril.",
+        "CASE WHEN peut créer deux périodes.",
+        "AVG(deaths) calcule la moyenne par ligne-session."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.5",
+      "xp": 10,
+      "title": "Part de joueurs premium",
+      "prompt": "Calcule le pourcentage de joueurs premium parmi tous les joueurs (échelle 0–100), arrondi à deux décimales.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "is_premium vaut 1 ou 0.",
+        "Le pourcentage est 100 × premium / total.",
+        "Multiplie par 100.0 pour éviter la division entière."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.6",
+      "xp": 10,
+      "title": "Quêtes par type",
+      "prompt": "Compte les quêtes par quest_type et ordonne les types par effectif décroissant.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM quests\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "La table quests a une ligne par quête.",
+        "Le type est quest_type.",
+        "Compte après avoir regroupé par type."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.7",
+      "xp": 10,
+      "title": "Rupees gagnées par session",
+      "prompt": "Calcule le nombre moyen de rupees gagnées par session, arrondi à deux décimales.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Chaque ligne de sessions est une session.",
+        "Utilise AVG sur rupees_earned.",
+        "ROUND(..., 2) limite l'affichage à deux décimales."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.8",
+      "xp": 10,
+      "title": "Jour le plus actif",
+      "prompt": "Compte les sessions par jour de semaine (0 = dimanche, 6 = samedi) et retourne le jour ayant le plus de sessions.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "strftime('%w', date) renvoie un chiffre de 0 à 6 dans SQLite.",
+        "Regroupe les sessions par ce chiffre.",
+        "Limite le résultat au premier après le tri décroissant."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.9",
+      "xp": 10,
+      "title": "Joueurs à une seule session",
+      "prompt": "Liste le nombre de joueurs ayant exactement une session. Un joueur sans session ne doit pas être compté.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Commence par une ligne par player_id dans sessions.",
+        "HAVING filtre les groupes après le comptage.",
+        "Compte les joueurs dont COUNT(*) vaut 1."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.10",
+      "xp": 10,
+      "title": "Durée médiane d'une session",
+      "prompt": "Construis la médiane de duration_min sans fonction MEDIAN : classe les valeurs et prends la ou les deux valeurs centrales.",
+      "difficulty": 1,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "ROW_NUMBER donne le rang trié; COUNT(*) OVER () répète l'effectif.",
+        "Pour un effectif pair, moyenne les rangs n/2 et n/2+1.",
+        "Pour un effectif impair, les deux expressions de rang désignent la même ligne."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.11",
+      "xp": 20,
+      "title": "Chiffre d'affaires EUR par catégorie",
+      "prompt": "Calcule le chiffre d'affaires en EUR par catégorie d'article pour les commandes completed uniquement. Une ligne d'article vaut quantité × prix unitaire.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Le statut et la devise sont dans orders.",
+        "Relie orders à order_lines, puis à shop_items.",
+        "Somme qty × unit_price par catégorie après filtrage."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.12",
+      "xp": 20,
+      "title": "Délai avant le premier achat",
+      "prompt": "Pour chaque joueur ayant une commande terminée, calcule le nombre de jours entre l'inscription et sa première commande completed.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Trouve d'abord la première date completed par joueur.",
+        "Utilise MIN(date(order_ts)) dans une CTE.",
+        "La différence entre deux julianday est un nombre de jours."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.13",
+      "xp": 20,
+      "title": "Joueurs sans commande",
+      "prompt": "Liste les joueurs qui n'ont aucune commande, avec leur plateforme et leur pays.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Une jointure interne éliminerait les joueurs sans correspondance.",
+        "Conserve tous les joueurs avec LEFT JOIN.",
+        "Une clé primaire nulle côté commande signale l'absence de commande."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.14",
+      "xp": 20,
+      "title": "Taux de victoire par boss",
+      "prompt": "Pour chaque boss, calcule le taux de victoire (0–100), le nombre de combats et le nombre de victoires.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM boss_fights\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Relie boss_fights à bosses par boss_id.",
+        "Une victoire correspond à result = 'win'.",
+        "Divise les victoires par les combats en utilisant 100.0."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.15",
+      "xp": 20,
+      "title": "Régions à risque",
+      "prompt": "Classe les régions par nombre moyen de morts par session, avec le nombre de sessions; limite aux cinq premières.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Le nom de région vient de regions.",
+        "La table sessions contient deaths à son grain session.",
+        "Moyenne les morts par région; affiche aussi l'effectif."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.16",
+      "xp": 20,
+      "title": "Remboursements par canal",
+      "prompt": "Par canal d'acquisition, calcule le pourcentage de commandes refunded parmi toutes les commandes (0–100), ainsi que le total de commandes.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Le canal est une propriété du joueur.",
+        "Chaque commande a un joueur; relie orders à players.",
+        "Le numérateur compte les refunded, le dénominateur toutes les commandes."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.17",
+      "xp": 20,
+      "title": "Dépenses RUPEES des joueurs",
+      "prompt": "Retourne les dix joueurs ayant dépensé le plus de RUPEES dans des commandes completed; calcule leur dépense à partir des lignes d'article.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Filtre la devise et le statut avant l'agrégation.",
+        "Le montant de commande vient de order_lines.",
+        "Agrège par joueur, puis trie et limite à 10."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.18",
+      "xp": 20,
+      "title": "Quêtes jamais tentées",
+      "prompt": "Liste les quêtes pour lesquelles aucun joueur n'a enregistré de tentative.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM quests\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Il faut conserver les quêtes même sans tentative.",
+        "Relie quests à quest_attempts avec LEFT JOIN.",
+        "Filtre les clés de tentative absentes."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.19",
+      "xp": 20,
+      "title": "Premier boss avant J14",
+      "prompt": "Liste les joueurs ayant gagné contre le boss 1 dans les 14 jours après leur inscription (J0 à J13). Chaque joueur doit apparaître une seule fois.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Relie les combats aux joueurs.",
+        "Filtre le boss_id 1 et les victoires.",
+        "La différence en jours est la date du combat moins signup_date."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.20",
+      "xp": 20,
+      "title": "Panier moyen par plateforme",
+      "prompt": "Calcule le montant moyen par commande terminée, séparément par plateforme et devise. Le panier est le total de ses lignes; ne mélange pas les monnaies.",
+      "difficulty": 2,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Calcule d'abord un total pour chaque commande.",
+        "Relie ensuite chaque commande au joueur pour obtenir sa plateforme.",
+        "Groupe par plateforme ET devise."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.21",
+      "xp": 30,
+      "title": "Top trois des articles par catégorie",
+      "prompt": "En RUPEES et pour les commandes completed, classe les articles dans chaque catégorie par chiffre d'affaires. Retourne les trois premiers de chaque catégorie.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Agrège le chiffre d'affaires par catégorie et article.",
+        "ROW_NUMBER() avec PARTITION BY category recommence le rang dans chaque catégorie.",
+        "Filtre le rang dans une requête externe."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.22",
+      "xp": 30,
+      "title": "Variation mensuelle des inscriptions",
+      "prompt": "Compte les inscriptions par mois et utilise LAG pour afficher le nombre du mois précédent et l'écart absolu.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Agrège avant d'appliquer la fenêtre.",
+        "LAG(signups) récupère la valeur de la ligne précédente.",
+        "Calcule l'écart dans une requête externe pour réutiliser l'alias."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.23",
+      "xp": 30,
+      "title": "Chiffre d'affaires EUR cumulé",
+      "prompt": "Pour les commandes EUR completed, calcule le chiffre d'affaires par mois et son cumul chronologique.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM orders\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Filtre les commandes EUR completed et calcule les totaux de lignes.",
+        "Regroupe les montants par mois avant le cumul.",
+        "SUM(...) OVER (ORDER BY month) conserve une ligne par mois."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.24",
+      "xp": 30,
+      "title": "Rétention J1 et J7 par cohorte",
+      "prompt": "Par semaine d'inscription (lundi de la semaine), calcule le nombre de joueurs et les taux de retour à J1 et J7. Un retour est une session dans la fenêtre exacte du jour demandé jusqu'au lendemain exclu.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Définis le lundi de cohorte à partir de signup_date.",
+        "Agrège d'abord un indicateur 0/1 par joueur et cohorte.",
+        "AVG des indicateurs 0/1 donne la proportion; multiplie par 100."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.25",
+      "xp": 30,
+      "title": "Délai entre deux sessions",
+      "prompt": "Pour chaque joueur, calcule en heures l'écart avec sa session précédente. Affiche les dix écarts les plus longs.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "LAG récupère l'horodatage précédent du même joueur.",
+        "Julianday donne un écart en jours.",
+        "Multiplie par 24 pour obtenir des heures."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.26",
+      "xp": 30,
+      "title": "Rang de dépense dans le pays",
+      "prompt": "Calcule la dépense totale RUPEES completed de chaque joueur puis classe les joueurs dans leur pays. Retourne les dix meilleurs rangs, avec pays, joueur et montant.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Pré-agrège une dépense par joueur sans mélanger les commandes.",
+        "RANK avec PARTITION BY country redémarre le classement par pays.",
+        "Filtre le rang dans une requête externe."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.27",
+      "xp": 30,
+      "title": "Rétention J7 par canal",
+      "prompt": "Par canal d'acquisition, mesure la part des joueurs ayant au moins une session pendant le 7e jour après inscription (J7 inclus, J8 exclu).",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM players\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Construis d'abord un indicateur de retour par joueur.",
+        "La fenêtre va de signup_date + 7 jours inclus à + 8 jours exclu.",
+        "Une moyenne de 0/1 donne le taux de rétention."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.28",
+      "xp": 30,
+      "title": "Moyenne mobile des sessions sur 7 jours",
+      "prompt": "Construis une série journalière dense (jours sans session inclus avec zéro), puis calcule la moyenne mobile sur sept jours. Retourne les 30 jours les plus récents.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM sessions\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Génère les jours manquants avec une CTE récursive.",
+        "LEFT JOIN les sessions et compte la clé nullable s.session_id.",
+        "La fenêtre comprend la ligne actuelle et les six précédentes."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.29",
+      "xp": 30,
+      "title": "Boss avant et après le patch 2.3",
+      "prompt": "À partir de la date de sortie du patch 2.3, compare le taux de victoire par boss avant et après le patch. Affiche les combats, victoires et taux.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM patches\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "La date de référence se trouve dans patches, version 2.3.",
+        "Classe chaque combat avant ou après cette date avec CASE.",
+        "Calcule les victoires et le taux par boss et période."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "E2.30",
+      "xp": 30,
+      "title": "Trois défaites consécutives",
+      "prompt": "Liste une fois chacun les joueurs ayant subi au moins trois défaites consécutives contre des boss.",
+      "difficulty": 3,
+      "starter_query": "SELECT\n  -- colonnes et indicateurs demand?s\nFROM boss_fights\n-- compl?te filtres, jointures, regroupements et fen?tres selon la question",
+      "hints": [
+        "Ordonne les combats de chaque joueur dans le temps.",
+        "Deux appels à LAG récupèrent les deux résultats précédents.",
+        "Une série de trois pertes a le résultat courant et les deux précédents à lose."
+      ],
+      "type": "sql"
+    }
+  ],
+  "debugging": [
+    {
+      "id": "D2.1",
+      "title": "Déboguer le fan-out",
+      "prompt": "Cette jointure sessions × orders sur player_id répète chaque session autant de fois que le joueur a de commandes. Calcule la somme correcte de rupees_earned par plateforme, sans double comptage.",
+      "starter_query": "SELECT p.platform, SUM(s.rupees_earned) AS rupees\nFROM sessions s\nJOIN orders o ON o.player_id = s.player_id\nJOIN players p ON p.player_id = s.player_id\nGROUP BY p.platform",
+      "hints": [
+        "Les deux tables de faits ont plusieurs lignes par joueur.",
+        "La question ne nécessite aucune colonne de orders.",
+        "Relie chaque session à son joueur une seule fois."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "D2.2",
+      "title": "Déplacer l'agrégat dans HAVING",
+      "prompt": "La requête filtre un total dans WHERE, avant que le groupe existe. Retourne les régions dont les morts cumulées dépassent 20 000.",
+      "starter_query": "SELECT region_id, SUM(deaths) AS total_deaths\nFROM sessions\nWHERE SUM(deaths) > 20000\nGROUP BY region_id",
+      "hints": [
+        "WHERE filtre les lignes brutes, pas les groupes agrégés.",
+        "Groupe d'abord les sessions par région.",
+        "Le filtre sur SUM(deaths) doit être HAVING."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "D2.3",
+      "title": "Préserver le LEFT JOIN",
+      "prompt": "La condition sur orders.status placée dans WHERE supprime les joueurs sans commande. Liste tous les joueurs sans commande completed.",
+      "starter_query": "SELECT p.player_id\nFROM players p\nLEFT JOIN orders o ON o.player_id = p.player_id\nWHERE o.status = 'completed' AND o.order_id IS NULL\nORDER BY p.player_id",
+      "hints": [
+        "Une condition dans WHERE élimine les lignes où les colonnes de o sont NULL.",
+        "Place le filtre status dans la condition de jointure.",
+        "Puis filtre les joueurs pour lesquels aucune commande correspondante n'existe."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "D2.4",
+      "title": "Compter les valeurs NULL",
+      "prompt": "Après LEFT JOIN, COUNT(*) compte aussi la ligne conservée sans commande. Retourne par plateforme le nombre de joueurs et le nombre de commandes présentes.",
+      "starter_query": "SELECT p.platform, COUNT(*) AS players, COUNT(o.order_id) AS orders\nFROM players p\nLEFT JOIN orders o ON o.player_id = p.player_id\nGROUP BY p.platform\nORDER BY p.platform",
+      "hints": [
+        "Une jointure peut produire plusieurs lignes par joueur.",
+        "COUNT(*) compte les lignes, y compris les colonnes NULL.",
+        "Pour un comptage de commandes, compte la clé nullable o.order_id."
+      ],
+      "type": "sql"
+    },
+    {
+      "id": "D2.5",
+      "title": "Éviter la division entière",
+      "prompt": "La division entière donne 0 pour les canaux où la part completed est inférieure à 1. Calcule le taux de commandes completed (0–100) par canal.",
+      "starter_query": "SELECT p.acquisition_channel,\n       100 * SUM(CASE WHEN o.status = 'completed' THEN 1 ELSE 0 END) / COUNT(*) AS completed_percent\nFROM orders o\nJOIN players p ON p.player_id = o.player_id\nGROUP BY p.acquisition_channel\nORDER BY p.acquisition_channel",
+      "hints": [
+        "Deux entiers divisés restent une division entière dans SQLite.",
+        "Convertis un opérande en réel avant la division.",
+        "Utilise 100.0 et arrondis si nécessaire."
+      ],
+      "type": "sql"
+    }
+  ]
+}

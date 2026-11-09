@@ -1,0 +1,123 @@
+{
+  "exercises": [
+    {
+      "id": "E1.1",
+      "xp": 10,
+      "title": "Décrire le fichier",
+      "prompt": "Ouvre le classeur fourni et relève sa taille et son grain avant de l'analyser.",
+      "fields": [
+        {
+          "key": "rows",
+          "label": "Nombre de lignes de données (sans l'en-tête)",
+          "type": "numeric"
+        },
+        {
+          "key": "columns",
+          "label": "Nombre de colonnes",
+          "type": "numeric"
+        },
+        {
+          "key": "grain",
+          "label": "Grain (réponse courte : « ligne de commande »)",
+          "type": "code_output"
+        }
+      ]
+    },
+    {
+      "id": "E1.2",
+      "xp": 15,
+      "title": "Quantifier les anomalies",
+      "prompt": "Dans le fichier brut, compte les lignes concernées par chacun des cinq contrôles. Une ligne en double est une répétition exacte de toutes les colonnes.",
+      "fields": [
+        {
+          "key": "duplicates",
+          "label": "Lignes exactes en double",
+          "type": "numeric"
+        },
+        {
+          "key": "negative_prices",
+          "label": "Prix unitaires négatifs",
+          "type": "numeric"
+        },
+        {
+          "key": "future_dates",
+          "label": "Dates postérieures au 1er juillet 2026",
+          "type": "numeric"
+        },
+        {
+          "key": "inconsistent_names",
+          "label": "Noms d'objet avec espaces ou casse incohérents",
+          "type": "numeric"
+        },
+        {
+          "key": "zero_quantities",
+          "label": "Quantités égales à zéro",
+          "type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "E1.3",
+      "xp": 20,
+      "title": "Nettoyer et calculer le chiffre d'affaires",
+      "prompt": "Dans Power Query, retire les lignes exactes en double, les prix négatifs, les dates futures et les quantités égales à zéro. Uniformise les noms d'objet, puis calcule le chiffre d'affaires RUPEES de mars 2026 : somme de quantité × prix unitaire après nettoyage.",
+      "fields": [
+        {
+          "key": "revenue",
+          "label": "Chiffre d'affaires RUPEES en mars 2026",
+          "type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "E1.4",
+      "xp": 15,
+      "title": "Trouver l'objet le plus vendu",
+      "prompt": "Avec un tableau croisé dynamique basé sur les données nettoyées, classe les objets par chiffre d'affaires décroissant en RUPEES. Saisis le premier objet et son montant.",
+      "fields": [
+        {
+          "key": "item",
+          "label": "Nom de l'objet en première position",
+          "type": "code_output"
+        },
+        {
+          "key": "revenue",
+          "label": "Chiffre d'affaires RUPEES de cet objet",
+          "type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "E1.5",
+      "xp": 15,
+      "title": "Calculer le panier moyen",
+      "prompt": "Pour les lignes nettoyées de la plateforme pc en EUR, crée d'abord un tableau d'une ligne par commande. Agrège les lignes avec SOMME.SI.ENS, puis divise le chiffre d'affaires total par le nombre de commandes distinctes (NB.SI.ENS sur cette table unique). Ne divise pas par le nombre de lignes.",
+      "fields": [
+        {
+          "key": "average_basket",
+          "label": "Panier moyen EUR sur pc (arrondi à deux décimales)",
+          "type": "numeric"
+        }
+      ]
+    },
+    {
+      "id": "E1.6",
+      "xp": 10,
+      "title": "Transformer une demande floue",
+      "prompt": "Reformule chaque demande pour qu'une équipe puisse produire une analyse qui éclaire une décision. Pour chaque réponse, rédige une question mesurable et coche les quatre éléments présents.",
+      "type": "rubric",
+      "criteria": [
+        "Population ou périmètre défini",
+        "Période définie",
+        "Mesure ou indicateur défini",
+        "Décision à éclairer définie"
+      ],
+      "requests": [
+        "Les ventes vont mal ?",
+        "Qui sont nos bons joueurs ?",
+        "Le nouvel article est-il un succès ?",
+        "La boutique devrait-elle changer ses prix ?"
+      ]
+    }
+  ]
+}

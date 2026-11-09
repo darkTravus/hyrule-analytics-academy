@@ -1,0 +1,27 @@
+.widget-card { margin-top: 1rem; border: 1px solid #ffffff19; border-radius: .75rem; padding: 1rem; background: #101a22aa; }
+.widget-card h3 { margin: 0 0 .65rem; color: var(--gold); font-size: 1rem; }
+.widget-card .widget-form { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.m3-exercise-list { display: grid; gap: .8rem; }
+.m3-exercise-card { min-width: 0; border: 1px solid #ffffff19; border-radius: .8rem; padding: clamp(.85rem, 2.5vw, 1.2rem); background: #ffffff05; }
+.m3-exercise-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; }
+.m3-exercise-heading span { color: var(--gold); font: 800 .75rem Consolas, "Courier New", monospace; }
+.m3-exercise-heading h3 { margin: 0; font-size: 1.05rem; }
+.m3-exercise-card > p { color: #c2cecc; }
+.m3-exercise-root { margin-top: .75rem; }
+.m3-exercise-root .exercise-form textarea { min-height: 12rem; }
+.m3-boss-form { display: grid; gap: .8rem; margin-top: 1rem; border: 1px solid #ffffff19; border-radius: .8rem; padding: clamp(.9rem, 3vw, 1.4rem); background: #ffffff05; }
+.m3-boss-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .8rem; }
+.m3-boss-field { display: grid; gap: .35rem; }
+.m3-boss-field label, .m3-boss-form > label { color: #dce5df; font-weight: 800; }
+.m3-boss-field input, .m3-boss-form textarea { width: 100%; min-width: 0; border: 1px solid #62747a; border-radius: .55rem; padding: .65rem; color: var(--paper); background: var(--night); }
+.m3-boss-form textarea { min-height: 12rem; }
+.m3-boss-rubric { display: grid; gap: .55rem; border: 1px solid var(--line); border-radius: .7rem; padding: .8rem; }
+.m3-boss-rubric legend { padding: 0 .25rem; font-weight: 800; }
+.m3-boss-rubric label { display: grid; grid-template-columns: auto 1fr; align-items: start; gap: .55rem; }
+.m3-boss-rubric input { width: 1.2rem; height: 1.2rem; margin: .1rem 0 0; accent-color: var(--mint-deep); }
+.m3-boss-status { min-height: 1.5rem; color: var(--mint); font-weight: 700; }
+.m3-exercise-card .exercise-figure img { height: auto; }
+@media (max-width: 42rem) {
+  .m3-exercise-heading { display: grid; }
+  .m3-boss-form { padding: .75rem; }
+}

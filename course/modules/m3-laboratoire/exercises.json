@@ -1,0 +1,101 @@
+{
+  "module": "m3",
+  "exercises": [
+    {
+      "id": "E3.1",
+      "type": "python",
+      "result_kind": "num",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "Le théorème central limite en simulation",
+      "prompt": "À partir de sessions.csv, tire 1 000 échantillons de 30 sessions avec remise et calcule leur moyenne de durée. Trace l'histogramme des moyennes. Affiche la moyenne des moyennes et place-la dans answer; elle doit être proche de la moyenne de la population (tolérance de correction : 0,4 minute).",
+      "data": ["sessions.csv"],
+      "packages": ["numpy", "pandas", "matplotlib"],
+      "starter_code": "import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nsessions = pd.read_csv('/data/sessions.csv')\ndurations = sessions['duration_min'].dropna().to_numpy()\nrng = np.random.default_rng(42)\n# Tire 1 000 échantillons de 30 durées, avec remise.\n# Calcule leur moyenne, trace l'histogramme et définis answer.\n"
+    },
+    {
+      "id": "E3.2",
+      "type": "python",
+      "result_kind": "text",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "Décrire et ajuster la durée des sessions",
+      "prompt": "Calcule la moyenne et la médiane de duration_min. Ajuste une loi log-normale (loc=0) avec scipy.stats.lognorm.fit, puis calcule son asymétrie théorique. Imprime ces quatre valeurs et définis answer comme le JSON compact [moyenne, médiane, sigma, exp(mu), asymétrie], arrondies à trois décimales dans cet ordre.",
+      "data": ["sessions.csv"],
+      "packages": ["numpy", "pandas", "scipy"],
+      "starter_code": "import json\nimport numpy as np\nimport pandas as pd\nfrom scipy.stats import lognorm\n\nsessions = pd.read_csv('/data/sessions.csv')\ndurations = sessions['duration_min'].dropna().to_numpy()\n# Ajuste la loi log-normale et définis answer avec cinq valeurs arrondies.\n"
+    },
+    {
+      "id": "E3.3",
+      "type": "python",
+      "result_kind": "text",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "Expliquer les rupees gagnées",
+      "prompt": "Ajuste par moindres carrés ordinaires rupees_earned ~ duration_min + deaths avec statsmodels. Affiche les deux coefficients, la constante et R². Définis answer comme le JSON compact [constante, coefficient durée, coefficient morts, R²], arrondies à trois décimales.",
+      "data": ["sessions.csv"],
+      "packages": ["numpy", "pandas", "statsmodels"],
+      "starter_code": "import json\nimport pandas as pd\nimport statsmodels.api as sm\n\nsessions = pd.read_csv('/data/sessions.csv')\nmodel_data = sessions[['rupees_earned', 'duration_min', 'deaths']].dropna()\n# Ajuste OLS avec constante, affiche les paramètres et définis answer.\n"
+    },
+    {
+      "id": "E3.4",
+      "type": "python",
+      "result_kind": "text",
+      "answer_expression": "answer",
+      "xp": 20,
+      "title": "Évaluer EXP_KOROK",
+      "prompt": "Construis une rétention par joueur à J7 exactement (au moins une session dont la date est le jour d'inscription + 7), puis calcule les taux control/treatment, l'écart treatment−control, son IC à 95 % de Wald et le test z bilatéral de deux proportions avec variance poolée sous H0. Affiche les résultats et définis answer comme le JSON compact [taux contrôle, taux traitement, écart, borne basse, borne haute, p-value], arrondis à trois décimales.",
+      "data": ["players.csv", "experiment_assignments.csv", "sessions.csv"],
+      "packages": ["numpy", "pandas", "scipy"],
+      "starter_code": "import json\nimport numpy as np\nimport pandas as pd\nfrom scipy.stats import norm\n\nplayers = pd.read_csv('/data/players.csv', usecols=['player_id', 'signup_date'])\nassignments = pd.read_csv('/data/experiment_assignments.csv')\ncohort = assignments[assignments['experiment_id'] == 'EXP_KOROK_2026_02'].merge(players, on='player_id')\nsessions = pd.read_csv('/data/sessions.csv', usecols=['player_id', 'start_ts'])\n# Crée la rétention J7 par joueur, calcule taux, différence, IC et test z.\n# Affiche les résultats et définis answer comme demandé.\n"
+    },
+    {
+      "id": "E3.5",
+      "type": "python",
+      "result_kind": "num",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "Dimensionner une expérience",
+      "prompt": "Pour un taux de référence de 20 %, un effet minimal de +4 points, alpha=5 % bilatéral et une puissance cible de 80 %, calcule le nombre entier nécessaire par bras. Utilise statsmodels.stats.power.NormalIndPower et proportion_effectsize. Définis answer comme le plafond du résultat.",
+      "data": [],
+      "packages": ["numpy", "statsmodels"],
+      "starter_code": "import math\nfrom statsmodels.stats.power import NormalIndPower\nfrom statsmodels.stats.proportion import proportion_effectsize\n\n# Calcule la taille pour p1=0.20 et p2=0.24, par bras.\n# Définis answer comme un entier arrondi au supérieur.\n"
+    },
+    {
+      "id": "E3.6",
+      "type": "python",
+      "result_kind": "num",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "Un résultat non significatif n'est pas une preuve d'absence",
+      "prompt": "Pour EXP_HEARTS, mesure les achats terminés dans les sept jours après l'inscription et estime les taux control/treatment. Calcule ensuite la puissance théorique d'un test bilatéral à 5 % pour ces taux et 300 participants par bras avec statsmodels. Affiche les taux et la puissance; définis answer comme la puissance arrondie à deux décimales.",
+      "data": ["players.csv", "experiment_assignments.csv", "orders.csv"],
+      "packages": ["numpy", "pandas", "statsmodels"],
+      "starter_code": "import pandas as pd\nfrom statsmodels.stats.power import NormalIndPower\nfrom statsmodels.stats.proportion import proportion_effectsize\n\nplayers = pd.read_csv('/data/players.csv', usecols=['player_id', 'signup_date'])\nassignments = pd.read_csv('/data/experiment_assignments.csv')\norders = pd.read_csv('/data/orders.csv', usecols=['player_id', 'order_ts', 'status'])\n# Calcule l'indicateur d'achat J0-J6 et les deux taux.\n# Estime la puissance pour n=300 par bras et définis answer.\n"
+    },
+    {
+      "id": "E3.7",
+      "type": "python",
+      "result_kind": "text",
+      "answer_expression": "answer",
+      "xp": 20,
+      "title": "Déplier le paradoxe de Simpson",
+      "prompt": "Pour EXP_PACK, un achat est un joueur ayant acheté un pack aventurier payé en EUR, commande completed, dans les trois jours suivant son inscription. Calcule les conversions globales de A et B puis celles par plateforme (android, ios, pc). Affiche-les et définis answer comme le JSON compact [A global, B global, A android, B android, A ios, B ios, A pc, B pc], arrondies à trois décimales.",
+      "data": ["players.csv", "experiment_assignments.csv", "orders.csv", "order_lines.csv", "shop_items.csv"],
+      "packages": ["numpy", "pandas"],
+      "starter_code": "import json\nimport pandas as pd\n\nplayers = pd.read_csv('/data/players.csv', usecols=['player_id', 'signup_date', 'platform'])\nassignments = pd.read_csv('/data/experiment_assignments.csv')\ncohort = assignments[assignments['experiment_id'] == 'EXP_PACK_2026_06'].merge(players, on='player_id')\norders = pd.read_csv('/data/orders.csv')\nlines = pd.read_csv('/data/order_lines.csv')\nitems = pd.read_csv('/data/shop_items.csv', usecols=['item_id', 'category'])\n# Filtre les achats éligibles, relie-les aux joueurs et calcule les taux.\n# Affiche les conversions globales et par plateforme, puis définis answer.\n"
+    },
+    {
+      "id": "E3.8",
+      "type": "python",
+      "result_kind": "num",
+      "answer_expression": "answer",
+      "xp": 15,
+      "title": "La probabilité après une alerte",
+      "prompt": "Un détecteur de bots a une sensibilité de 98 %, une spécificité de 98 % et la prévalence des bots est de 0,5 %. Calcule la probabilité qu'un joueur signalé soit réellement un bot avec Bayes. Affiche aussi les vrais positifs et faux positifs attendus sur 100 000 joueurs. Définis answer comme la probabilité postérieure arrondie à trois décimales.",
+      "data": [],
+      "packages": [],
+      "starter_code": "prevalence = 0.005\nsensitivity = 0.98\nspecificity = 0.98\n# Applique Bayes et définis answer avec la probabilité postérieure arrondie.\n"
+    }
+  ]
+}

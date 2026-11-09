@@ -1,0 +1,44 @@
+{
+  "title": "Le Gardien des archives",
+  "time_limit_seconds": 5400,
+  "question_count": 6,
+  "pass_score": 5,
+  "questions": [
+    {
+      "id": "B2.1",
+      "title": "Activité par plateforme",
+      "prompt": "Compte les joueurs et calcule le nombre moyen de sessions par joueur, par plateforme.",
+      "starter_query": "SELECT\n  -- colonnes et indicateurs a calculer\nFROM players\n-- complete les jointures, filtres et regroupements"
+    },
+    {
+      "id": "B2.2",
+      "title": "Conversion boutique",
+      "prompt": "Par canal d'acquisition, calcule la part des joueurs ayant au moins une commande terminée. Une personne ne doit compter qu'une fois.",
+      "starter_query": "SELECT\n  -- joueurs convertis par canal\nFROM players\n-- complete la jointure et le calcul du taux"
+    },
+    {
+      "id": "B2.3",
+      "title": "Rétention à J7",
+      "prompt": "Par cohorte de semaine d'inscription, calcule la part des joueurs revenus lors du 7e jour après leur inscription (fenêtre du jour 7 inclus au jour 8 exclu).",
+      "starter_query": "SELECT\n  -- taux de retour par semaine d'inscription\nFROM players\n-- complete les dates, la jointure et l'agregation"
+    },
+    {
+      "id": "B2.4",
+      "title": "Chiffre d'affaires EUR",
+      "prompt": "Par catégorie d'article, calcule le chiffre d'affaires en EUR des commandes terminées. Ne multiplie pas les montants par les sessions ou les autres tables à plusieurs lignes.",
+      "starter_query": "SELECT\n  -- chiffre d'affaires EUR par categorie\nFROM orders\n-- complete les jointures, filtres et agregations"
+    },
+    {
+      "id": "B2.5",
+      "title": "Écart entre sessions",
+      "prompt": "Pour chaque joueur ayant plusieurs sessions, calcule l'intervalle en heures entre deux sessions consécutives. Retourne les 10 plus longs intervalles.",
+      "starter_query": "SELECT\n  -- intervalles entre deux sessions\nFROM sessions\n-- ajoute LAG, le calcul d'heures et la limite"
+    },
+    {
+      "id": "B2.6",
+      "title": "Séries de défaites",
+      "prompt": "Trouve les joueurs ayant au moins trois défaites consécutives contre des boss. Utilise l'ordre temporel, compte chaque joueur une seule fois et retourne au plus 100 identifiants triés.",
+      "starter_query": "SELECT\n  -- joueurs ayant trois defaites consecutives\nFROM boss_fights\n-- ajoute les fenetres, le filtre et LIMIT 100"
+    }
+  ]
+}

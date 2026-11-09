@@ -1,0 +1,505 @@
+{
+  "module": "m0",
+  "questions": [
+    {
+      "id": "Q0.1",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Que fait git commit ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Envoie automatiquement les fichiers sur GitHub."
+        },
+        {
+          "id": "b",
+          "text": "Enregistre un instantané local des changements préparés."
+        },
+        {
+          "id": "c",
+          "text": "Supprime les changements non suivis."
+        },
+        {
+          "id": "d",
+          "text": "Télécharge le dépôt distant."
+        }
+      ],
+      "explanation": "Un commit crée un point d'historique local. git push sert ensuite à envoyer les commits vers le dépôt distant."
+    },
+    {
+      "id": "Q0.2",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Dans un CSV où chaque ligne représente une commande, que compte un comptage direct des lignes ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Le nombre de clients uniques."
+        },
+        {
+          "id": "c",
+          "text": "Le nombre de produits distincts."
+        },
+        {
+          "id": "a",
+          "text": "Le nombre de commandes."
+        },
+        {
+          "id": "d",
+          "text": "Le nombre de fichiers sources."
+        }
+      ],
+      "explanation": "Le grain est une commande : chaque ligne compte donc une commande, même si un client apparaît plusieurs fois."
+    },
+    {
+      "id": "Q0.3",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quel format est généralement adapté à un tableau simple avec des colonnes séparées par des virgules ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "PNG"
+        },
+        {
+          "id": "c",
+          "text": "MP3"
+        },
+        {
+          "id": "d",
+          "text": "ZIP"
+        },
+        {
+          "id": "a",
+          "text": "CSV"
+        }
+      ],
+      "explanation": "Un CSV stocke des lignes de valeurs séparées par un délimiteur. Il ne conserve pas les formules ou la mise en forme d'un tableur."
+    },
+    {
+      "id": "Q0.4",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quel format représente couramment des objets structurés avec des paires clé-valeur ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "JSON"
+        },
+        {
+          "id": "b",
+          "text": "JPEG"
+        },
+        {
+          "id": "c",
+          "text": "WAV"
+        },
+        {
+          "id": "d",
+          "text": "PDF"
+        }
+      ],
+      "explanation": "JSON permet de représenter des objets, des listes et des valeurs imbriquées."
+    },
+    {
+      "id": "Q0.5",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "À quoi sert git status ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "À créer un dépôt GitHub."
+        },
+        {
+          "id": "a",
+          "text": "À afficher l'état des fichiers et de la zone de préparation."
+        },
+        {
+          "id": "c",
+          "text": "À lancer Python."
+        },
+        {
+          "id": "d",
+          "text": "À publier un site web."
+        }
+      ],
+      "explanation": "git status indique les changements suivis, non suivis et préparés pour le prochain commit."
+    },
+    {
+      "id": "Q0.6",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quel code HTTP indique en général qu'une ressource a été trouvée ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "404"
+        },
+        {
+          "id": "c",
+          "text": "429"
+        },
+        {
+          "id": "a",
+          "text": "200"
+        },
+        {
+          "id": "d",
+          "text": "500"
+        }
+      ],
+      "explanation": "Un statut 200 signale généralement une réponse réussie. Le contenu exact dépend ensuite du format renvoyé."
+    },
+    {
+      "id": "Q0.7",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Que signifie souvent une réponse HTTP 404 ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "La requête a réussi."
+        },
+        {
+          "id": "c",
+          "text": "Le serveur demande une authentification."
+        },
+        {
+          "id": "d",
+          "text": "Le débit est limité."
+        },
+        {
+          "id": "a",
+          "text": "La ressource demandée est introuvable."
+        }
+      ],
+      "explanation": "404 indique que la ressource demandée n'a pas été trouvée à l'adresse interrogée."
+    },
+    {
+      "id": "Q0.8",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quel fichier explique le but d'un dépôt et comment l'utiliser ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "README.md"
+        },
+        {
+          "id": "b",
+          "text": "image.png"
+        },
+        {
+          "id": "c",
+          "text": "cache.tmp"
+        },
+        {
+          "id": "d",
+          "text": "data.sqlite-journal"
+        }
+      ],
+      "explanation": "Le README présente le projet, ses étapes d'installation, son usage et ses limites."
+    },
+    {
+      "id": "Q0.9",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Tu veux compter les clients uniques dans un fichier où une ligne représente une commande. Quelle approche est correcte ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Compter les lignes."
+        },
+        {
+          "id": "b",
+          "text": "Compter les identifiants client distincts."
+        },
+        {
+          "id": "c",
+          "text": "Compter les cellules non vides de toutes les colonnes."
+        },
+        {
+          "id": "d",
+          "text": "Compter les noms de produits."
+        }
+      ],
+      "explanation": "Le nombre de lignes mesure les commandes. Pour compter les clients, il faut dédupliquer leur identifiant."
+    },
+    {
+      "id": "Q0.10",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Quel est le rôle de git add fichier.csv ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Envoyer immédiatement ce fichier à GitHub."
+        },
+        {
+          "id": "c",
+          "text": "Supprimer le fichier de l'historique."
+        },
+        {
+          "id": "a",
+          "text": "Préparer ce fichier pour le prochain commit."
+        },
+        {
+          "id": "d",
+          "text": "Renommer le dépôt distant."
+        }
+      ],
+      "explanation": "git add place les changements sélectionnés dans la zone de préparation. Il ne crée pas encore de commit."
+    },
+    {
+      "id": "Q0.11",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Tu as créé un commit local et veux l'envoyer sur GitHub. Quelle commande utilises-tu ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "git status"
+        },
+        {
+          "id": "c",
+          "text": "git add"
+        },
+        {
+          "id": "d",
+          "text": "git init"
+        },
+        {
+          "id": "a",
+          "text": "git push"
+        }
+      ],
+      "explanation": "git push envoie les commits locaux vers le dépôt distant configuré."
+    },
+    {
+      "id": "Q0.12",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "À quoi sert principalement git pull ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Récupérer et intégrer les changements du dépôt distant."
+        },
+        {
+          "id": "b",
+          "text": "Créer une copie de sauvegarde sur le même disque."
+        },
+        {
+          "id": "c",
+          "text": "Préparer les fichiers pour un commit."
+        },
+        {
+          "id": "d",
+          "text": "Ignorer les fichiers de données."
+        }
+      ],
+      "explanation": "git pull récupère les changements distants puis les intègre à la branche locale."
+    },
+    {
+      "id": "Q0.13",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Pourquoi ajouter .env à .gitignore ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Pour accélérer l'affichage du README."
+        },
+        {
+          "id": "a",
+          "text": "Pour éviter de versionner des paramètres locaux pouvant contenir des secrets."
+        },
+        {
+          "id": "c",
+          "text": "Pour convertir le fichier en JSON."
+        },
+        {
+          "id": "d",
+          "text": "Pour que Git crée automatiquement une sauvegarde."
+        }
+      ],
+      "explanation": "Les secrets et paramètres privés ne doivent pas être publiés. .gitignore aide à éviter leur ajout accidentel, sans remplacer la vérification."
+    },
+    {
+      "id": "Q0.14",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Une API répond HTTP 429. Quelle interprétation est la plus probable ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "La ressource n'existe pas."
+        },
+        {
+          "id": "c",
+          "text": "La réponse est toujours vide."
+        },
+        {
+          "id": "a",
+          "text": "La limite de requêtes a été atteinte."
+        },
+        {
+          "id": "d",
+          "text": "Le fichier reçu est forcément un CSV."
+        }
+      ],
+      "explanation": "429 signale une limitation de débit. Il faut ralentir et respecter les indications de nouvelle tentative du service."
+    },
+    {
+      "id": "Q0.15",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Une réponse JSON contient {\"data\": {\"name\": \"lynel\"}}. Où se trouve la valeur lynel ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Dans une colonne appelée data."
+        },
+        {
+          "id": "c",
+          "text": "Dans le code HTTP."
+        },
+        {
+          "id": "d",
+          "text": "Dans le nom du fichier."
+        },
+        {
+          "id": "a",
+          "text": "Dans la clé name de l'objet data."
+        }
+      ],
+      "explanation": "Il faut parcourir l'objet data, puis lire sa clé name. Les accolades décrivent des objets JSON imbriqués."
+    },
+    {
+      "id": "Q0.16",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Quel est le meilleur réflexe avant d'envoyer une analyse produite avec une IA ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Vérifier les chiffres, les sources et le raisonnement."
+        },
+        {
+          "id": "b",
+          "text": "Publier immédiatement la réponse."
+        },
+        {
+          "id": "c",
+          "text": "Demander à l'IA de garantir qu'elle ne se trompe jamais."
+        },
+        {
+          "id": "d",
+          "text": "Remplacer les données par des exemples inventés."
+        }
+      ],
+      "explanation": "Une IA peut se tromper ou inventer des éléments. Tu restes responsable de vérifier ses résultats et ses sources."
+    },
+    {
+      "id": "Q0.17",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Un fichier contient une ligne par article commandé. Une même commande a quatre articles. Quelle conclusion respecte le grain ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Elle contribue forcément une ligne."
+        },
+        {
+          "id": "a",
+          "text": "Elle contribue quatre lignes au fichier."
+        },
+        {
+          "id": "c",
+          "text": "Elle ne peut apparaître qu'une fois par client."
+        },
+        {
+          "id": "d",
+          "text": "Le grain ne permet jamais de compter les lignes."
+        }
+      ],
+      "explanation": "Le grain est l'article commandé : une commande contenant quatre articles produit quatre lignes."
+    },
+    {
+      "id": "Q0.18",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Un commit local n'apparaît pas encore sur GitHub. Quelle explication est la plus probable ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Il faut relancer git status jusqu'à ce qu'il soit publié."
+        },
+        {
+          "id": "c",
+          "text": "Les commits ne peuvent pas être envoyés sur Internet."
+        },
+        {
+          "id": "a",
+          "text": "Il faut encore pousser les commits avec git push."
+        },
+        {
+          "id": "d",
+          "text": "Il faut renommer le fichier README."
+        }
+      ],
+      "explanation": "commit et push sont deux opérations distinctes : le premier enregistre localement, le second synchronise avec le dépôt distant."
+    },
+    {
+      "id": "Q0.19",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "L'API renvoie HTTP 200, mais le JSON contient une liste vide. Que peux-tu conclure ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Il existe forcément des résultats cachés."
+        },
+        {
+          "id": "c",
+          "text": "Le serveur a renvoyé une erreur 404."
+        },
+        {
+          "id": "d",
+          "text": "La liste vide prouve que le code HTTP est incorrect."
+        },
+        {
+          "id": "a",
+          "text": "La requête a réussi, mais aucun élément n'est présent dans cette réponse."
+        }
+      ],
+      "explanation": "Le statut décrit le résultat de la requête ; il ne garantit pas que la réponse contient des éléments."
+    },
+    {
+      "id": "Q0.20",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Tu demandes à une IA d'analyser un export contenant des e-mails de clients. Quel choix est le plus responsable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne pas transmettre les données personnelles et utiliser un jeu anonymisé ou synthétique autorisé."
+        },
+        {
+          "id": "b",
+          "text": "Coller les données, puis supprimer la conversation."
+        },
+        {
+          "id": "c",
+          "text": "Publier les données dans un dépôt public pour demander de l'aide."
+        },
+        {
+          "id": "d",
+          "text": "Masquer seulement la première ligne."
+        }
+      ],
+      "explanation": "Ne transmets pas de données personnelles à un service externe sans autorisation et cadre adapté. Préfère des données synthétiques ou correctement anonymisées."
+    }
+  ]
+}

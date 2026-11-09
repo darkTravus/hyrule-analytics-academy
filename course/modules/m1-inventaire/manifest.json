@@ -1,0 +1,28 @@
+{
+  "id": "m1",
+  "title": "L'inventaire de la Tablette Sheikah",
+  "status": "available",
+  "lessons": [
+    "L1.1",
+    "L1.2",
+    "L1.3",
+    "L1.4",
+    "L1.5",
+    "L1.6",
+    "L1.7"
+  ],
+  "exercises": [
+    "E1.1",
+    "E1.2",
+    "E1.3",
+    "E1.4",
+    "E1.5",
+    "E1.6"
+  ],
+  "combat": "boss-fight",
+  "dungeon": "B1",
+  "data": [
+    "../../data/excel/boutique_extrait.xlsx",
+    "../../data/excel/boutique_extrait_boss.csv"
+  ]
+}

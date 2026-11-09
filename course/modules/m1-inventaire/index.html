@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audite un extrait de commandes, nettoie ses anomalies et construis une synthèse dans un tableur.">
+  <title>M1 — L'inventaire de la Tablette Sheikah | Chroniques d'Hyrule Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../m0-eveil/module.css">
+  <link rel="stylesheet" href="./module.css">
+  <script type="module" src="./module.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Chroniques d'Hyrule Analytics, accueil">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CHRONIQUES <b>DATA GUILD</b></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="../../index.html#parcours">La carte</a>
+      <a href="#activites">Activités</a>
+      <a href="#livrable">Livrable</a>
+    </nav>
+  </header>
+
+  <main id="contenu" class="module-main">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Module 1</span>
+    </nav>
+
+    <section class="module-hero" aria-labelledby="module-title">
+      <p class="eyebrow">MODULE 01 · SEMAINES 1 ET 2</p>
+      <h1 id="module-title">L'inventaire de la Tablette Sheikah</h1>
+      <p class="module-lead">Le chiffre d'affaires de la boutique semble faux. Audite les lignes de commande, nettoie l'extrait et prépare une synthèse fiable pour la réunion.</p>
+      <p class="project-disclaimer">Projet pédagogique indépendant, créé à des fins d’apprentissage. Il n’est ni associé à The Legend of Zelda ni affilié à Nintendo, et n’est ni approuvé ni commandité par Nintendo.</p>
+      <ul class="objective-list" aria-label="Objectifs du module">
+        <li>Définir le grain et les types de données</li>
+        <li>Calculer et choisir des indicateurs</li>
+        <li>Nettoyer avec Power Query</li>
+        <li>Créer un tableau croisé dynamique</li>
+        <li>Garder les devises séparées</li>
+      </ul>
+      <div class="module-save">
+        <p id="module-progress" role="status" aria-live="polite">Chargement de ta progression…</p>
+        <a class="button button--secondary" href="../../index.html#progression">Créer ou importer ma progression</a>
+      </div>
+    </section>
+
+    <section class="lesson-list" aria-label="Leçons du module">
+      <article class="lesson-card" id="L1.1">
+        <p class="lesson-number">L1.1 · TYPES ET GRAIN</p>
+        <h2>Une ligne représente quoi ?</h2>
+        <p>Le fichier contient des champs de dates, des identifiants, des nombres et des catégories. Avant tout calcul, précise ce que représente un enregistrement : ici, une ligne correspond à un article d'une commande, pas à une commande complète ni à un client.</p>
+        <div class="format-grid">
+          <div><h3>Identifiants</h3><p><code>order_id</code> et <code>player_id</code> servent à relier ou distinguer des entités. Les compter directement ne donne pas toujours le nombre d'entités uniques.</p></div>
+          <div><h3>Mesures</h3><p><code>qty</code> et <code>unit_price</code> sont des nombres. Le montant de ligne se calcule par quantité × prix unitaire.</p></div>
+          <div><h3>Catégories et dates</h3><p><code>currency</code>, <code>platform</code> et <code>order_date</code> servent à filtrer et regrouper les mesures.</p></div>
+        </div>
+        <p class="callout">Un même <code>order_id</code> peut apparaître plusieurs fois : additionner le nombre de lignes ne revient donc pas à compter les commandes.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.2">
+        <p class="lesson-number">L1.2 · INDICATEURS</p>
+        <h2>Choisir une mesure adaptée</h2>
+        <p>La somme décrit un volume total. La moyenne décrit une valeur moyenne, mais peut être tirée par quelques montants très élevés. La médiane partage les observations en deux moitiés et résiste mieux aux valeurs extrêmes.</p>
+        <ul>
+          <li><strong>Taux :</strong> indique toujours son numérateur et son dénominateur.</li>
+          <li><strong>Variation :</strong> compare une période à une base cohérente.</li>
+          <li><strong>Part :</strong> rapporte une catégorie à un total dont le périmètre est explicite.</li>
+          <li><strong>Point de pourcentage :</strong> de 2 % à 3 %, l'écart est +1 point, soit +50 % en relatif.</li>
+        </ul>
+        <p>Chaque indicateur doit avoir un nom, une définition, une période, un périmètre, un grain et une unité. Un chiffre sans ces éléments peut être exact et pourtant trompeur.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.3">
+        <p class="lesson-number">L1.3 · TABLEAUX STRUCTURÉS ET TCD</p>
+        <h2>Explorer sans perdre le grain</h2>
+        <p>Dans Excel, transforme les données en tableau structuré. Les nouvelles lignes sont alors incluses plus facilement dans les filtres et les formules. Un tableau croisé dynamique regroupe ces lignes pour répondre à une question.</p>
+        <ol>
+          <li>Place le champ de regroupement, par exemple <code>item_name</code>, dans les lignes.</li>
+          <li>Place <code>line_revenue</code> dans les valeurs et vérifie que l'agrégat est une somme.</li>
+          <li>Filtre la devise avant de classer les résultats.</li>
+          <li>Trie le chiffre d'affaires du plus grand au plus petit.</li>
+        </ol>
+        <p>Un TCD peut compter des lignes, des commandes ou des clients : choisis le calcul selon le grain demandé. Pour un nombre de commandes, compte les identifiants distincts, pas les lignes.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.4">
+        <p class="lesson-number">L1.4 · FORMULES</p>
+        <h2>Rechercher, sommer et contrôler</h2>
+        <ul>
+          <li><code>RECHERCHEX</code> retrouve une information à partir d'une clé et permet de définir le résultat si aucune correspondance n'existe.</li>
+          <li><code>SOMME.SI.ENS</code> additionne une mesure en appliquant plusieurs critères, par exemple devise, plateforme et dates.</li>
+          <li><code>NB.SI.ENS</code> compte les lignes qui satisfont plusieurs critères. Pour le panier moyen, utilise un nombre de commandes, pas un nombre de lignes.</li>
+          <li><code>SI</code> renvoie un résultat selon une condition, par exemple signaler une quantité nulle à examiner.</li>
+        </ul>
+        <pre><code>=SOMME.SI.ENS(TableauBoutique[line_revenue];TableauBoutique[currency];"RUPEES";TableauBoutique[order_date];"&gt;="&amp;DATE(2026;3;1);TableauBoutique[order_date];"&lt;"&amp;DATE(2026;4;1))</code></pre>
+        <p>Les noms de fonctions et séparateurs peuvent varier selon la langue et le logiciel. Vérifie que le résultat utilise bien les filtres prévus.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.5">
+        <p class="lesson-number">L1.5 · POWER QUERY</p>
+        <h2>Conserver une source brute et tracer les corrections</h2>
+        <p>Power Query permet d'importer un CSV ou un classeur et de rejouer une suite d'étapes. Garde le fichier brut intact et applique le nettoyage à une requête séparée.</p>
+        <ol>
+          <li>Vérifie les types : date, texte, quantité et prix.</li>
+          <li>Repère les répétitions exactes sur toutes les colonnes.</li>
+          <li>Signale les prix négatifs, dates futures et quantités égales à zéro au lieu de les masquer silencieusement.</li>
+          <li>Supprime les espaces superflus et harmonise la casse des noms.</li>
+          <li>Ajoute le montant de ligne, puis vérifie les totaux et le nombre de lignes obtenu.</li>
+        </ol>
+        <p>Dans l'onglet « Nettoyage » de ton classeur, note chaque règle et son effet. Une correction doit être explicable et reproductible.</p>
+        <p class="callout">Power Query est inclus dans Excel de bureau sur les versions compatibles. LibreOffice Calc et Google Sheets peuvent servir d'alternative, mais les étapes d'import et de nettoyage ne seront pas identiques.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.6">
+        <p class="lesson-number">L1.6 · CADRER UNE QUESTION</p>
+        <h2>Relier l'analyse à une décision</h2>
+        <p>« Les ventes vont mal ? » ne précise ni quelles ventes, ni quand, ni ce que signifie « mal ». Une question exploitable nomme au minimum la population ou le périmètre, la période, la mesure et la décision à éclairer.</p>
+        <p>Exemple : « Pour les commandes en RUPEES de mars 2026, quel est le chiffre d'affaires net par objet, et quels objets faut-il réapprovisionner avant la prochaine période de vente ? »</p>
+        <p>La formulation n'impose pas une conclusion : elle permet de calculer des résultats comparables puis d'indiquer les limites des données.</p>
+      </article>
+
+      <article class="lesson-card" id="L1.7">
+        <p class="lesson-number">L1.7 · DEVISES ET UNITÉS</p>
+        <h2>Ne pas additionner des euros et des rupees</h2>
+        <p>Le fichier mélange les devises <code>RUPEES</code> et <code>EUR</code>. Le montant reste associé à sa devise dans chaque tableau, formule et graphique. Une somme combinée n'a pas d'unité interprétable.</p>
+        <p>Si une comparaison convertie est nécessaire, indique le taux de change, sa source et sa date, puis conserve aussi les montants d'origine. Le format monétaire d'une cellule ne réalise pas une conversion.</p>
+      </article>
+    </section>
+
+    <section id="activites" class="activity-section" aria-labelledby="activities-title">
+      <p class="eyebrow">MISE EN PRATIQUE</p>
+      <h2 id="activities-title">Audite l'extrait de boutique</h2>
+      <p class="activity-intro">Télécharge le classeur brut, puis utilise Excel et Power Query pour répondre aux exercices. Les contrôles vérifient les valeurs saisies sans envoyer tes réponses ni ton classeur à un serveur.</p>
+      <p class="data-downloads">
+        <a class="button button--secondary" href="../../data/excel/boutique_extrait.xlsx" download>Télécharger le classeur Excel</a>
+        <a class="button button--quiet" href="../../data/excel/boutique_extrait.csv" download>Télécharger le CSV brut</a>
+      </p>
+      <p id="module-status" class="module-status" role="status" aria-live="polite"></p>
+      <div id="exercise-list"></div>
+      <article id="rubric-exercise" class="exercise-card">
+        <div class="exercise-heading"><span>E1.6 · 10 XP</span><h3>Transformer une demande floue</h3></div>
+        <div id="rubric-root"></div>
+      </article>
+      <div class="results-export">
+        <p>Quand tu as saisi tes réponses aux exercices vérifiables et au défi B1, télécharge leur fichier de résultats et place-le dans <code>m1/results.json</code> dans ton dépôt élève.</p>
+        <button id="export-results" class="button button--secondary" type="button">Télécharger results.json</button>
+      </div>
+    </section>
+
+    <section class="fight-section" aria-labelledby="fight-title">
+      <p class="eyebrow">COMBAT DE BOSS · VALIDATION DES NOTIONS</p>
+      <h2 id="fight-title">Défie l'inventaire expert</h2>
+      <p>Le combat reprend les notions de grain, d'indicateurs, de TCD, de formules, de nettoyage et de devises. Il remplace le QCM de validation ; tu peux le recommencer pour t'entraîner.</p>
+      <button id="start-fight" class="button button--primary" type="button">Commencer le combat</button>
+      <div id="fight-root" class="fight-root"></div>
+    </section>
+
+    <section class="fight-section" aria-labelledby="dungeon-title">
+      <p class="eyebrow">ÉPREUVE DU DONJON B1 · 45 MINUTES</p>
+      <h2 id="dungeon-title">Vérifier l'inventaire bis</h2>
+      <p>Cette épreuve séparée utilise un second extrait avec d'autres anomalies. Dans le CSV, nettoie les données et calcule le CA RUPEES de mars 2026, l'objet RUPEES en tête et son CA, puis le panier moyen EUR sur PC. Les trois résultats doivent être corrects. Aucun XP n'est attribué.</p>
+      <a class="button button--quiet" href="../../data/excel/boutique_extrait_boss.csv" download>Télécharger l'extrait bis</a>
+      <p id="dungeon-timer" class="dungeon-timer" aria-live="off"></p>
+      <button id="start-dungeon" class="button button--secondary" type="button">Commencer l'épreuve de 45 minutes</button>
+      <div id="dungeon-root" class="fight-root"></div>
+    </section>
+
+    <section id="livrable" class="deliverable-section" aria-labelledby="deliverable-title">
+      <p class="eyebrow">TON LIVRABLE</p>
+      <h2 id="deliverable-title">Remettre un classeur vérifiable</h2>
+      <p>Enregistre le classeur dans <code>m1/classeur.xlsx</code> avec exactement ces trois onglets dans cet ordre :</p>
+      <ol>
+        <li><strong>Données brutes</strong> : copie du classeur source, laissée intacte.</li>
+        <li><strong>Nettoyage</strong> : données nettoyées, montant de ligne et journal des corrections.</li>
+        <li><strong>Synthèse</strong> : au moins cinq indicateurs numériques, chacun avec définition, période, périmètre et devise.</li>
+      </ol>
+      <p>Par exemple, la synthèse peut présenter le CA RUPEES de mars, le CA EUR de mars, le panier moyen PC EUR, le nombre de lignes nettoyées et le nombre de commandes distinctes. Ne fusionne pas les devises.</p>
+      <p>Le classeur reste dans ton dépôt individuel ; le site ne téléverse ni ne lit ton fichier. Le contrôle automatisé vérifie la présence du classeur, ses onglets et le contenu numérique de la synthèse. Il ne valide pas les formules ou le sens métier : garde tes étapes de nettoyage lisibles.</p>
+    </section>
+
+    <nav class="module-next" aria-label="Navigation entre modules">
+      <a href="../m0-eveil/index.html">← Revoir le module 0</a>
+      <span>La suite du parcours s'ouvrira après ce module.</span>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <p>Projet pédagogique indépendant, non affilié à Nintendo. Zelda est une marque de Nintendo.</p>
+  </footer>
+</body>
+</html>

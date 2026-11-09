@@ -1,0 +1,21 @@
+# Python test and bytecode caches
+__pycache__/
+.pytest_cache/
+
+# Local Python environments
+.venv/
+venv/
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# JavaScript dependencies
+node_modules/
+
+# Fichiers locaux
+base-gitignore.zip
+README-ENSEIGNANT.md
+grading-private/
+dist/

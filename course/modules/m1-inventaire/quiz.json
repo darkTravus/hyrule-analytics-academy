@@ -1,0 +1,505 @@
+{
+  "module": "m1",
+  "questions": [
+    {
+      "id": "Q1.1",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Le fichier contient une ligne par ligne de commande. Que compte le nombre de lignes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le nombre de lignes de commande, doublons compris."
+        },
+        {
+          "id": "b",
+          "text": "Le nombre de personnes distinctes."
+        },
+        {
+          "id": "c",
+          "text": "Le nombre d'objets distincts."
+        },
+        {
+          "id": "d",
+          "text": "Le nombre de commandes uniques."
+        }
+      ],
+      "explanation": "Le nombre de lignes décrit le nombre d'enregistrements au grain ligne de commande ; il ne compte pas les commandes ou clients distincts."
+    },
+    {
+      "id": "Q1.2",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quelle statistique résiste le mieux à quelques valeurs extrêmes ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La somme."
+        },
+        {
+          "id": "c",
+          "text": "La moyenne."
+        },
+        {
+          "id": "b",
+          "text": "La médiane."
+        },
+        {
+          "id": "d",
+          "text": "Le maximum."
+        }
+      ],
+      "explanation": "La médiane dépend de la position centrale des valeurs et est moins sensible aux valeurs extrêmes que la moyenne."
+    },
+    {
+      "id": "Q1.3",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Un taux passe de 2 % à 3 %. Quelle description est correcte ?",
+      "options": [
+        {
+          "id": "c",
+          "text": "Il augmente de 1 point de pourcentage, soit 50 % en relatif."
+        },
+        {
+          "id": "a",
+          "text": "Il augmente de 1 % en relatif."
+        },
+        {
+          "id": "b",
+          "text": "Il augmente de 3 points de pourcentage."
+        },
+        {
+          "id": "d",
+          "text": "Il ne change pas."
+        }
+      ],
+      "explanation": "La différence absolue est d'un point ; rapportée à la valeur de départ, la hausse est de 1/2, soit 50 %."
+    },
+    {
+      "id": "Q1.4",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Pourquoi faut-il séparer les RUPEES et les EUR dans une synthèse ?",
+      "options": [
+        {
+          "id": "d",
+          "text": "Les devises ne sont comparables qu'après conversion avec un taux et une date explicités."
+        },
+        {
+          "id": "a",
+          "text": "Les EUR ne peuvent pas être additionnés dans Excel."
+        },
+        {
+          "id": "b",
+          "text": "Les RUPEES sont toujours des nombres entiers."
+        },
+        {
+          "id": "c",
+          "text": "Le symbole monétaire suffit pour convertir les montants."
+        }
+      ],
+      "explanation": "Additionner des devises différentes produit un total sans unité cohérente. Toute conversion doit préciser son taux et sa date."
+    },
+    {
+      "id": "Q1.5",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quel calcul correspond au chiffre d'affaires d'une ligne de commande ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Quantité × prix unitaire."
+        },
+        {
+          "id": "b",
+          "text": "Quantité + prix unitaire."
+        },
+        {
+          "id": "c",
+          "text": "Prix unitaire ÷ nombre de commandes."
+        },
+        {
+          "id": "d",
+          "text": "Nombre de clients × quantité."
+        }
+      ],
+      "explanation": "Pour une ligne, le montant vendu est la quantité multipliée par le prix unitaire."
+    },
+    {
+      "id": "Q1.6",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Dans un tableau croisé, quel champ utiliser pour classer les objets par chiffre d'affaires ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Nom d'objet en lignes et somme du chiffre d'affaires en valeurs."
+        },
+        {
+          "id": "a",
+          "text": "Nom d'objet en valeurs et somme de la quantité en filtres."
+        },
+        {
+          "id": "c",
+          "text": "Date en valeurs et nom d'objet en colonnes."
+        },
+        {
+          "id": "d",
+          "text": "Prix unitaire en lignes sans agrégation."
+        }
+      ],
+      "explanation": "Les catégories se placent en lignes et la mesure à agréger en valeurs, avec une somme."
+    },
+    {
+      "id": "Q1.7",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Quelle formule calcule le panier moyen par commande ?",
+      "options": [
+        {
+          "id": "c",
+          "text": "Chiffre d'affaires total ÷ nombre de commandes distinctes."
+        },
+        {
+          "id": "a",
+          "text": "Prix unitaire moyen ÷ nombre de clients."
+        },
+        {
+          "id": "b",
+          "text": "Nombre de lignes ÷ quantité totale."
+        },
+        {
+          "id": "d",
+          "text": "Chiffre d'affaires total ÷ nombre de lignes."
+        }
+      ],
+      "explanation": "Le dénominateur est le nombre de commandes, car le panier moyen mesure le montant moyen par commande."
+    },
+    {
+      "id": "Q1.8",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Pourquoi conserver une copie du fichier brut avant le nettoyage ?",
+      "options": [
+        {
+          "id": "d",
+          "text": "Pour garder une source intacte et rendre les transformations vérifiables."
+        },
+        {
+          "id": "a",
+          "text": "Pour doubler les lignes disponibles."
+        },
+        {
+          "id": "b",
+          "text": "Pour éviter de documenter les corrections."
+        },
+        {
+          "id": "c",
+          "text": "Pour cacher les valeurs supprimées."
+        }
+      ],
+      "explanation": "La copie brute permet de revenir à la source et d'expliquer chaque correction."
+    },
+    {
+      "id": "Q1.9",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Pour calculer le chiffre d'affaires de mars 2026 sans inclure avril, quelles bornes de date sont les plus sûres ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Date ≥ 1er mars et date < 1er avril."
+        },
+        {
+          "id": "b",
+          "text": "Date = 1er mars."
+        },
+        {
+          "id": "c",
+          "text": "Date ≥ 1er mars sans borne supérieure."
+        },
+        {
+          "id": "d",
+          "text": "Date ≤ 31 mars à minuit."
+        }
+      ],
+      "explanation": "L'intervalle semi-ouvert inclut toutes les heures de mars et exclut le premier instant d'avril."
+    },
+    {
+      "id": "Q1.10",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Pourquoi le nombre de commandes distinctes est-il nécessaire au panier moyen ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Une commande peut occuper plusieurs lignes de détail."
+        },
+        {
+          "id": "a",
+          "text": "Les commandes ont toutes le même montant."
+        },
+        {
+          "id": "c",
+          "text": "Chaque commande ne contient qu'un seul objet."
+        },
+        {
+          "id": "d",
+          "text": "Les lignes ne peuvent pas contenir de devise."
+        }
+      ],
+      "explanation": "Le grain est la ligne de commande : une même commande peut apparaître plusieurs fois."
+    },
+    {
+      "id": "Q1.11",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Une somme de 100 RUPEES et 100 EUR donne quel résultat analytique ?",
+      "options": [
+        {
+          "id": "c",
+          "text": "Aucun total monétaire interprétable sans conversion explicite."
+        },
+        {
+          "id": "a",
+          "text": "200 EUR."
+        },
+        {
+          "id": "b",
+          "text": "200 RUPEES."
+        },
+        {
+          "id": "d",
+          "text": "100 dans la devise la plus fréquente."
+        }
+      ],
+      "explanation": "Des unités monétaires différentes ne s'additionnent pas directement."
+    },
+    {
+      "id": "Q1.12",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Dans Power Query, que faut-il faire d'un nom d'objet avec des espaces en trop et une casse incohérente ?",
+      "options": [
+        {
+          "id": "d",
+          "text": "Supprimer les espaces superflus puis appliquer une règle de casse cohérente."
+        },
+        {
+          "id": "a",
+          "text": "Le remplacer par une valeur choisie au hasard."
+        },
+        {
+          "id": "b",
+          "text": "Le conserver tel quel et créer une nouvelle catégorie."
+        },
+        {
+          "id": "c",
+          "text": "Supprimer toutes les lignes contenant un nom en majuscules."
+        }
+      ],
+      "explanation": "Le nettoyage des espaces et de la casse rapproche les variantes d'une même valeur sans supprimer les transactions."
+    },
+    {
+      "id": "Q1.13",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Que fait SOMME.SI.ENS ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Additionne une plage quand plusieurs critères sont satisfaits."
+        },
+        {
+          "id": "b",
+          "text": "Compte les cellules uniques sans condition."
+        },
+        {
+          "id": "c",
+          "text": "Trie une table selon plusieurs colonnes."
+        },
+        {
+          "id": "d",
+          "text": "Recherche le premier texte correspondant."
+        }
+      ],
+      "explanation": "SOMME.SI.ENS additionne une plage de somme en appliquant une ou plusieurs plages de critères."
+    },
+    {
+      "id": "Q1.14",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Que renvoie RECHERCHEX quand aucune correspondance n'existe et qu'un résultat de remplacement a été fourni ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "La valeur de remplacement prévue dans la formule."
+        },
+        {
+          "id": "a",
+          "text": "La dernière ligne de la table."
+        },
+        {
+          "id": "c",
+          "text": "Toujours zéro."
+        },
+        {
+          "id": "d",
+          "text": "Une correspondance approximative obligatoire."
+        }
+      ],
+      "explanation": "L'argument de valeur si non trouvé permet de traiter explicitement l'absence de correspondance."
+    },
+    {
+      "id": "Q1.15",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Quelle information doit accompagner un indicateur partagé en réunion ?",
+      "options": [
+        {
+          "id": "c",
+          "text": "Sa définition, sa période, son périmètre et son unité."
+        },
+        {
+          "id": "a",
+          "text": "Uniquement sa couleur."
+        },
+        {
+          "id": "b",
+          "text": "Le nom du classeur, sans autre précision."
+        },
+        {
+          "id": "d",
+          "text": "Le résultat sans préciser la devise."
+        }
+      ],
+      "explanation": "Une mesure interprétable doit être définie et contextualisée."
+    },
+    {
+      "id": "Q1.16",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Quelle est la première étape utile face à « Les ventes vont mal ? » ?",
+      "options": [
+        {
+          "id": "d",
+          "text": "Préciser les ventes, la population, la période, l'indicateur et la décision."
+        },
+        {
+          "id": "a",
+          "text": "Choisir le graphique le plus coloré."
+        },
+        {
+          "id": "b",
+          "text": "Calculer toutes les colonnes sans question."
+        },
+        {
+          "id": "c",
+          "text": "Comparer des devises sans conversion."
+        }
+      ],
+      "explanation": "Il faut d'abord transformer la demande en question mesurable liée à une décision."
+    },
+    {
+      "id": "Q1.17",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Le chiffre d'affaires moyen par ligne augmente fortement, mais la médiane reste stable. Quelle piste est raisonnable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Quelques valeurs élevées peuvent tirer la moyenne vers le haut."
+        },
+        {
+          "id": "b",
+          "text": "Toutes les lignes ont nécessairement augmenté."
+        },
+        {
+          "id": "c",
+          "text": "La médiane est la somme des montants."
+        },
+        {
+          "id": "d",
+          "text": "La devise a disparu des données."
+        }
+      ],
+      "explanation": "Une hausse de la moyenne sans hausse de la médiane peut signaler une distribution asymétrique ou des valeurs extrêmes."
+    },
+    {
+      "id": "Q1.18",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Une requête de Power Query supprime les 40 doublons, mais le total des lignes ne baisse que de 25. Quelle vérification faire d'abord ?",
+      "options": [
+        {
+          "id": "b",
+          "text": "Vérifier si d'autres doublons ont été supprimés par plusieurs étapes ou si la règle ne porte pas sur les 40 lignes attendues."
+        },
+        {
+          "id": "a",
+          "text": "Ajouter 15 lignes arbitraires."
+        },
+        {
+          "id": "c",
+          "text": "Remplacer les dates manquantes par aujourd'hui."
+        },
+        {
+          "id": "d",
+          "text": "Convertir toutes les devises en nombres sans unité."
+        }
+      ],
+      "explanation": "Il faut inspecter la définition de doublon et l'historique des étapes avant de modifier les données."
+    },
+    {
+      "id": "Q1.19",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "On compare le CA de mars entre deux années, mais le nombre de lignes a doublé. Quel autre indicateur peut aider à comprendre l'évolution ?",
+      "options": [
+        {
+          "id": "c",
+          "text": "Le CA par commande, en plus du CA total, avec le même périmètre et la même devise."
+        },
+        {
+          "id": "a",
+          "text": "Le nom de l'objet le plus long."
+        },
+        {
+          "id": "b",
+          "text": "La somme des RUPEES et des EUR."
+        },
+        {
+          "id": "d",
+          "text": "La couleur de la feuille Excel."
+        }
+      ],
+      "explanation": "Un indicateur rapporté aux commandes aide à distinguer croissance du volume et évolution du panier, sans mélanger les devises."
+    },
+    {
+      "id": "Q1.20",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Le panier moyen PC EUR est calculé en divisant le CA par le nombre de lignes. Quel est le risque ?",
+      "options": [
+        {
+          "id": "d",
+          "text": "Le résultat est un montant moyen par ligne, pas par commande."
+        },
+        {
+          "id": "a",
+          "text": "Le résultat devient automatiquement le panier moyen."
+        },
+        {
+          "id": "b",
+          "text": "Le chiffre d'affaires est forcément doublé."
+        },
+        {
+          "id": "c",
+          "text": "Les dates deviennent invalides."
+        }
+      ],
+      "explanation": "Le dénominateur doit correspondre à l'unité de l'indicateur ; le panier est défini par commande."
+    }
+  ]
+}

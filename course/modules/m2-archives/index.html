@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apprends SQL en explorant et en interrogeant une base relationnelle de jeu.">
+  <title>M2 — Les archives d'Impa | Chroniques d'Hyrule Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../m0-eveil/module.css">
+  <link rel="stylesheet" href="./module.css">
+  <script type="module" src="./module.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Chroniques d'Hyrule Analytics, accueil">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CHRONIQUES <b>DATA GUILD</b></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="../../index.html#parcours">La carte</a>
+      <a href="#schema">Schéma SQL</a>
+      <a href="#activites">Exercices</a>
+      <a href="#boss">Boss</a>
+    </nav>
+  </header>
+
+  <main id="contenu" class="module-main">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Module 2</span>
+    </nav>
+
+    <section class="module-hero" aria-labelledby="module-title">
+      <p class="eyebrow">MODULE 02 · SEMAINES 2 À 4</p>
+      <h1 id="module-title">Les archives d'Impa</h1>
+      <p class="module-lead">Les archives du studio sont une base relationnelle. Apprends à les interroger sans te tromper : une jointure fausse peut doubler les chiffres.</p>
+      <p class="project-disclaimer">Projet pédagogique indépendant, créé à des fins d’apprentissage. Il n’est ni associé à The Legend of Zelda ni affilié à Nintendo, et n’est ni approuvé ni commandité par Nintendo.</p>
+      <ul class="objective-list" aria-label="Objectifs du module">
+        <li>Lire un schéma et suivre les clés</li>
+        <li>Filtrer, agréger et joindre</li>
+        <li>Écrire des CTE et fenêtres</li>
+        <li>Éviter NULL et fan-out</li>
+        <li>Interpréter un plan SQLite</li>
+      </ul>
+      <div class="module-save">
+        <p id="module-progress" role="status" aria-live="polite">Chargement de ta progression…</p>
+        <a class="button button--secondary" href="../../index.html#progression">Créer ou importer ma progression</a>
+      </div>
+    </section>
+
+    <section class="schema-section" id="schema" aria-labelledby="schema-title">
+      <div class="section-title">
+        <div><p class="eyebrow">01 — EXPLORER LES DONNÉES</p><h2 id="schema-title">Le registre des <em>archives.</em></h2></div>
+        <p>Choisis une table pour consulter ses colonnes. Les clés primaires identifient les lignes; les clés étrangères relient les tables.</p>
+      </div>
+      <div id="schema-root" class="schema-root" aria-live="polite">
+        <p>Chargement du schéma relationnel…</p>
+      </div>
+    </section>
+
+    <section class="lesson-list" aria-label="Leçons du module">
+      <article class="lesson-card" id="L2.1">
+        <p class="lesson-number">L2.1 · MODÈLE RELATIONNEL</p>
+        <h2>Une table, une entité, un grain</h2>
+        <p>Une base relationnelle répartit l'information entre des tables reliées par des clés. Dans <code>players</code>, une ligne représente un joueur; dans <code>sessions</code>, une ligne représente une session. Cette différence de grain est essentielle avant de compter ou de joindre.</p>
+        <div class="format-grid">
+          <div><h3>Clé primaire (PK)</h3><p>Identifie une ligne sans ambiguïté. <code>players.player_id</code> est unique; <code>order_lines</code> a une clé composée de <code>order_id</code> et <code>line_no</code>.</p></div>
+          <div><h3>Clé étrangère (FK)</h3><p>Pointe vers une clé d'une autre table. <code>sessions.player_id</code> rattache chaque session à son joueur.</p></div>
+          <div><h3>Cardinalité</h3><p>Un joueur peut avoir zéro ou plusieurs sessions (1 vers 0..n). Une commande possède une ou plusieurs lignes.</p></div>
+        </div>
+        <p class="callout">Une relation plusieurs-à-plusieurs passe par une table d'association : joueurs et expériences sont reliés via <code>experiment_assignments</code>.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.2">
+        <p class="lesson-number">L2.2 · SÉLECTION ET FILTRES</p>
+        <h2>Demander juste ce qu'il faut</h2>
+        <p><code>SELECT</code> choisit les colonnes, <code>FROM</code> la table de départ, <code>WHERE</code> filtre les lignes et <code>ORDER BY</code> les trie. <code>LIMIT</code> réduit le nombre de lignes affichées.</p>
+        <pre><code>SELECT player_id, country, platform
+FROM players
+WHERE country = 'FR' AND is_premium = 1
+ORDER BY signup_date DESC, player_id
+LIMIT 20;</code></pre>
+        <p>Une chaîne doit être entourée d'apostrophes. Utilise une seconde colonne de tri pour rendre les ex-aequo stables. Pour tester une absence, écris <code>IS NULL</code>, jamais <code>= NULL</code>.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.3">
+        <p class="lesson-number">L2.3 · AGRÉGATIONS</p>
+        <h2>Former et filtrer des groupes</h2>
+        <p><code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code> et <code>MAX</code> résument les lignes. <code>GROUP BY</code> définit les groupes; <code>HAVING</code> filtre leurs résultats.</p>
+        <pre><code>SELECT platform, COUNT(*) AS players
+FROM players
+GROUP BY platform
+HAVING COUNT(*) &gt; 100
+ORDER BY players DESC;</code></pre>
+        <p><code>COUNT(*)</code> compte les lignes; <code>COUNT(colonne)</code> ignore les valeurs NULL. Une colonne sélectionnée qui n'est pas agrégée doit généralement figurer dans <code>GROUP BY</code>.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.4">
+        <p class="lesson-number">L2.4 · JOINTURES</p>
+        <h2>Relier sans perdre le grain</h2>
+        <p><code>INNER JOIN</code> ne garde que les lignes appariées. <code>LEFT JOIN</code> conserve toutes les lignes de gauche et remplit par NULL quand il n'existe pas de correspondance.</p>
+        <pre><code>SELECT p.platform, COUNT(DISTINCT p.player_id) AS players,
+       COUNT(s.session_id) AS sessions
+FROM players p
+LEFT JOIN sessions s ON s.player_id = p.player_id
+GROUP BY p.platform;</code></pre>
+        <p>Les sessions ont plusieurs lignes par joueur : <code>COUNT(*)</code> compterait des sessions, pas des joueurs. Une condition sur la table de droite placée dans <code>WHERE</code> peut retirer les lignes NULL et annuler l'effet du LEFT JOIN.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.5">
+        <p class="lesson-number">L2.5 · CASE, DATES ET CTE</p>
+        <h2>Découper le raisonnement</h2>
+        <p><code>CASE WHEN</code> construit une catégorie. Dans SQLite, <code>strftime</code> extrait des éléments de date; <code>julianday</code> permet de calculer un écart en jours. Une sous-requête ou un CTE <code>WITH</code> nomme un résultat intermédiaire.</p>
+        <pre><code>WITH monthly AS (
+  SELECT strftime('%Y-%m', start_ts) AS month, COUNT(*) AS sessions
+  FROM sessions
+  GROUP BY month
+)
+SELECT month, sessions
+FROM monthly
+WHERE sessions &gt; 100
+ORDER BY month;</code></pre>
+        <p>Dans les dates ISO de ce cours, comparer deux chaînes au format AAAA-MM-JJ est également sûr pour un ordre chronologique.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.6">
+        <p class="lesson-number">L2.6 · FONCTIONS DE FENÊTRE</p>
+        <h2>Comparer sans réduire les lignes</h2>
+        <p>Les fonctions de fenêtre calculent sur un voisinage tout en conservant chaque ligne. <code>ROW_NUMBER</code> attribue un rang unique; <code>RANK</code> partage les ex-aequo; <code>LAG</code> lit une ligne précédente.</p>
+        <pre><code>SELECT player_id, start_ts,
+       LAG(start_ts) OVER (
+         PARTITION BY player_id ORDER BY start_ts
+       ) AS previous_session
+FROM sessions;</code></pre>
+        <p>Pour un cumul, utilise <code>SUM(mesure) OVER (ORDER BY date)</code>. Pour le top 3 de chaque catégorie, ajoute <code>PARTITION BY catégorie</code>, puis filtre le rang dans une requête externe.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.7">
+        <p class="lesson-number">L2.7 · COHORTES ET RÉTENTION</p>
+        <h2>Suivre les joueurs dans le temps</h2>
+        <p>Une cohorte regroupe des personnes selon un événement de départ, par exemple la semaine d'inscription. La rétention est la part de cette cohorte qui revient dans une fenêtre définie.</p>
+        <ol>
+          <li>Définis le jour de départ et la taille de chaque cohorte.</li>
+          <li>Relie les sessions au joueur et calcule un indicateur 0/1 par personne.</li>
+          <li>Agrège ces indicateurs pour obtenir un taux cohérent.</li>
+        </ol>
+        <p>Précise si J7 signifie « le jour exact J7 » ou « au moins une fois dans les sept premiers jours ». Ces définitions ne donnent pas la même mesure.</p>
+      </article>
+
+      <article class="lesson-card" id="L2.8">
+        <p class="lesson-number">L2.8 · PIÈGES À ÉVITER</p>
+        <h2>NULL, fan-out et division entière</h2>
+        <p><code>NULL</code> signifie valeur inconnue ou absente; il ne se compare pas avec <code>=</code>. Un fan-out survient quand deux tables de faits à plusieurs lignes par entité sont jointes ensemble : chacune multiplie les lignes de l'autre.</p>
+        <ul>
+          <li>Vérifie le grain avant chaque jointure et mesure le nombre de lignes obtenu.</li>
+          <li>Agrège séparément les faits avant de les rapprocher si nécessaire.</li>
+          <li>En SQLite, <code>1.0 * numerateur / denominateur</code> force une division réelle.</li>
+          <li>Sur un LEFT JOIN, <code>COUNT(*)</code> compte la ligne conservée; <code>COUNT(clé_droite)</code> ignore les absences.</li>
+        </ul>
+      </article>
+
+      <article class="lesson-card" id="L2.9">
+        <p class="lesson-number">L2.9 · PERFORMANCE</p>
+        <h2>Lire un plan et comprendre les index</h2>
+        <p>Un index est une structure auxiliaire qui peut accélérer une recherche ou une jointure sur certaines colonnes. Il occupe de l'espace et rend les écritures plus coûteuses; il n'améliore pas tous les plans.</p>
+        <p>Utilise <code>EXPLAIN QUERY PLAN SELECT ...</code> dans un outil SQLite de bureau pour observer un balayage ou l'usage d'un index. Le runner pédagogique autorise volontairement seulement les requêtes de lecture; il affiche le plan pour comprendre la requête exécutée.</p>
+        <p class="callout">L'ordre logique à garder en tête est FROM, WHERE, GROUP BY, HAVING, SELECT, ORDER BY, LIMIT.</p>
+      </article>
+    </section>
+
+    <section class="activity-section" id="activites" aria-labelledby="activity-title">
+      <p class="eyebrow">02 — LABORATOIRE SQL</p>
+      <h2 id="activity-title">Trente requêtes, <em>pas à pas.</em></h2>
+      <p class="activity-intro">Écris et exécute tes requêtes directement dans le navigateur. Les requêtes sont en lecture seule. Déplie les indices dans l'ordre si tu bloques; chaque exercice réussi est enregistré dans ta progression.</p>
+      <div id="exercise-groups">
+        <section aria-labelledby="basic-title"><h3 id="basic-title">Niveau 1 · SELECT et agrégations simples</h3><div id="basic-exercises"></div></section>
+        <section aria-labelledby="joins-title"><h3 id="joins-title">Niveau 2 · Jointures et CTE</h3><div id="join-exercises"></div></section>
+        <section aria-labelledby="windows-title"><h3 id="windows-title">Niveau 3 · Fenêtres et cohortes</h3><div id="window-exercises"></div></section>
+      </div>
+    </section>
+
+    <section class="activity-section" id="debugging" aria-labelledby="debug-title">
+      <p class="eyebrow">03 — CLINIQUE DES REQUÊTES</p>
+      <h2 id="debug-title">Trouve les cinq <em>pièges.</em></h2>
+      <p class="activity-intro">Ces requêtes contiennent une erreur de logique. Réécris-les pour obtenir le résultat demandé; ne te contente pas de corriger la syntaxe.</p>
+      <div id="debug-exercises"></div>
+    </section>
+
+    <section class="fight-section" aria-labelledby="fight-title">
+      <p class="eyebrow">04 — COMBAT DE CONNAISSANCES</p>
+      <h2 id="fight-title">Le scribe des archives</h2>
+      <p>Vérifie tes repères sur les jointures, les agrégations, les fenêtres et la qualité des résultats.</p>
+      <button id="start-fight" class="button button--primary" type="button">Lancer le combat</button>
+      <p id="module-status" class="module-status" role="status" aria-live="polite"></p>
+      <div id="fight-root" class="fight-root"></div>
+    </section>
+
+    <section class="activity-section" id="boss" aria-labelledby="boss-title">
+      <p class="eyebrow">05 — ÉPREUVE DU DONJON B2 · 90 MINUTES</p>
+      <h2 id="boss-title">Le Gardien des archives</h2>
+      <p class="activity-intro">Une seconde base SQLite, générée avec une autre graine, t'attend. Réponds aux six questions métier sans indices. Il faut au moins cinq réponses exactes; cette épreuve n'accorde pas d'XP.</p>
+      <button id="start-boss" class="button button--secondary" type="button">Commencer l'épreuve de 90 minutes</button>
+      <p id="boss-timer" class="boss-timer" role="timer" aria-live="off"></p>
+      <div id="boss-root" class="boss-root"></div>
+    </section>
+
+    <section class="deliverable-section" id="livrable" aria-labelledby="deliverable-title">
+      <p class="eyebrow">06 — TRANSMISSION À IMPA</p>
+      <h2 id="deliverable-title">Documente tes découvertes</h2>
+      <p>Prépare un fichier <code>.sql</code> commenté avec une requête par question, puis une page de synthèse avec cinq enseignements métier. Pour chaque chiffre, indique le périmètre, la période, le grain et l'unité.</p>
+      <ul>
+        <li>Vérifie les clés et le grain avant les jointures.</li>
+        <li>Commente tes hypothèses, filtres et choix de dénominateur.</li>
+        <li>Explique une limite ou un risque de fan-out parmi tes résultats.</li>
+        <li>Dépose le fichier dans ton espace de travail élève; la page ne téléverse aucune donnée.</li>
+      </ul>
+      <p class="callout">Validation pédagogique : au moins 24 des 30 exercices SQL, combat de connaissances réussi à 80 % et épreuve B2 réussie (5/6). Les cinq activités de débogage sont un entraînement complémentaire.</p>
+    </section>
+
+    <nav class="module-next" aria-label="Navigation entre modules">
+      <a href="../m1-inventaire/index.html">← Module 1 · L'inventaire</a>
+      <a href="../../index.html#parcours">Retour à la carte ↑</a>
+    </nav>
+  </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apprends à décrire les données, tester une expérience et communiquer l'incertitude.">
+  <title>M3 — Le laboratoire de Purah | Chroniques d'Hyrule Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="../m0-eveil/module.css">
+  <link rel="stylesheet" href="./module.css">
+  <script type="module" src="./module.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Chroniques d'Hyrule Analytics, accueil">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CHRONIQUES <b>DATA GUILD</b></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="../../index.html#parcours">La carte</a>
+      <a href="#lecons">Leçons</a>
+      <a href="#activites">Exercices</a>
+      <a href="#boss">Épreuve B3</a>
+    </nav>
+  </header>
+
+  <main id="contenu" class="module-main">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Module 3</span>
+    </nav>
+
+    <section class="module-hero" aria-labelledby="module-title">
+      <p class="eyebrow">MODULE 03 · LE LABORATOIRE DE PURAH</p>
+      <h1 id="module-title">Mesurer l'incertitude, pas seulement les chiffres</h1>
+      <p class="module-lead">Purah te confie les expériences du royaume. Décris les données, estime les effets, vérifie la puissance statistique et transforme tes résultats en recommandations prudentes.</p>
+      <p class="project-disclaimer">Projet pédagogique indépendant, créé à des fins d’apprentissage. Il n’est ni associé à The Legend of Zelda ni affilié à Nintendo, et n’est ni approuvé ni commandité par Nintendo.</p>
+      <ul class="objective-list" aria-label="Objectifs du module">
+        <li>Décrire des distributions</li>
+        <li>Simuler le théorème central limite</li>
+        <li>Calculer un test A/B et son intervalle</li>
+        <li>Comprendre la puissance et Bayes</li>
+        <li>Repérer confusion et paradoxe de Simpson</li>
+      </ul>
+      <div class="module-save">
+        <p id="module-progress" role="status" aria-live="polite">Chargement de ta progression…</p>
+        <a class="button button--secondary" href="../../index.html#progression">Créer ou importer ma progression</a>
+      </div>
+    </section>
+
+    <section class="lesson-list" id="lecons" aria-label="Huit leçons de statistiques">
+      <article class="lesson-card" id="L3.1">
+        <p class="lesson-number">L3.1 · STATISTIQUES DESCRIPTIVES</p>
+        <h2>Décrire avant de modéliser</h2>
+        <p>La moyenne utilise toutes les valeurs mais se déplace avec les extrêmes; la médiane partage les observations en deux moitiés. La variance (et son unité au carré) et l'écart-type résument la dispersion. Les quantiles décrivent des seuils de la distribution; l'asymétrie indique si une queue s'étire davantage d'un côté.</p>
+        <pre><code>sessions["duration_min"].describe()
+sessions["duration_min"].quantile([.25, .5, .75])
+sessions["duration_min"].skew()</code></pre>
+        <p class="callout">Commence par tracer les données et vérifier les valeurs manquantes. Une moyenne seule ne révèle ni la forme, ni les sous-groupes, ni les erreurs de saisie.</p>
+      </article>
+
+      <article class="lesson-card" id="L3.2">
+        <p class="lesson-number">L3.2 · PROBABILITÉS ET BAYES</p>
+        <h2>Un test positif n'est pas une certitude</h2>
+        <p>La sensibilité est la probabilité d'une alerte si le joueur est réellement un bot. La spécificité est la probabilité d'un résultat négatif chez un joueur légitime. La probabilité qu'une alerte soit juste dépend aussi de la prévalence :</p>
+        <pre><code>P(bot | alerte) = sensibilité × prévalence
+                 / [sensibilité × prévalence
+                    + (1 − spécificité) × (1 − prévalence)]</code></pre>
+        <div class="widget-card"><h3>Calculateur de Bayes</h3><div id="bayes-widget"></div></div>
+      </article>
+
+      <article class="lesson-card" id="L3.3">
+        <p class="lesson-number">L3.3 · LOIS ET THÉORÈME CENTRAL LIMITE</p>
+        <h2>Comprendre les variations aléatoires</h2>
+        <p>La loi normale décrit une variable continue symétrique; la binomiale compte des succès dans un nombre fixé d'essais indépendants; la loi de Poisson modélise un nombre d'événements dans une fenêtre à taux moyen stable. Le théorème central limite concerne les moyennes d'échantillons : leur distribution tend à être normale sous des conditions usuelles, même si les données brutes ne le sont pas.</p>
+        <p>La dispersion des moyennes est l'erreur-type; pour une moyenne, elle décroît approximativement comme l'écart-type divisé par la racine carrée de la taille d'échantillon.</p>
+        <div class="widget-card"><h3>Simuler le TCL</h3><div id="clt-widget"></div></div>
+      </article>
+
+      <article class="lesson-card" id="L3.4">
+        <p class="lesson-number">L3.4 · INFÉRENCE ET TESTS</p>
+        <h2>Comparer un effet à son incertitude</h2>
+        <p>Un estimateur varie d'un échantillon à l'autre. Un intervalle de confiance à 95 % est produit par une méthode qui couvrirait le paramètre dans environ 95 % des répétitions. Une p-value mesure la compatibilité des données avec H0 et le modèle du test; ce n'est ni la probabilité que H0 soit vraie, ni la taille de l'effet.</p>
+        <ul>
+          <li>Erreur de type I : rejeter une hypothèse nulle vraie (risque contrôlé par alpha).</li>
+          <li>Erreur de type II : ne pas détecter un effet réel (risque beta).</li>
+          <li>Précise l'indicateur, le dénominateur, le test et la période avant de lire le résultat.</li>
+        </ul>
+        <div class="widget-card"><h3>Comparer deux proportions</h3><div id="ab-widget"></div></div>
+      </article>
+
+      <article class="lesson-card" id="L3.5">
+        <p class="lesson-number">L3.5 · PUISSANCE ET TAILLE D'ÉCHANTILLON</p>
+        <h2>Planifier avant de regarder le résultat</h2>
+        <p>La puissance est la probabilité de détecter un effet donné si cet effet existe, sous les hypothèses du calcul. Elle dépend de l'effet minimal utile, de la variabilité, du seuil alpha et de la taille. Pour détecter une hausse de 20 % à 24 % avec 80 % de puissance et un test bilatéral à 5 %, il faut environ 1 700 participants par bras.</p>
+        <div class="widget-card"><h3>Puissance et taille nécessaire</h3><div id="power-widget"></div></div>
+      </article>
+
+      <article class="lesson-card" id="L3.6">
+        <p class="lesson-number">L3.6 · RÉGRESSION LINÉAIRE</p>
+        <h2>Modéliser une association conditionnelle</h2>
+        <p>Une régression linéaire relie une réponse numérique à un ou plusieurs prédicteurs. Chaque coefficient décrit une variation moyenne associée à une unité du prédicteur, à variables incluses constantes. R² résume la part de variabilité expliquée dans l'échantillon; il ne prouve ni causalité, ni bonne prédiction hors échantillon.</p>
+        <p>Vérifie la forme des résidus, leur indépendance, leur variance, les observations influentes et le risque de colinéarité. Un coefficient ne doit pas être interprété en dehors de son unité et de sa population.</p>
+      </article>
+
+      <article class="lesson-card" id="L3.7">
+        <p class="lesson-number">L3.7 · CAUSALITÉ ET PARADOXE DE SIMPSON</p>
+        <h2>Un bon résultat global peut inverser les comparaisons</h2>
+        <p>Une variable de confusion est liée à l'exposition et au résultat. Le biais de sélection survient lorsque l'entrée dans l'analyse dépend de caractéristiques qui créent ou déforment une association. Une affectation non aléatoire peut rendre les groupes incomparables.</p>
+        <p>Dans EXP_PACK, le bras B est plus représenté sur PC, où les achats sont plus fréquents. Il peut gagner globalement tout en perdant sur Android, iOS et PC : c'est un paradoxe de Simpson. Examine les taux par strate et la composition des groupes avant toute conclusion causale.</p>
+        <p class="callout">La stratification révèle l'inversion, mais ne la corrige pas automatiquement. Il faut comprendre le mécanisme d'affectation et choisir une méthode causale adaptée.</p>
+      </article>
+
+      <article class="lesson-card" id="L3.8">
+        <p class="lesson-number">L3.8 · COMMUNIQUER UNE RECOMMANDATION</p>
+        <h2>Dire ce que l'on sait — et ce que l'on ignore</h2>
+        <p>Une recommandation utile précise la population, la période, l'indicateur, l'effet estimé, son intervalle d'incertitude, les limites du plan d'étude et la décision proposée. Distingue significativité statistique, importance pratique et causalité. Si la puissance est faible, propose une expérience ou collecte de données plutôt que de conclure à l'absence d'effet.</p>
+      </article>
+    </section>
+
+    <section class="activity-section" id="activites" aria-labelledby="exercise-title">
+      <p class="eyebrow">02 — LABORATOIRE PYTHON</p>
+      <h2 id="exercise-title">Huit expériences à reproduire</h2>
+      <p class="activity-intro">Python, pandas, NumPy, SciPy, statsmodels et Matplotlib s'exécutent dans ton navigateur grâce à Pyodide. Les CSV nécessaires sont chargés à la demande; ton code et ta progression restent sur cet appareil.</p>
+      <p id="module-status" class="module-status" role="status" aria-live="polite"></p>
+      <div id="exercise-list" class="m3-exercise-list"><p>Chargement des activités…</p></div>
+    </section>
+
+    <section class="activity-section" id="combat" aria-labelledby="fight-title">
+      <p class="eyebrow">03 — COMBAT DE CONNAISSANCES</p>
+      <h2 id="fight-title">Le gardien des statistiques</h2>
+      <p>Vérifie tes repères en statistiques descriptives, probabilités, inférence, puissance et causalité.</p>
+      <button id="start-fight" class="button button--primary" type="button">Lancer le combat</button>
+      <div id="fight-root" class="fight-root"></div>
+    </section>
+
+    <section class="activity-section" id="boss" aria-labelledby="boss-title">
+      <p class="eyebrow">04 — ÉPREUVE B3 · 2 HEURES</p>
+      <h2 id="boss-title">L'expérience secrète de Purah</h2>
+      <p>Analyse une nouvelle expérience générée avec une graine indépendante. Télécharge <a href="../../data/csv/exp_boss.csv">exp_boss.csv</a>, calcule la rétention J7 de chaque bras, l'écart et le test bilatéral, puis rédige un mémo de recommandation d'au moins 150 mots. La vérification automatique couvre les quatre valeurs; la grille d'auto-évaluation porte sur le mémo. Une tentative par date locale, sans XP.</p>
+      <button id="start-boss" class="button button--secondary" type="button">Commencer l'épreuve de 2 heures</button>
+      <p id="boss-timer" class="boss-timer" role="timer" aria-live="off"></p>
+      <div id="boss-root" class="boss-root"></div>
+    </section>
+
+    <section class="deliverable-section" id="livrable" aria-labelledby="deliverable-title">
+      <p class="eyebrow">05 — CARNET D'ANALYSE</p>
+      <h2 id="deliverable-title">Constitue le notebook stats-pratiques</h2>
+      <p>Regroupe les exercices E3.1 à E3.8 dans un notebook et accompagne chaque résultat d'une interprétation accessible. Pour le mémo B3, vise au moins 150 mots et explicite l'incertitude, les limites et la décision proposée.</p>
+      <p class="callout">Validation pédagogique : QCM à 80 % ou plus, E3.4 et E3.7 exacts, puis explication orale de la différence entre « non significatif » et « manque de puissance ».</p>
+    </section>
+
+    <nav class="module-next" aria-label="Navigation entre modules">
+      <a href="../m2-archives/index.html">← Module 2 · Les archives</a>
+      <a href="../../index.html#parcours">Retour à la carte ↑</a>
+    </nav>
+  </main>
+</body>
+</html>

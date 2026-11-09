@@ -1,0 +1,10 @@
+{
+  "seed": 20261104,
+  "players": 12000,
+  "sessions": 162213,
+  "orders": 9000,
+  "order_lines": 13855,
+  "retained_d7_control": 0.2,
+  "retained_d7_treatment": 0.24,
+  "review_count": 600
+}

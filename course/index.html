@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111a24">
+  <meta name="description" content="Un parcours interactif pour apprendre l'analyse de données en relevant des défis.">
+  <title>Chroniques d'Hyrule Analytics — Ton aventure data</title>
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <script type="module" src="./assets/js/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Chroniques d'Hyrule Analytics, accueil">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CHRONIQUES <b>DATA GUILD</b></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="#parcours">La carte</a>
+      <a href="#progression">Mon camp</a>
+      <a class="nav-cta" href="#progression">Reprendre l'aventure <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="titre-principal">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-pulse" aria-hidden="true"></span> Ta prochaine grande découverte commence ici</p>
+        <h1 id="titre-principal">Les données ont besoin d'un <em>héros.</em></h1>
+        <p class="hero-lead">Explore le royaume des données, maîtrise de nouveaux outils et transforme tes découvertes en décisions.</p>
+        <p class="project-disclaimer">Ce parcours est un projet pédagogique indépendant, créé à des fins d’apprentissage. Il n’est ni associé à The Legend of Zelda ni affilié à Nintendo, et n’est ni approuvé ni commandité par Nintendo. Ta progression reste dans ton navigateur.</p>
+        <div class="hero-actions">
+          <a class="button button--primary" href="#progression">Créer mon personnage <span aria-hidden="true">→</span></a>
+          <a class="button button--quiet" href="#parcours">Explorer la carte <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-facts" aria-label="Informations sur le parcours">
+          <span><b>10</b> régions à explorer</span>
+          <span><b>1</b> aventure, à ton rythme</span>
+          <span><b>0</b> classement, 100 % progrès perso</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit art-orbit--one"></div>
+        <div class="art-orbit art-orbit--two"></div>
+        <div class="art-sun"></div>
+        <div class="art-peak art-peak--back"></div>
+        <div class="art-peak art-peak--front"></div>
+        <div class="art-chart">
+          <span style="--height:32%"></span><span style="--height:53%"></span>
+          <span style="--height:44%"></span><span style="--height:76%"></span>
+          <span style="--height:62%"></span><span style="--height:92%"></span>
+        </div>
+        <div class="art-star art-star--a">✦</div>
+        <div class="art-star art-star--b">✧</div>
+        <div class="art-tag">DATA<br>QUEST <span>✦</span></div>
+      </div>
+      <a class="scroll-cue" href="#parcours"><span></span> Fais défiler pour découvrir</a>
+    </section>
+
+    <section id="progression" class="camp-section" aria-labelledby="progression-titre">
+      <div class="section-title">
+        <div>
+          <p class="eyebrow">01 — Ton camp de base</p>
+          <h2 id="progression-titre">Ta progression, <em>tes règles.</em></h2>
+        </div>
+        <p>Sans compte et sans classement : ta sauvegarde reste dans ce navigateur. Exporte-la pour ne pas perdre ta quête.</p>
+      </div>
+      <div class="camp-grid">
+        <article class="player-card">
+          <div class="player-card__top">
+            <div class="avatar" aria-hidden="true"><span>✦</span></div>
+            <div>
+              <p class="eyebrow">Aventurier·ère</p>
+              <h3 id="player-name">Nouveau personnage</h3>
+              <span id="player-level" class="level-chip">Niveau 1 · Explorateur</span>
+            </div>
+          </div>
+          <div class="xp-heading"><span>Expérience</span><strong id="xp-total">0 XP</strong></div>
+          <progress id="xp-progress" max="100" value="0" aria-label="Progression vers le niveau suivant">0%</progress>
+          <p id="xp-next" class="microcopy">Encore 100 XP pour atteindre le niveau 2.</p>
+          <div class="player-card__stats">
+            <div><span class="stat-icon stat-icon--heart" aria-hidden="true">♥</span><b id="heart-total">0 / 30</b><small>Cœurs gagnés</small></div>
+            <div><span class="stat-icon stat-icon--badge" aria-hidden="true">✦</span><b id="badge-total">0</b><small>Badges trouvés</small></div>
+          </div>
+        </article>
+        <article class="save-card">
+          <div class="save-card__heading">
+            <span class="save-icon" aria-hidden="true">⌘</span>
+            <div><p class="eyebrow">Sauvegarde locale</p><h3>Prépare ton camp</h3></div>
+          </div>
+          <form id="create-progress" class="progress-form">
+            <label for="alias">Choisis un alias</label>
+            <div class="form-row">
+              <input id="alias" name="alias" autocomplete="nickname" maxlength="40" placeholder="Ex. NovaData" required>
+              <button class="button button--primary" type="submit">Enregistrer <span aria-hidden="true">→</span></button>
+            </div>
+          </form>
+          <div class="progress-actions">
+            <button id="export-progress" class="button button--secondary" type="button" disabled>⇧ Exporter</button>
+            <label class="button button--secondary file-button" for="import-file">⇩ Importer</label>
+            <input id="import-file" type="file" accept="application/json,.json" hidden>
+          </div>
+          <p id="progress-summary" class="progress-summary">Aucune progression chargée.</p>
+          <p id="site-status" class="site-status" role="status" aria-live="polite"></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="parcours" class="map-section" aria-labelledby="parcours-titre">
+      <div class="section-title section-title--map">
+        <div>
+          <p class="eyebrow">02 — La grande carte</p>
+          <h2 id="parcours-titre">Dix régions. <em>Une légende.</em></h2>
+        </div>
+        <p>Chaque étape débloque une nouvelle compétence. Les régions s'ouvriront dans l'ordre, une aventure à la fois.</p>
+      </div>
+      <div class="map-legend" aria-label="Légende">
+        <span><i class="legend-dot legend-dot--active"></i> Prochaine étape</span>
+        <span><i class="legend-dot legend-dot--locked"></i> À débloquer</span>
+        <span class="map-legend__note">Pas de compte à rebours. Apprends à ton rythme.</span>
+      </div>
+      <ol class="journey-map">
+        <li class="map-node map-node--ready" data-module="m0">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card">
+            <div class="region-card__top"><span class="region-number">REGION 00</span><span class="region-state"><i></i> OUVERTE</span></div>
+            <div class="region-icon region-icon--zero" aria-hidden="true"><span>⌘</span><i>✦</i></div>
+            <h3>L'Éveil du héros</h3>
+            <p>Configure tes outils, découvre Git et lance ton premier appel d'API.</p>
+            <div class="region-card__footer"><span>POSTE · GIT · API</span><span class="region-lock">↗</span></div>
+            <a class="region-card__link" href="./modules/m0-eveil/index.html">Ouvrir le module <span aria-hidden="true">→</span></a>
+          </article>
+        </li>
+        <li class="map-node map-node--ready" data-module="m1">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 01</span><span class="region-state"><i></i> OUVERTE</span></div><div class="region-icon" aria-hidden="true">▦</div><h3>L'inventaire de la Tablette Sheikah</h3><p>Audite les commandes, nettoie les anomalies et construis une synthèse dans un tableur.</p><div class="region-card__footer"><span>EXCEL · ANALYSE</span><span class="region-lock">↗</span></div><a class="region-card__link" href="./modules/m1-inventaire/index.html">Ouvrir le module <span aria-hidden="true">→</span></a></article>
+        </li>
+        <li class="map-node map-node--ready" data-module="m2">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 02</span><span class="region-state"><i></i> OUVERTE</span></div><div class="region-icon" aria-hidden="true">⌘</div><h3>Les archives d'Impa</h3><p>Explore les liens entre les données, écris des requêtes SQL et évite les pièges de jointure.</p><div class="region-card__footer"><span>SQL · RELATIONNEL</span><span class="region-lock">↗</span></div><a class="region-card__link" href="./modules/m2-archives/index.html">Ouvrir le module <span aria-hidden="true">→</span></a></article>
+        </li>
+        <li class="map-node map-node--ready" data-module="m3">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 03</span><span class="region-state"><i></i> OUVERTE</span></div><div class="region-icon" aria-hidden="true">⌁</div><h3>Le laboratoire de Purah</h3><p>Mesure l'incertitude, teste les expériences et formule des recommandations prudentes.</p><div class="region-card__footer"><span>STATS · TEST A/B</span><span class="region-lock">↗</span></div><a class="region-card__link" href="./modules/m3-laboratoire/index.html">Ouvrir le module <span aria-hidden="true">→</span></a></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m4">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 04</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">⌬</div><h3>La cartographie</h3><p>Explore les API et donne vie aux données avec Python.</p><div class="region-card__footer"><span>PYTHON · PANDAS</span><span class="region-lock">⌑</span></div></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m5">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 05</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">◫</div><h3>La tour de contrôle</h3><p>Transforme tes analyses en tableau de bord.</p><div class="region-card__footer"><span>BI · DATA STORY</span><span class="region-lock">⌑</span></div></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m6">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 06</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">⛭</div><h3>La forge qualité</h3><p>Rends tes analyses fiables et reproductibles.</p><div class="region-card__footer"><span>QUALITÉ · GIT</span><span class="region-lock">⌑</span></div></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m7">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 07</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">⌕</div><h3>La tour de prédiction</h3><p>Construis des modèles et déjoue les fuites.</p><div class="region-card__footer"><span>MACHINE LEARNING</span><span class="region-lock">⌑</span></div></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m8">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 08</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">✳</div><h3>L'oracle des modèles</h3><p>Audite l'IA et vérifie ses réponses.</p><div class="region-card__footer"><span>IA · AUDIT</span><span class="region-lock">⌑</span></div></article>
+        </li>
+        <li class="map-node map-node--locked" data-module="m9">
+          <span class="map-node__connector" aria-hidden="true"></span>
+          <article class="region-card"><div class="region-card__top"><span class="region-number">REGION 09</span><span class="region-state"><i></i> VERROUILLÉE</span></div><div class="region-icon" aria-hidden="true">✧</div><h3>La légende</h3><p>Réunis tes compétences dans un projet final.</p><div class="region-card__footer"><span>PROJET FINAL</span><span class="region-lock">⌑</span></div></article>
+        </li>
+      </ol>
+    </section>
+
+    <section class="closing-banner" aria-labelledby="closing-title">
+      <div class="closing-spark" aria-hidden="true">✦</div>
+      <p class="eyebrow">Aucune expérience requise</p>
+      <h2 id="closing-title">Prêt·e à voir les choses <em>autrement ?</em></h2>
+      <p>Pas besoin d'être un génie des maths. Il suffit d'être curieux·se et d'avancer à ton rythme.</p>
+      <a class="button button--light" href="#progression">Installer mon camp <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="brand brand--footer" href="./index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>CHRONIQUES <b>DATA GUILD</b></span></a>
+    <p>Projet pédagogique · progression individuelle · sauvegarde dans ton navigateur</p>
+    <a href="#contenu">Retour en haut ↑</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "id": "m2",
+  "title": "Les archives d'Impa",
+  "weeks": "2-4",
+  "guide": "Impa",
+  "status": "available",
+  "lessons": [
+    { "id": "L2.1", "title": "Le modèle relationnel", "minutes": 25 },
+    { "id": "L2.2", "title": "Filtrer et trier", "minutes": 25 },
+    { "id": "L2.3", "title": "Résumer avec GROUP BY", "minutes": 30 },
+    { "id": "L2.4", "title": "Relier les tables", "minutes": 35 },
+    { "id": "L2.5", "title": "CASE, dates, sous-requêtes et CTE", "minutes": 35 },
+    { "id": "L2.6", "title": "Fenêtres et classements", "minutes": 35 },
+    { "id": "L2.7", "title": "Cohortes et rétention", "minutes": 30 },
+    { "id": "L2.8", "title": "NULL, fan-out et types", "minutes": 30 },
+    { "id": "L2.9", "title": "Index et plan d'exécution", "minutes": 20 }
+  ],
+  "exercises": "exercises.json",
+  "quiz": "quiz.json",
+  "boss": "boss.json",
+  "deliverable": {
+    "label": "Fichier SQL commenté et synthèse de cinq enseignements",
+    "check": "self"
+  },
+  "pass": {
+    "quiz_min": 0.8,
+    "exercises_min": 0.8,
+    "boss_required": true
+  },
+  "data": [
+    "../../data/hqo_lite.sqlite",
+    "../../data/hqo_boss.sqlite"
+  ]
+}

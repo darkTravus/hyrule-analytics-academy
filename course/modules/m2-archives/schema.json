@@ -1,0 +1,34 @@
+{
+  "tables": [
+    { "name": "players", "columns": ["player_id PK", "signup_ts", "signup_date", "country", "platform", "age_band", "hero_class", "acquisition_channel", "is_premium"] },
+    { "name": "sessions", "columns": ["session_id PK", "player_id FK", "start_ts", "duration_min", "region_id FK", "enemies_defeated", "deaths", "rupees_earned"] },
+    { "name": "regions", "columns": ["region_id PK", "region_name", "biome", "danger_level"] },
+    { "name": "quests", "columns": ["quest_id PK", "title", "quest_type", "region_id FK", "difficulty", "recommended_level", "reward_rupees"] },
+    { "name": "quest_attempts", "columns": ["attempt_id PK", "player_id FK", "quest_id FK", "started_ts", "completed", "duration_min", "deaths"] },
+    { "name": "bosses", "columns": ["boss_id PK", "boss_name", "region_id FK", "base_hp", "difficulty"] },
+    { "name": "boss_fights", "columns": ["fight_id PK", "player_id FK", "boss_id FK", "fight_ts", "result", "duration_sec", "hearts_at_start", "damage_taken", "attempt_no"] },
+    { "name": "shop_items", "columns": ["item_id PK", "item_name", "category", "rarity", "price_rupees", "price_eur", "compendium_name"] },
+    { "name": "orders", "columns": ["order_id PK", "player_id FK", "order_ts", "currency", "status", "payment_method"] },
+    { "name": "order_lines", "columns": ["order_id PK/FK", "line_no PK", "item_id FK", "qty", "unit_price"] },
+    { "name": "experiments", "columns": ["experiment_id PK", "experiment_label", "hypothesis", "start_date", "end_date", "primary_metric"] },
+    { "name": "experiment_assignments", "columns": ["experiment_id PK/FK", "player_id PK/FK", "variant", "assigned_ts"] },
+    { "name": "patches", "columns": ["patch_id PK", "version", "release_date", "notes"] },
+    { "name": "reviews", "columns": ["review_id PK", "player_id FK", "review_ts", "rating", "lang", "review_text", "theme"] }
+  ],
+  "relationships": [
+    ["players", "sessions", "1 vers 0..n"],
+    ["regions", "sessions", "1 vers 0..n"],
+    ["regions", "quests", "1 vers 0..n"],
+    ["players", "quest_attempts", "1 vers 0..n"],
+    ["quests", "quest_attempts", "1 vers 0..n"],
+    ["players", "boss_fights", "1 vers 0..n"],
+    ["bosses", "boss_fights", "1 vers 0..n"],
+    ["regions", "bosses", "1 vers 0..n"],
+    ["players", "orders", "1 vers 0..n"],
+    ["orders", "order_lines", "1 vers 1..n"],
+    ["shop_items", "order_lines", "1 vers 0..n"],
+    ["experiments", "experiment_assignments", "1 vers 0..n"],
+    ["players", "experiment_assignments", "1 vers 0..n"],
+    ["players", "reviews", "1 vers 0..n"]
+  ]
+}

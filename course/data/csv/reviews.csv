@@ -1,0 +1,601 @@
+review_id,player_id,review_ts,rating,lang,review_text,theme
+1,P010944,2026-05-16T12:00:00Z,2,fr,Les commandes me frustrent.,story
+2,P006089,2026-02-22T12:00:00Z,5,fr,Le monde est agréable à explorer.,bugs
+3,P003415,2026-04-03T12:00:00Z,3,fr,Uné expérience convenable.,difficulty
+4,P000523,2026-06-30T12:00:00Z,5,fr,J'adore le rythme des missions.,difficulty
+5,P001091,2025-04-06T12:00:00Z,2,fr,Jé rencontre trop de problèmes techniques.,graphics
+6,P001532,2026-04-15T12:00:00Z,2,fr,Les commandes me frustrent.,price
+7,P002886,2026-02-26T12:00:00Z,2,en,Too many frustrating issues.,story
+8,P002564,2025-03-16T12:00:00Z,4,fr,J'adoré le rythme des missions. 🙂,other
+9,P011991,2026-03-13T12:00:00Z,2,fr,Le monde est agréable à explorer.,price
+10,P009704,2025-02-09T12:00:00Z,1,fr,Lés commandes me frustrent.,bugs
+11,P011826,2026-06-30T12:00:00Z,1,fr,Les commandes me frustrent.,story
+12,P000986,2026-03-13T12:00:00Z,5,fr,Lé monde est agréable à explorer.,price
+13,P004828,2026-03-25T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,other
+14,P010444,2026-01-21T12:00:00Z,2,fr,Les commandes me frustrent.,controls
+15,P004061,2026-06-30T12:00:00Z,5,fr,J'adore le rythme des missions.,bugs
+16,P010757,2025-02-25T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",story
+17,P000396,2026-02-09T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+18,P006314,2026-04-05T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+19,P009732,2026-04-29T12:00:00Z,5,fr,"Le jeu est correct, sans plus.",bugs
+20,P007303,2025-11-12T12:00:00Z,5,fr,Le monde est agréable à explorer.,other
+21,P010524,2026-01-10T12:00:00Z,1,fr,J'adoré le rythme des missions.,story
+22,P010688,2026-06-13T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+23,P001614,2026-06-30T12:00:00Z,5,fr,"Très bonné surprise, je reviens souvent.",difficulty
+24,P007354,2025-05-12T12:00:00Z,5,en,A delightful adventure.,bugs
+25,P006576,2026-04-08T12:00:00Z,4,fr,Lé monde est agréable à explorer.,price
+26,P003289,2026-06-23T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",other
+27,P004839,2026-02-20T12:00:00Z,1,fr,La progression devient pénible.,controls
+28,P009633,2026-01-23T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+29,P011946,2025-03-17T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",controls
+30,P001840,2026-02-12T12:00:00Z,3,fr,Les commandes me frustrent.,graphics
+31,P009771,2025-03-12T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,graphics
+32,P000655,2026-05-08T12:00:00Z,1,en,Too many frustrating issues.,story
+33,P004054,2026-01-16T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",story
+34,P002627,2025-07-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+35,P009803,2026-06-30T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",other
+36,P011462,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",story
+37,P004421,2026-03-05T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",other
+38,P007963,2026-06-22T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+39,P004650,2026-06-30T12:00:00Z,3,fr,"Très bonne surprise, je reviens souvent.",controls
+40,P005860,2026-06-04T12:00:00Z,5,fr,J'adore le rythme des missions.,difficulty
+41,P011964,2026-02-18T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,other
+42,P006669,2026-02-10T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",story
+43,P000686,2025-12-16T12:00:00Z,1,fr,La progréssion devient pénible.,controls
+44,P007695,2026-06-18T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,graphics
+45,P003175,2026-02-26T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques. 🙂,other
+46,P002837,2026-03-31T12:00:00Z,4,fr,Le monde est agréable à explorer.,other
+47,P000564,2026-06-30T12:00:00Z,4,fr,Je rencontre trop de problèmes techniques.,controls
+48,P006901,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+49,P010627,2025-12-26T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",controls
+50,P010683,2026-03-22T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant. 🙂",difficulty
+51,P010861,2026-06-30T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,difficulty
+52,P002885,2026-04-15T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+53,P008760,2026-06-30T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",other
+54,P003278,2025-09-22T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",other
+55,P007879,2025-11-15T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,story
+56,P011066,2026-03-20T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+57,P006059,2026-02-22T12:00:00Z,3,fr,Une expérience convenable.,price
+58,P004723,2026-02-25T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",difficulty
+59,P004412,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+60,P000241,2026-06-17T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+61,P009025,2026-06-08T12:00:00Z,1,fr,Le monde est agréable à explorer.,bugs
+62,P010799,2026-01-21T12:00:00Z,2,fr,Jé rencontre trop de problèmes techniques.,price
+63,P001252,2025-07-07T12:00:00Z,5,fr,J'adore le rythme des missions. 🙂,other
+64,P002780,2026-02-17T12:00:00Z,5,fr,J'adore le rythme des missions.,graphics
+65,P004801,2026-04-25T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",controls
+66,P003820,2025-10-13T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+67,P011021,2025-05-05T12:00:00Z,3,fr,"Lé jeu est correct, sans plus. 🙂",story
+68,P000737,2026-05-07T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",story
+69,P002480,2026-05-02T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",difficulty
+70,P001863,2026-03-19T12:00:00Z,1,fr,Les commandes me frustrent.,graphics
+71,P011035,2026-01-15T12:00:00Z,2,fr,Lés commandes me frustrent.,difficulty
+72,P007149,2025-04-25T12:00:00Z,1,fr,"Très bonné surprise, je reviens souvent.",story
+73,P007824,2026-03-23T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,controls
+74,P003009,2025-12-11T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+75,P001745,2025-05-19T12:00:00Z,5,fr,J'adoré le rythme des missions.,controls
+76,P010502,2026-06-30T12:00:00Z,2,fr,La progression devient pénible.,price
+77,P011281,2026-06-30T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant. 🙂",difficulty
+78,P008487,2025-10-21T12:00:00Z,4,fr,"Quelques bonnes idées, mais rien de marquant.",other
+79,P004846,2026-06-24T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",difficulty
+80,P008478,2025-04-03T12:00:00Z,2,fr,Les commandes me frustrent.,graphics
+81,P003182,2026-06-19T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",controls
+82,P006217,2025-04-06T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+83,P008431,2026-06-28T12:00:00Z,4,fr,J'adore le rythme des missions.,difficulty
+84,P004654,2026-02-26T12:00:00Z,4,fr,J'adore le rythme des missions.,story
+85,P001932,2025-10-14T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",story
+86,P009397,2026-06-16T12:00:00Z,1,fr,"Quelques bonnes idées, mais rien de marquant.",other
+87,P000053,2026-01-05T12:00:00Z,2,fr,Lés commandes me frustrent.,controls
+88,P004785,2025-08-02T12:00:00Z,3,en,It is fine.,graphics
+89,P011972,2025-06-20T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",bugs
+90,P002318,2026-04-01T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+91,P010071,2026-06-30T12:00:00Z,1,fr,Les commandes me frustrent.,graphics
+92,P003267,2026-06-30T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+93,P000200,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+94,P007575,2026-04-16T12:00:00Z,2,fr,Les commandes me frustrent.,bugs
+95,P000576,2026-06-30T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",bugs
+96,P001210,2026-04-04T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+97,P006436,2026-05-12T12:00:00Z,5,fr,J'adore le rythme des missions.,bugs
+98,P000888,2026-06-30T12:00:00Z,4,fr,Lé monde est agréable à explorer. 🙂,price
+99,P006552,2025-10-18T12:00:00Z,4,fr,Le monde est agréable à explorer.,other
+100,P003671,2025-08-24T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,difficulty
+101,P004630,2025-06-12T12:00:00Z,2,fr,Les commandes me frustrent.,graphics
+102,P009384,2026-05-01T12:00:00Z,5,fr,J'adoré le rythme des missions.,price
+103,P007857,2026-06-27T12:00:00Z,5,fr,J'adoré le rythme des missions.,other
+104,P010678,2026-06-30T12:00:00Z,5,fr,J'adore le rythme des missions.,difficulty
+105,P003498,2025-11-23T12:00:00Z,1,fr,Les commandes me frustrent.,difficulty
+106,P007525,2026-04-16T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,controls
+107,P003609,2026-04-06T12:00:00Z,5,fr,Les commandes me frustrent. 🙂,other
+108,P001852,2026-06-30T12:00:00Z,3,fr,Une expérience convenable.,difficulty
+109,P006709,2026-04-13T12:00:00Z,3,fr,Une expérience convenable.,difficulty
+110,P011801,2026-06-30T12:00:00Z,2,en,Too many frustrating issues.,graphics
+111,P009096,2025-09-09T12:00:00Z,5,fr,J'adoré le rythme des missions. 🙂,difficulty
+112,P000953,2026-03-16T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques. 🙂,story
+113,P003573,2025-10-18T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent. 🙂",controls
+114,P003019,2026-04-01T12:00:00Z,2,fr,Lés commandes me frustrent.,graphics
+115,P003692,2026-04-28T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+116,P010303,2026-03-13T12:00:00Z,5,fr,J'adore le rythme des missions.,price
+117,P001296,2025-12-06T12:00:00Z,2,fr,Lés commandes me frustrent.,other
+118,P002121,2025-11-07T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,difficulty
+119,P004861,2025-10-04T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",other
+120,P010220,2026-01-19T12:00:00Z,5,fr,J'adoré le rythme des missions.,graphics
+121,P003876,2025-07-21T12:00:00Z,3,fr,Une expérience convenable.,controls
+122,P004047,2026-05-24T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques. 🙂,bugs
+123,P007330,2025-10-11T12:00:00Z,4,fr,J'adore le rythme des missions.,difficulty
+124,P002294,2026-05-27T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+125,P008950,2025-07-30T12:00:00Z,3,fr,Une expérience convenable.,price
+126,P004993,2025-11-08T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+127,P009713,2026-05-17T12:00:00Z,5,en,A delightful adventure.,price
+128,P002931,2026-03-20T12:00:00Z,1,fr,Lés commandes me frustrent. 🙂,other
+129,P001141,2026-06-26T12:00:00Z,4,fr,J'adore le rythme des missions.,difficulty
+130,P010254,2026-04-11T12:00:00Z,4,fr,Lé monde est agréable à explorer.,bugs
+131,P001462,2025-11-18T12:00:00Z,5,fr,Le monde est agréable à explorer.,story
+132,P005156,2026-04-12T12:00:00Z,5,fr,Le monde est agréable à explorer.,other
+133,P005254,2026-04-09T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+134,P006770,2025-11-10T12:00:00Z,1,fr,La progression devient pénible.,controls
+135,P006724,2026-04-02T12:00:00Z,4,fr,J'adore le rythme des missions.,graphics
+136,P002315,2025-02-26T12:00:00Z,4,fr,J'adore le rythme des missions.,bugs
+137,P001558,2026-04-25T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+138,P004498,2026-06-10T12:00:00Z,5,fr,J'adoré le rythme des missions.,controls
+139,P004625,2025-08-19T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,other
+140,P005720,2026-06-30T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,story
+141,P003605,2026-04-21T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+142,P000203,2026-03-04T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",price
+143,P001311,2025-11-22T12:00:00Z,3,fr,Une expérience convenable.,price
+144,P009992,2026-04-01T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+145,P009963,2026-02-21T12:00:00Z,4,fr,Le monde est agréable à explorer.,controls
+146,P007520,2025-06-05T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+147,P009738,2026-05-13T12:00:00Z,5,fr,Lé monde est agréable à explorer.,story
+148,P004183,2026-04-17T12:00:00Z,1,fr,Les commandes me frustrent.,price
+149,P011398,2026-03-05T12:00:00Z,4,fr,J'adoré le rythme des missions.,other
+150,P001978,2026-03-19T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,bugs
+151,P009701,2026-03-21T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,other
+152,P004611,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,price
+153,P002665,2026-05-23T12:00:00Z,4,fr,Lé monde est agréable à explorer.,story
+154,P003798,2026-03-10T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,graphics
+155,P009804,2026-02-18T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+156,P008204,2025-03-14T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+157,P003028,2026-06-30T12:00:00Z,1,fr,La progression devient pénible.,difficulty
+158,P011002,2026-05-27T12:00:00Z,2,fr,La progréssion devient pénible. 🙂,bugs
+159,P004395,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,difficulty
+160,P010784,2025-07-02T12:00:00Z,5,fr,"Quelques bonnes idées, mais rien de marquant.",price
+161,P004484,2026-04-22T12:00:00Z,2,fr,"Quélques bonnes idées, mais rien de marquant.",price
+162,P010692,2026-05-29T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",difficulty
+163,P005491,2026-02-05T12:00:00Z,2,fr,La progression devient pénible. 🙂,graphics
+164,P006651,2026-03-28T12:00:00Z,1,fr,La progression devient pénible.,difficulty
+165,P007784,2025-08-25T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+166,P009494,2025-12-23T12:00:00Z,1,fr,Jé rencontre trop de problèmes techniques.,bugs
+167,P001963,2025-12-29T12:00:00Z,1,fr,La progression devient pénible.,other
+168,P007112,2026-04-10T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",graphics
+169,P007965,2026-04-25T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,graphics
+170,P009663,2026-03-05T12:00:00Z,1,fr,La progréssion devient pénible.,difficulty
+171,P010343,2025-05-20T12:00:00Z,5,fr,Lé monde est agréable à explorer.,graphics
+172,P002008,2025-01-26T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,other
+173,P008211,2026-02-24T12:00:00Z,4,fr,J'adoré le rythme des missions.,bugs
+174,P009797,2026-04-11T12:00:00Z,2,fr,Les commandes me frustrent.,other
+175,P010260,2026-06-30T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",bugs
+176,P010853,2026-06-21T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+177,P008672,2025-08-29T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",difficulty
+178,P009032,2026-06-30T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant. 🙂",controls
+179,P005244,2026-04-26T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+180,P006854,2025-08-21T12:00:00Z,4,fr,J'adore le rythme des missions.,other
+181,P001669,2026-06-25T12:00:00Z,4,fr,J'adoré le rythme des missions. 🙂,graphics
+182,P003874,2026-04-05T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",other
+183,P010113,2026-06-01T12:00:00Z,1,fr,Les commandes me frustrent.,difficulty
+184,P009900,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+185,P007238,2026-03-17T12:00:00Z,4,fr,Le monde est agréable à explorer.,other
+186,P007941,2026-05-12T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+187,P009993,2026-04-21T12:00:00Z,4,fr,Je rencontre trop de problèmes techniques.,difficulty
+188,P000679,2026-06-12T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",controls
+189,P010580,2025-12-22T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+190,P002340,2025-08-17T12:00:00Z,5,fr,J'adore le rythme des missions.,story
+191,P003830,2026-06-30T12:00:00Z,2,fr,Jé rencontre trop de problèmes techniques.,story
+192,P009499,2026-04-19T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+193,P000557,2026-06-30T12:00:00Z,5,en,A delightful adventure.,price
+194,P000437,2026-04-11T12:00:00Z,2,fr,Jé rencontre trop de problèmes techniques.,graphics
+195,P001655,2026-06-22T12:00:00Z,4,fr,La progression devient pénible.,controls
+196,P011776,2026-04-15T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+197,P006763,2025-07-02T12:00:00Z,4,fr,J'adore le rythme des missions.,graphics
+198,P000133,2025-02-24T12:00:00Z,1,fr,Lés commandes me frustrent.,graphics
+199,P005635,2025-11-17T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+200,P010980,2026-05-08T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,bugs
+201,P001217,2026-06-30T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,bugs
+202,P002700,2025-04-17T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+203,P006560,2026-04-09T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+204,P005668,2026-03-29T12:00:00Z,1,en,Too many frustrating issues.,bugs
+205,P006171,2025-11-09T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,bugs
+206,P010376,2026-06-30T12:00:00Z,3,fr,Les commandes me frustrent.,controls
+207,P008453,2026-06-19T12:00:00Z,1,fr,Les commandes me frustrent.,difficulty
+208,P011223,2025-09-03T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",price
+209,P004827,2026-02-22T12:00:00Z,4,fr,J'adore le rythme des missions.,other
+210,P007331,2025-10-10T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+211,P005652,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,controls
+212,P000594,2026-04-02T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",graphics
+213,P002669,2026-04-11T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+214,P004734,2025-09-15T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,bugs
+215,P009816,2026-06-01T12:00:00Z,5,fr,J'adore le rythme des missions.,bugs
+216,P009237,2025-04-02T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+217,P001754,2026-05-05T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+218,P000675,2026-05-12T12:00:00Z,2,fr,"Quélques bonnes idées, mais rien de marquant.",bugs
+219,P000183,2026-04-10T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+220,P009580,2025-09-10T12:00:00Z,2,fr,La progression devient pénible.,graphics
+221,P000067,2026-01-19T12:00:00Z,2,fr,La progression devient pénible.,price
+222,P011307,2025-11-17T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",difficulty
+223,P007777,2026-05-21T12:00:00Z,2,fr,La progression devient pénible. 🙂,other
+224,P005564,2026-06-26T12:00:00Z,4,fr,J'adore le rythme des missions.,other
+225,P007751,2025-05-05T12:00:00Z,4,fr,J'adoré le rythme des missions.,other
+226,P010355,2026-04-29T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+227,P008301,2026-06-30T12:00:00Z,1,fr,La progression devient pénible.,other
+228,P008652,2026-05-22T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,story
+229,P003265,2026-06-30T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",controls
+230,P003227,2026-06-30T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+231,P000362,2026-04-07T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",story
+232,P010372,2025-09-15T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",difficulty
+233,P009883,2025-08-28T12:00:00Z,1,fr,La progréssion devient pénible.,bugs
+234,P010792,2025-09-28T12:00:00Z,4,en,A delightful adventure.,controls
+235,P002299,2026-05-10T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+236,P007597,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+237,P005137,2025-11-26T12:00:00Z,1,fr,Les commandes me frustrent.,graphics
+238,P009788,2026-04-27T12:00:00Z,1,fr,Les commandes me frustrent.,bugs
+239,P009429,2026-05-16T12:00:00Z,1,fr,La progression devient pénible.,bugs
+240,P000364,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",story
+241,P001954,2025-09-27T12:00:00Z,5,fr,J'adoré le rythme des missions.,controls
+242,P010013,2026-03-14T12:00:00Z,1,fr,La progression devient pénible.,other
+243,P006363,2026-04-01T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,price
+244,P005274,2025-07-30T12:00:00Z,1,fr,La progression devient pénible.,other
+245,P003106,2026-04-03T12:00:00Z,4,fr,Je rencontre trop de problèmes techniques. 🙂,story
+246,P004563,2026-06-30T12:00:00Z,1,fr,La progréssion devient pénible.,difficulty
+247,P007457,2025-12-27T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+248,P005369,2026-04-14T12:00:00Z,4,fr,Le monde est agréable à explorer.,controls
+249,P009443,2025-10-21T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",bugs
+250,P002307,2026-03-31T12:00:00Z,3,fr,"Quélques bonnes idées, mais rien de marquant.",story
+251,P004397,2026-04-01T12:00:00Z,1,fr,"Très bonne surprise, je reviens souvent.",controls
+252,P001929,2025-05-09T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,story
+253,P008786,2026-04-16T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+254,P007808,2026-03-12T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+255,P004496,2025-10-03T12:00:00Z,5,fr,Le monde est agréable à explorer.,price
+256,P011010,2026-06-29T12:00:00Z,3,fr,"Quélques bonnes idées, mais rien de marquant.",controls
+257,P009428,2026-06-21T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+258,P002964,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+259,P005936,2026-06-03T12:00:00Z,5,fr,Le monde est agréable à explorer.,bugs
+260,P010381,2025-10-08T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+261,P006600,2026-06-07T12:00:00Z,2,fr,Les commandes me frustrent.,bugs
+262,P006837,2026-06-04T12:00:00Z,2,fr,Les commandes me frustrent.,controls
+263,P005732,2025-05-04T12:00:00Z,5,fr,"Très bonné surprise, je reviens souvent.",bugs
+264,P006166,2026-06-30T12:00:00Z,4,en,A delightful adventure.,difficulty
+265,P002425,2025-09-04T12:00:00Z,3,fr,J'adoré le rythme des missions.,difficulty
+266,P008906,2025-05-11T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+267,P011366,2025-08-06T12:00:00Z,3,fr,Les commandes me frustrent.,graphics
+268,P011503,2026-04-14T12:00:00Z,4,fr,J'adore le rythme des missions.,other
+269,P001102,2026-03-15T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,graphics
+270,P010240,2025-10-14T12:00:00Z,5,fr,Le monde est agréable à explorer.,story
+271,P010453,2026-05-24T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",bugs
+272,P000349,2026-04-08T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques. 🙂,bugs
+273,P002312,2026-03-09T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+274,P005842,2026-03-22T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",difficulty
+275,P007192,2026-06-30T12:00:00Z,4,en,A delightful adventure.,price
+276,P008822,2025-11-29T12:00:00Z,1,en,Too many frustrating issues.,controls
+277,P006627,2026-04-19T12:00:00Z,1,fr,Les commandes me frustrent.,story
+278,P007640,2026-06-30T12:00:00Z,2,fr,Jé rencontre trop de problèmes techniques.,price
+279,P003286,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,difficulty
+280,P006080,2026-05-06T12:00:00Z,5,fr,Les commandes me frustrent.,controls
+281,P011925,2026-03-20T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",controls
+282,P005199,2026-03-15T12:00:00Z,4,fr,Une expérience convenable. 🙂,story
+283,P004146,2026-03-05T12:00:00Z,4,fr,J'adore le rythme des missions.,difficulty
+284,P001848,2026-05-09T12:00:00Z,5,fr,J'adoré le rythme des missions.,controls
+285,P007850,2025-11-28T12:00:00Z,4,fr,Je rencontre trop de problèmes techniques.,story
+286,P006940,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,difficulty
+287,P006421,2026-03-03T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+288,P010327,2026-06-30T12:00:00Z,1,fr,Jé rencontre trop de problèmes techniques.,story
+289,P008890,2026-03-31T12:00:00Z,1,en,Too many frustrating issues.,difficulty
+290,P000944,2025-12-27T12:00:00Z,3,fr,Les commandes me frustrent. 🙂,story
+291,P006334,2026-02-20T12:00:00Z,1,fr,La progréssion devient pénible.,bugs
+292,P005527,2026-06-30T12:00:00Z,5,fr,Lé monde est agréable à explorer.,price
+293,P001803,2026-03-14T12:00:00Z,3,fr,J'adore le rythme des missions.,price
+294,P006805,2026-02-21T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",other
+295,P008474,2026-05-07T12:00:00Z,1,fr,Les commandes me frustrent. 🙂,bugs
+296,P009146,2026-06-30T12:00:00Z,2,fr,Lés commandes me frustrent. 🙂,controls
+297,P008199,2026-06-30T12:00:00Z,3,fr,Une expérience convenable.,story
+298,P007492,2026-03-19T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,price
+299,P008490,2025-03-22T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,controls
+300,P006004,2025-08-08T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",bugs
+301,P011907,2026-04-06T12:00:00Z,5,fr,Lé monde est agréable à explorer.,difficulty
+302,P004899,2025-09-20T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+303,P010833,2025-03-21T12:00:00Z,5,fr,Lé monde est agréable à explorer.,difficulty
+304,P010374,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+305,P006445,2026-03-17T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+306,P000847,2026-03-03T12:00:00Z,5,fr,J'adoré le rythme des missions.,story
+307,P008730,2026-05-21T12:00:00Z,3,fr,Uné expérience convenable.,bugs
+308,P007970,2026-03-15T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,difficulty
+309,P011952,2026-04-07T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,controls
+310,P006182,2026-02-21T12:00:00Z,5,fr,Le monde est agréable à explorer.,price
+311,P006120,2025-05-06T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+312,P006843,2025-03-19T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,bugs
+313,P007064,2026-03-21T12:00:00Z,1,fr,Les commandes me frustrent.,bugs
+314,P006134,2026-04-04T12:00:00Z,2,fr,La progression devient pénible.,other
+315,P001931,2026-06-23T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",graphics
+316,P005270,2026-04-16T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent. 🙂",controls
+317,P003735,2026-04-09T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques. 🙂,difficulty
+318,P001579,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",other
+319,P009944,2026-05-31T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+320,P002104,2026-04-09T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+321,P010330,2025-02-24T12:00:00Z,5,fr,J'adore le rythme des missions.,bugs
+322,P005871,2026-04-07T12:00:00Z,1,fr,Les commandes me frustrent.,other
+323,P010126,2026-03-06T12:00:00Z,2,fr,Les commandes me frustrent.,other
+324,P009037,2025-04-26T12:00:00Z,1,fr,La progression devient pénible.,other
+325,P011854,2026-02-23T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",other
+326,P009047,2026-03-12T12:00:00Z,5,fr,J'adore le rythme des missions.,difficulty
+327,P005872,2025-11-17T12:00:00Z,3,fr,Une expérience convenable.,bugs
+328,P010437,2026-03-23T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+329,P002641,2026-06-24T12:00:00Z,1,fr,La progression devient pénible.,difficulty
+330,P005440,2026-04-04T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,bugs
+331,P005410,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,difficulty
+332,P009941,2026-06-18T12:00:00Z,1,fr,La progression devient pénible.,graphics
+333,P009748,2026-06-23T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+334,P010435,2026-06-30T12:00:00Z,1,fr,Les commandes me frustrent.,price
+335,P008907,2026-06-16T12:00:00Z,2,fr,Lés commandes me frustrent.,bugs
+336,P000938,2025-11-04T12:00:00Z,1,fr,Les commandes me frustrent. 🙂,controls
+337,P002782,2026-02-25T12:00:00Z,5,fr,J'adore le rythme des missions.,story
+338,P011710,2025-11-02T12:00:00Z,4,fr,J'adoré le rythme des missions.,controls
+339,P006415,2026-03-26T12:00:00Z,3,fr,"Quélques bonnes idées, mais rien de marquant.",controls
+340,P009775,2025-11-10T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,price
+341,P006978,2025-05-01T12:00:00Z,2,fr,Les commandes me frustrent. 🙂,difficulty
+342,P001014,2025-09-17T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+343,P005346,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",story
+344,P000122,2026-06-29T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",difficulty
+345,P002150,2026-03-24T12:00:00Z,1,fr,La progréssion devient pénible. 🙂,story
+346,P005076,2026-06-30T12:00:00Z,5,fr,J'adore le rythme des missions.,graphics
+347,P004697,2026-02-16T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+348,P002394,2026-03-16T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",bugs
+349,P001991,2026-05-08T12:00:00Z,5,fr,J'adoré le rythme des missions.,story
+350,P009374,2026-03-24T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,graphics
+351,P005370,2026-03-04T12:00:00Z,5,fr,Le monde est agréable à explorer.,price
+352,P005613,2026-05-28T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",controls
+353,P005856,2026-06-30T12:00:00Z,5,fr,Les commandes me frustrent.,story
+354,P010589,2025-08-27T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",graphics
+355,P009414,2025-08-17T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",graphics
+356,P011065,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,controls
+357,P006604,2026-06-28T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+358,P009785,2026-03-24T12:00:00Z,2,fr,Les commandes me frustrent.,difficulty
+359,P003273,2026-03-27T12:00:00Z,5,fr,J'adore le rythme des missions.,other
+360,P009405,2026-02-12T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+361,P002621,2026-05-16T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",controls
+362,P001003,2025-04-10T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",bugs
+363,P002200,2026-06-30T12:00:00Z,5,en,A delightful adventure.,graphics
+364,P000438,2025-07-16T12:00:00Z,5,fr,Le monde est agréable à explorer.,bugs
+365,P003398,2025-08-27T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+366,P009260,2025-05-08T12:00:00Z,5,fr,Lé monde est agréable à explorer.,difficulty
+367,P006084,2026-04-11T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,other
+368,P005368,2025-02-24T12:00:00Z,3,fr,Une expérience convenable.,bugs
+369,P004090,2025-12-23T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+370,P003097,2026-02-10T12:00:00Z,2,fr,"Très bonné surprise, je reviens souvent. 🙂",price
+371,P007052,2025-07-26T12:00:00Z,1,fr,Les commandes me frustrent.,bugs
+372,P004790,2026-04-22T12:00:00Z,1,fr,La progréssion devient pénible.,price
+373,P011130,2026-06-30T12:00:00Z,2,fr,Les commandes me frustrent.,bugs
+374,P010571,2026-03-27T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,controls
+375,P000680,2026-04-14T12:00:00Z,4,fr,J'adoré le rythme des missions. 🙂,difficulty
+376,P007313,2026-01-12T12:00:00Z,1,fr,Les commandes me frustrent. 🙂,controls
+377,P009012,2026-04-13T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+378,P009954,2025-08-25T12:00:00Z,1,fr,Le monde est agréable à explorer.,story
+379,P010985,2026-04-11T12:00:00Z,4,fr,J'adore le rythme des missions.,price
+380,P000084,2026-04-19T12:00:00Z,1,fr,Lés commandes me frustrent.,price
+381,P000308,2025-10-18T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+382,P009583,2025-04-09T12:00:00Z,2,fr,Lés commandes me frustrent.,difficulty
+383,P008853,2025-05-08T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent. 🙂",price
+384,P008798,2026-02-10T12:00:00Z,2,fr,Les commandes me frustrent.,story
+385,P003979,2025-08-20T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+386,P007646,2025-03-24T12:00:00Z,2,fr,Les commandes me frustrent.,bugs
+387,P005478,2025-05-18T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+388,P008278,2026-03-31T12:00:00Z,4,fr,J'adore le rythme des missions.,bugs
+389,P001782,2026-01-11T12:00:00Z,1,fr,La progression devient pénible.,other
+390,P008423,2026-05-07T12:00:00Z,4,fr,J'adoré le rythme des missions.,graphics
+391,P004569,2026-03-14T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+392,P000042,2026-03-06T12:00:00Z,5,en,A delightful adventure.,graphics
+393,P011117,2025-09-21T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,bugs
+394,P004806,2026-04-09T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+395,P009935,2025-02-17T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",difficulty
+396,P010091,2026-06-30T12:00:00Z,5,fr,J'adore le rythme des missions.,price
+397,P009805,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+398,P002412,2025-08-18T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,difficulty
+399,P006242,2026-02-09T12:00:00Z,5,fr,J'adore le rythme des missions.,difficulty
+400,P005622,2026-01-14T12:00:00Z,2,en,Too many frustrating issues.,controls
+401,P006756,2026-04-02T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",graphics
+402,P000664,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",bugs
+403,P009720,2025-12-15T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+404,P008817,2026-02-23T12:00:00Z,4,fr,J'adoré le rythme des missions.,bugs
+405,P002776,2026-06-30T12:00:00Z,2,fr,La progression devient pénible.,price
+406,P002233,2026-03-08T12:00:00Z,5,fr,J'adore le rythme des missions.,other
+407,P005883,2026-02-01T12:00:00Z,2,en,Too many frustrating issues.,other
+408,P000305,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",story
+409,P007831,2026-04-07T12:00:00Z,3,fr,"Lé jeu est correct, sans plus. 🙂",story
+410,P001220,2026-06-30T12:00:00Z,5,fr,Lé monde est agréable à explorer.,controls
+411,P011915,2025-12-09T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",difficulty
+412,P011904,2026-04-07T12:00:00Z,5,fr,J'adore le rythme des missions. 🙂,difficulty
+413,P009815,2026-04-03T12:00:00Z,1,fr,La progression devient pénible.,story
+414,P000848,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",bugs
+415,P001271,2025-02-19T12:00:00Z,2,fr,La progression devient pénible. 🙂,story
+416,P004620,2026-06-15T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",difficulty
+417,P003250,2026-04-22T12:00:00Z,3,fr,J'adoré le rythme des missions.,story
+418,P000689,2025-03-08T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",story
+419,P000723,2026-03-19T12:00:00Z,5,fr,J'adore le rythme des missions.,price
+420,P004112,2026-05-19T12:00:00Z,5,en,A delightful adventure.,graphics
+421,P011196,2026-04-11T12:00:00Z,4,fr,J'adoré le rythme des missions.,price
+422,P002928,2025-04-22T12:00:00Z,1,fr,Les commandes me frustrent.,price
+423,P007919,2026-05-08T12:00:00Z,2,fr,Les commandes me frustrent.,price
+424,P009254,2026-03-13T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,other
+425,P006883,2026-06-30T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",price
+426,P011869,2025-09-10T12:00:00Z,3,en,It is fine.,controls
+427,P008994,2026-02-17T12:00:00Z,3,fr,Jé rencontre trop de problèmes techniques.,graphics
+428,P000452,2026-03-13T12:00:00Z,4,fr,J'adore le rythme des missions.,difficulty
+429,P009774,2026-03-30T12:00:00Z,2,fr,La progression devient pénible.,story
+430,P007944,2025-02-23T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,graphics
+431,P002076,2025-12-21T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent. 🙂",controls
+432,P004276,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,price
+433,P003562,2026-06-30T12:00:00Z,2,fr,Une expérience convenable.,graphics
+434,P011942,2026-06-09T12:00:00Z,2,fr,La progression devient pénible.,controls
+435,P007730,2025-08-04T12:00:00Z,1,fr,"Très bonne surprise, je reviens souvent.",controls
+436,P004768,2026-06-30T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,graphics
+437,P004528,2025-04-04T12:00:00Z,2,fr,Les commandes me frustrent.,bugs
+438,P005667,2025-03-25T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",other
+439,P011377,2025-04-06T12:00:00Z,3,fr,Uné expérience convenable.,graphics
+440,P006472,2025-07-31T12:00:00Z,4,fr,Le monde est agréable à explorer.,other
+441,P005457,2025-10-11T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+442,P001569,2025-04-30T12:00:00Z,1,fr,La progréssion devient pénible.,story
+443,P009625,2026-05-29T12:00:00Z,5,fr,Le monde est agréable à explorer.,other
+444,P003625,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,story
+445,P004027,2026-03-17T12:00:00Z,3,fr,Une expérience convenable. 🙂,controls
+446,P001487,2025-11-17T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+447,P006131,2026-01-07T12:00:00Z,3,fr,Une expérience convenable.,graphics
+448,P007207,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,controls
+449,P001964,2026-04-23T12:00:00Z,5,fr,"Très bonné surprise, je reviens souvent.",story
+450,P000387,2025-06-25T12:00:00Z,4,fr,Le monde est agréable à explorer.,other
+451,P011341,2026-02-27T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+452,P010231,2025-07-24T12:00:00Z,3,fr,J'adore le rythme des missions.,controls
+453,P006144,2026-03-21T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",difficulty
+454,P004270,2026-03-15T12:00:00Z,2,fr,Lés commandes me frustrent. 🙂,price
+455,P007533,2026-06-29T12:00:00Z,4,fr,J'adoré le rythme des missions.,story
+456,P006626,2025-12-30T12:00:00Z,4,fr,Le monde est agréable à explorer. 🙂,controls
+457,P007126,2025-12-25T12:00:00Z,5,fr,Lé monde est agréable à explorer.,bugs
+458,P006585,2026-02-24T12:00:00Z,3,fr,"Lé jeu est correct, sans plus. 🙂",difficulty
+459,P004443,2026-06-19T12:00:00Z,2,fr,Les commandes me frustrent.,price
+460,P002241,2025-07-16T12:00:00Z,1,fr,Les commandes me frustrent.,story
+461,P009876,2026-03-24T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",difficulty
+462,P004896,2026-06-30T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+463,P003301,2026-03-25T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+464,P009519,2026-06-30T12:00:00Z,2,fr,Les commandes me frustrent.,story
+465,P001324,2026-05-03T12:00:00Z,1,fr,Une expérience convenable.,controls
+466,P000960,2025-08-10T12:00:00Z,1,fr,Je rencontre trop de problèmes techniques.,difficulty
+467,P011986,2026-06-30T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",price
+468,P004311,2026-04-03T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+469,P007460,2025-09-23T12:00:00Z,5,fr,Lé monde est agréable à explorer.,bugs
+470,P005319,2026-06-19T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",controls
+471,P010818,2026-06-30T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",bugs
+472,P003355,2026-06-30T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent. 🙂",graphics
+473,P011737,2025-02-24T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",price
+474,P006367,2026-04-24T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",difficulty
+475,P011618,2025-10-20T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",story
+476,P004164,2026-04-12T12:00:00Z,5,fr,J'adore le rythme des missions.,graphics
+477,P006369,2026-03-17T12:00:00Z,4,fr,J'adoré le rythme des missions.,story
+478,P007167,2025-10-07T12:00:00Z,2,fr,La progression devient pénible.,story
+479,P010459,2026-06-30T12:00:00Z,3,fr,"Quélques bonnes idées, mais rien de marquant.",story
+480,P002743,2026-04-15T12:00:00Z,2,fr,Les commandes me frustrent.,price
+481,P006038,2026-06-30T12:00:00Z,3,fr,Une expérience convenable.,graphics
+482,P006491,2026-06-30T12:00:00Z,3,fr,J'adore le rythme des missions.,graphics
+483,P011113,2026-02-27T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",other
+484,P007711,2026-06-22T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+485,P006717,2026-06-10T12:00:00Z,2,fr,La progression devient pénible.,bugs
+486,P001647,2026-06-30T12:00:00Z,1,fr,La progression devient pénible.,other
+487,P010264,2026-05-10T12:00:00Z,1,en,Too many frustrating issues.,other
+488,P001582,2026-06-30T12:00:00Z,4,fr,J'adore le rythme des missions.,story
+489,P007693,2025-08-13T12:00:00Z,1,fr,Les commandes me frustrent.,graphics
+490,P008766,2025-11-15T12:00:00Z,1,fr,Les commandes me frustrent.,story
+491,P010285,2026-03-20T12:00:00Z,2,fr,La progression devient pénible.,graphics
+492,P010287,2026-04-13T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+493,P003221,2025-11-26T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+494,P011987,2026-02-14T12:00:00Z,3,fr,Une expérience convenable. 🙂,difficulty
+495,P005004,2026-06-23T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",difficulty
+496,P010698,2026-03-08T12:00:00Z,1,fr,Les commandes me frustrent.,bugs
+497,P009293,2025-06-14T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",other
+498,P010625,2026-06-06T12:00:00Z,1,fr,La progression devient pénible.,story
+499,P004525,2026-01-28T12:00:00Z,2,fr,La progréssion devient pénible.,story
+500,P004107,2026-02-28T12:00:00Z,4,fr,Le monde est agréable à explorer.,graphics
+501,P006954,2026-06-30T12:00:00Z,1,fr,Le monde est agréable à explorer.,price
+502,P010191,2026-03-15T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",price
+503,P004853,2026-04-07T12:00:00Z,4,fr,J'adore le rythme des missions.,bugs
+504,P001827,2026-04-27T12:00:00Z,5,fr,J'adore le rythme des missions. 🙂,controls
+505,P001580,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+506,P009231,2025-07-08T12:00:00Z,5,en,A delightful adventure.,difficulty
+507,P002723,2026-04-21T12:00:00Z,2,fr,La progression devient pénible.,difficulty
+508,P002210,2026-03-25T12:00:00Z,4,en,A delightful adventure.,story
+509,P002067,2025-12-13T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+510,P007929,2026-04-21T12:00:00Z,4,fr,Le monde est agréable à explorer.,difficulty
+511,P004204,2026-06-29T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",controls
+512,P001907,2025-07-30T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+513,P004494,2026-06-30T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques.,price
+514,P002348,2026-06-29T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+515,P009640,2026-03-29T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",bugs
+516,P009250,2026-04-01T12:00:00Z,4,fr,J'adoré le rythme des missions.,difficulty
+517,P004254,2025-03-09T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",story
+518,P010120,2026-06-30T12:00:00Z,4,fr,J'adore le rythme des missions.,story
+519,P011744,2025-06-18T12:00:00Z,5,fr,Le monde est agréable à explorer.,bugs
+520,P011001,2026-02-08T12:00:00Z,3,fr,J'adore le rythme des missions.,graphics
+521,P004142,2025-03-25T12:00:00Z,5,fr,Lé monde est agréable à explorer.,graphics
+522,P010031,2025-12-04T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+523,P009486,2026-05-21T12:00:00Z,4,fr,"Très bonné surprise, je reviens souvent.",graphics
+524,P003494,2025-03-25T12:00:00Z,1,fr,Les commandes me frustrent.,price
+525,P010390,2026-04-12T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+526,P001679,2026-06-30T12:00:00Z,2,fr,Les commandes me frustrent.,price
+527,P004182,2025-03-24T12:00:00Z,2,fr,Le monde est agréable à explorer.,bugs
+528,P009286,2025-02-23T12:00:00Z,1,fr,La progréssion devient pénible.,story
+529,P005767,2026-06-27T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",story
+530,P004220,2025-12-28T12:00:00Z,5,fr,J'adore le rythme des missions.,graphics
+531,P005343,2026-06-30T12:00:00Z,2,fr,La progression devient pénible.,story
+532,P004942,2026-03-24T12:00:00Z,1,fr,Les commandes me frustrent.,other
+533,P001853,2025-11-02T12:00:00Z,5,fr,Le monde est agréable à explorer.,bugs
+534,P004132,2025-10-12T12:00:00Z,4,fr,J'adoré le rythme des missions.,controls
+535,P007896,2026-03-27T12:00:00Z,1,fr,La progréssion devient pénible.,bugs
+536,P000823,2026-01-08T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+537,P000091,2026-03-27T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+538,P008858,2026-03-02T12:00:00Z,1,fr,Jé rencontre trop de problèmes techniques.,story
+539,P002491,2026-02-21T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",story
+540,P007778,2026-05-24T12:00:00Z,1,fr,Jé rencontre trop de problèmes techniques.,other
+541,P004878,2025-06-22T12:00:00Z,5,fr,Lé monde est agréable à explorer.,bugs
+542,P010750,2026-05-11T12:00:00Z,2,fr,Les commandes me frustrent.,controls
+543,P005724,2026-04-25T12:00:00Z,4,fr,Le monde est agréable à explorer.,bugs
+544,P008261,2026-06-30T12:00:00Z,1,fr,Les commandes me frustrent.,controls
+545,P003195,2025-06-25T12:00:00Z,4,fr,J'adore le rythme des missions. 🙂,price
+546,P009183,2025-05-19T12:00:00Z,5,fr,Le monde est agréable à explorer.,graphics
+547,P003981,2025-10-12T12:00:00Z,5,fr,Le monde est agréable à explorer.,controls
+548,P008876,2026-04-08T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,bugs
+549,P006788,2026-04-11T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+550,P006904,2026-04-16T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+551,P006868,2026-02-08T12:00:00Z,2,fr,La progréssion devient pénible.,graphics
+552,P008684,2026-06-12T12:00:00Z,1,fr,Les commandes me frustrent.,bugs
+553,P008558,2026-03-20T12:00:00Z,3,fr,"Le jeu est correct, sans plus. 🙂",price
+554,P007543,2025-11-10T12:00:00Z,1,fr,Les commandes me frustrent.,price
+555,P003405,2026-05-07T12:00:00Z,1,fr,La progression devient pénible.,controls
+556,P010422,2026-06-25T12:00:00Z,2,fr,La progression devient pénible.,price
+557,P006262,2026-01-19T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+558,P009336,2026-06-30T12:00:00Z,3,fr,Une expérience convenable.,bugs
+559,P004786,2026-04-17T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",controls
+560,P000881,2025-12-07T12:00:00Z,4,fr,J'adore le rythme des missions.,graphics
+561,P009307,2026-01-20T12:00:00Z,4,en,A delightful adventure.,bugs
+562,P004312,2025-05-12T12:00:00Z,1,fr,Le monde est agréable à explorer.,graphics
+563,P008324,2026-03-21T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",difficulty
+564,P002947,2026-05-14T12:00:00Z,4,fr,J'adore le rythme des missions.,controls
+565,P005881,2025-05-16T12:00:00Z,2,fr,La progression devient pénible.,difficulty
+566,P005586,2026-02-09T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",controls
+567,P003155,2026-02-25T12:00:00Z,5,fr,J'adore le rythme des missions.,controls
+568,P007311,2026-01-17T12:00:00Z,1,fr,Jé rencontre trop de problèmes techniques.,controls
+569,P009490,2026-06-13T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",story
+570,P001404,2026-06-30T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+571,P004482,2026-01-12T12:00:00Z,3,fr,"Le jeu est correct, sans plus.",difficulty
+572,P010649,2025-07-01T12:00:00Z,4,fr,J'adore le rythme des missions.,story
+573,P003857,2025-08-29T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+574,P000555,2026-03-11T12:00:00Z,4,fr,J'adore le rythme des missions.,bugs
+575,P009406,2026-04-11T12:00:00Z,2,fr,Je rencontre trop de problèmes techniques. 🙂,controls
+576,P010022,2026-04-23T12:00:00Z,4,fr,J'adore le rythme des missions.,other
+577,P003127,2026-06-14T12:00:00Z,3,fr,"Lé jeu est correct, sans plus.",story
+578,P002976,2025-12-17T12:00:00Z,5,fr,J'adore le rythme des missions.,graphics
+579,P002142,2026-05-01T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent. 🙂",other
+580,P001542,2025-05-30T12:00:00Z,4,fr,Lé monde est agréable à explorer.,bugs
+581,P001099,2026-05-19T12:00:00Z,3,fr,J'adore le rythme des missions. 🙂,other
+582,P001335,2026-01-19T12:00:00Z,5,fr,Le monde est agréable à explorer. 🙂,price
+583,P003504,2026-04-20T12:00:00Z,2,fr,La progression devient pénible.,price
+584,P005372,2026-04-10T12:00:00Z,3,fr,"Quelques bonnes idées, mais rien de marquant.",difficulty
+585,P001949,2026-04-10T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+586,P009138,2025-12-18T12:00:00Z,4,fr,Lé monde est agréable à explorer.,other
+587,P007702,2026-03-18T12:00:00Z,5,en,A delightful adventure.,story
+588,P000018,2026-02-10T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",controls
+589,P006846,2026-01-28T12:00:00Z,1,en,Too many frustrating issues.,bugs
+590,P007318,2026-03-28T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",difficulty
+591,P001042,2026-06-30T12:00:00Z,4,fr,La progréssion devient pénible.,graphics
+592,P008954,2025-07-12T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+593,P003968,2026-02-25T12:00:00Z,4,fr,Le monde est agréable à explorer.,story
+594,P008729,2025-08-07T12:00:00Z,4,fr,"Très bonne surprise, je reviens souvent.",graphics
+595,P005604,2026-01-14T12:00:00Z,2,fr,Les commandes me frustrent. 🙂,bugs
+596,P008977,2025-12-04T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",controls
+597,P003260,2026-06-13T12:00:00Z,5,fr,La progression devient pénible.,price
+598,P005072,2026-06-15T12:00:00Z,5,fr,Le monde est agréable à explorer.,difficulty
+599,P009741,2026-06-30T12:00:00Z,5,fr,"Très bonne surprise, je reviens souvent.",price
+600,P005627,2025-11-23T12:00:00Z,4,fr,J'adoré le rythme des missions.,controls

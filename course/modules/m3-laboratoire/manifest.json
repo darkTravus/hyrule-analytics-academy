@@ -1,0 +1,24 @@
+{
+  "id": "m3",
+  "status": "available",
+  "title": "Le laboratoire de Purah",
+  "lessons": [
+    "statistiques descriptives",
+    "probabilités et Bayes",
+    "lois et théorème central limite",
+    "inférence et tests",
+    "puissance et taille d'échantillon",
+    "régression linéaire",
+    "causalité et paradoxe de Simpson",
+    "communication des résultats"
+  ],
+  "data": [
+    "data/csv/sessions.csv",
+    "data/csv/players.csv",
+    "data/csv/experiment_assignments.csv",
+    "data/csv/orders.csv",
+    "data/csv/order_lines.csv",
+    "data/csv/shop_items.csv",
+    "data/csv/exp_boss.csv"
+  ]
+}

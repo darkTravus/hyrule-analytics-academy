@@ -1,0 +1,26 @@
+.data-downloads { display: flex; flex-wrap: wrap; gap: .65rem; }
+.data-downloads .button { margin: 0; }
+.m1-exercise-form { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); align-items: end; }
+.m1-exercise-form > button, .m1-exercise-form > .exercise-status { grid-column: 1 / -1; }
+.m1-field { display: grid; gap: .35rem; min-width: 0; }
+.m1-field label, .rubric-item > label { color: #d6e0dd; font-weight: 750; }
+.m1-field input, .rubric-item textarea { width: 100%; min-height: 2.8rem; border: 1px solid #62747a; border-radius: .5rem; padding: .6rem .75rem; color: var(--paper); background: var(--night); }
+.rubric-form { display: grid; gap: .8rem; }
+.rubric-item { min-width: 0; border: 1px solid var(--line); border-radius: .75rem; padding: .85rem; }
+.rubric-item legend { padding: 0 .35rem; color: var(--gold); font-weight: 800; }
+.rubric-item > label { display: block; margin: .5rem 0 .3rem; }
+.rubric-item textarea { display: block; min-height: 5rem; resize: vertical; }
+.rubric-checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); gap: .45rem; margin-top: .75rem; }
+.rubric-check { display: flex !important; align-items: flex-start; gap: .45rem; color: #c2cecc !important; font-size: .88rem; font-weight: 500 !important; }
+.rubric-check input { flex: 0 0 auto; width: 1.15rem; height: 1.15rem; margin: .12rem 0 0; accent-color: var(--mint-deep); }
+.results-export { margin-top: 1rem; border-top: 1px solid #ffffff19; padding-top: 1rem; }
+.results-export p { color: #c2cecc; }
+.dungeon-timer { min-height: 1.5rem; color: var(--gold); font-weight: 800; }
+.m1-dungeon-form { display: grid; gap: .8rem; }
+.dungeon-task { border: 1px solid #ffffff19; border-radius: .7rem; padding: .8rem; background: #ffffff05; }
+.dungeon-task h3 { margin: 0 0 .7rem; font-size: 1rem; }
+.dungeon-task .m1-field { max-width: 28rem; margin: .5rem 0; }
+@media (max-width: 42rem) {
+  .data-downloads { align-items: stretch; flex-direction: column; }
+  .data-downloads .button { width: 100%; }
+}

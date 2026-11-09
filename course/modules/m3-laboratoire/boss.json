@@ -1,0 +1,21 @@
+{
+  "id": "B3",
+  "time_limit_seconds": 7200,
+  "max_score": 7,
+  "pass_score": 6,
+  "required_correct_calculations": 4,
+  "minimum_memo_words": 150,
+  "minimum_self_assessment": 2,
+  "data": "../../data/csv/exp_boss.csv",
+  "fields": [
+    {"key":"rate_control","label":"Rétention J7 — contrôle"},
+    {"key":"rate_treatment","label":"Rétention J7 — traitement"},
+    {"key":"difference","label":"Écart traitement − contrôle"},
+    {"key":"p_value","label":"p-value bilatérale du test de deux proportions"}
+  ],
+  "rubric": [
+    "Ma recommandation distingue l'ampleur mesurée de son importance pratique.",
+    "Je rapporte l'incertitude (intervalle ou p-value) et le périmètre des données.",
+    "Je cite une limite et précise quelle décision ou expérience suivrait."
+  ]
+}

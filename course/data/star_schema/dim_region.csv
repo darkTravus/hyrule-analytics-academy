@@ -1,0 +1,13 @@
+region_key,region_id,region_name,biome,danger_level
+1,1,Hyrule Field,plaine,2
+2,2,Hebra Mountains,montagne,5
+3,3,West Necluda,forêt,2
+4,4,Gerudo Highlands,désert,4
+5,5,East Necluda,lac,2
+6,6,Hyrule Ridge,plaine,3
+7,7,Tabantha Frontier,montagne,4
+8,8,Gerudo Desert,désert,5
+9,9,Lanayru Great Spring,lac,3
+10,10,Zora Domain,forêt,3
+11,11,Lake Hylia North,lac,1
+12,12,Death Mountain Peak,volcan,5

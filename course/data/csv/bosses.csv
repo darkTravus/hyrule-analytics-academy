@@ -1,0 +1,9 @@
+boss_id,boss_name,region_id,base_hp,difficulty
+1,Gardien de Pierre,1,800,1
+2,Reine des Sables,2,1400,2
+3,Ombre des Bois,3,2100,3
+4,Drake des Cimes,4,2800,4
+5,Sentinelle Rouge,5,3600,5
+6,Bête du Marais,6,4400,5
+7,Titan des Cendres,7,5200,5
+8,Seigneur du Néant,8,6000,5

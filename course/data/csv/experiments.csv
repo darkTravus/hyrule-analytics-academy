@@ -1,0 +1,4 @@
+experiment_id,experiment_label,hypothesis,start_date,end_date,primary_metric
+EXP_KOROK_2026_02,Récompense Korok,Une récompense au premier donjon améliore la rétention à J7.,2026-02-01,2026-03-15,retained_d7
+EXP_HEARTS_2026_05,Cœurs bonus,Un tutoriel plus généreux augmente les premiers achats.,2026-05-04,2026-05-17,first_purchase_within_7d
+EXP_PACK_2026_06,Pack aventurier,Une offre de pack augmente les achats en euros.,2026-06-01,2026-06-30,bought_pack_within_3d

@@ -1,0 +1,62 @@
+.module-main { padding-bottom: 3rem; }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: .55rem; padding: 1.2rem 0; color: var(--muted); font-size: .82rem; }
+.module-hero { position: relative; overflow: hidden; border: 1px solid #a4f0cb2c; border-radius: 1.2rem; padding: clamp(1.4rem, 5vw, 3.5rem); background: radial-gradient(ellipse at 85% 12%, #8deac523, transparent 40%), linear-gradient(130deg, #223b3d, #172832 72%); }
+.module-hero h1 { margin: .2rem 0 .7rem; font-size: clamp(2.4rem, 7vw, 4.7rem); letter-spacing: -.065em; line-height: 1; }
+.module-lead { max-width: 46rem; color: #c4cfce; font-size: 1.15rem; }
+.objective-list { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.3rem 0; padding: 0; list-style: none; }
+.objective-list li { border: 1px solid #ffffff20; border-radius: 99px; padding: .35rem .7rem; color: #d7e0da; background: #ffffff08; font-size: .78rem; }
+.module-save { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .6rem 1rem; margin-top: 1.6rem; border-top: 1px solid #ffffff20; padding-top: 1rem; }
+.module-save p { margin: 0; color: var(--mint); font-weight: 700; }
+.lesson-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.lesson-card, .activity-section, .deliverable-section, .fight-section { min-width: 0; border: 1px solid #ffffff18; border-radius: 1rem; padding: clamp(1.1rem, 3.5vw, 2rem); background: linear-gradient(145deg, #1d2c37, #17242e); }
+.lesson-number, .exercise-heading > span { margin: 0 0 .45rem; color: var(--gold); font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.lesson-card h2, .activity-section h2, .deliverable-section h2, .fight-section h2 { margin: 0 0 .75rem; font-size: clamp(1.45rem, 3vw, 2rem); letter-spacing: -.035em; }
+.lesson-card h3, .exercise-card h3 { margin: .15rem 0 .45rem; font-size: 1rem; }
+.lesson-card p, .lesson-card li, .deliverable-section li { color: #c2cecc; }
+.lesson-card pre, .exercise-card pre { overflow-x: auto; border: 1px solid #ffffff1b; border-radius: .65rem; padding: .85rem; color: #d5f4e1; background: #101a22; font-size: .83rem; }
+.lesson-card code, .deliverable-section code, .exercise-card code { color: #d5f4e1; }
+.role-grid, .format-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; margin: 1rem 0; }
+.role-grid > div, .format-grid > div { border: 1px solid #ffffff14; border-radius: .7rem; padding: .8rem; background: #ffffff05; }
+.role-grid p, .format-grid p { margin: 0; font-size: .88rem; }
+.install-list li { margin: .55rem 0; }
+.command-list { display: grid; gap: .65rem; padding-left: 1.35rem; }
+.command-list li { padding-left: .2rem; }
+.command-list code { display: block; font-weight: 800; }
+.command-list span { display: block; color: #b7c5c3; }
+.callout { border-left: 3px solid var(--gold); padding: .6rem .8rem; color: #d4dfd8 !important; background: #f5ca750c; }
+.hint-box { margin: .55rem 0; border: 1px solid #ffffff17; border-radius: .6rem; padding: .65rem .8rem; background: #ffffff05; }
+.hint-box summary { color: var(--mint); font-weight: 800; cursor: pointer; }
+.hint-box p { margin-bottom: .15rem; }
+.activity-section, .deliverable-section, .fight-section { margin-top: 1.2rem; }
+.activity-intro { max-width: 48rem; color: #bfceca; }
+.exercise-card { margin-top: 1rem; border: 1px solid #ffffff19; border-radius: .85rem; padding: clamp(.85rem, 2.5vw, 1.35rem); background: #ffffff05; }
+.exercise-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .8rem; }
+.exercise-heading > span { min-width: 6rem; margin: 0; }
+.exercise-heading h3 { margin: 0; }
+.exercise-root { margin: .8rem 0; }
+.exercise-form { display: grid; gap: .7rem; }
+.exercise-form textarea { width: 100%; min-height: 13rem; border: 1px solid #61747b; border-radius: .55rem; padding: .75rem; color: var(--paper); background: #111a24; font-family: Consolas, "Courier New", monospace; font-size: .88rem; line-height: 1.5; }
+.exercise-form label { font-weight: 800; }
+.exercise-status { min-height: 1.5rem; margin: 0; color: var(--mint); font-weight: 700; }
+.exercise-output pre { overflow-x: auto; border-radius: .5rem; padding: .8rem; background: #101a22; }
+.deliverable-form { display: grid; gap: .7rem; max-width: 44rem; margin: 1rem 0; }
+.deliverable-form > label:first-child { font-weight: 800; }
+.deliverable-form input[type="url"] { min-height: 2.8rem; border: 1px solid #62747a; border-radius: .5rem; padding: .6rem .75rem; color: var(--paper); background: var(--night); }
+.confirmation-label { display: flex; align-items: flex-start; gap: .55rem; color: #c2cecc; }
+.confirmation-label input { width: 1.2rem; height: 1.2rem; flex: 0 0 auto; margin-top: .2rem; accent-color: var(--mint-deep); }
+.deliverable-form [role="status"], .module-status { min-height: 1.4rem; color: var(--mint); }
+.fight-root { margin-top: 1rem; }
+.dungeon-question { border: 1px solid #ffffff19; border-radius: .8rem; padding: 1rem; background: #ffffff05; }
+.dungeon-question > p { color: var(--gold); font-weight: 800; }
+.dungeon-answers { display: grid; grid-template-columns: auto 1fr; gap: .7rem .55rem; margin: .8rem 0 1rem; border: 1px solid var(--line); border-radius: .7rem; padding: .8rem; }
+.dungeon-answers legend { grid-column: 1 / -1; padding: 0 .25rem; font-weight: 800; }
+.dungeon-answers input { align-self: center; min-width: 1.2rem; min-height: 1.2rem; accent-color: var(--mint-deep); }
+.dungeon-answers textarea, .dungeon-answers input[type="number"] { grid-column: 1 / -1; width: 100%; min-height: 2.7rem; border: 1px solid #62747a; border-radius: .5rem; padding: .6rem; color: var(--paper); background: var(--night); }
+.dungeon-status { min-height: 1.4rem; color: var(--mint); }
+.dungeon-result { border-left: 3px solid var(--mint); padding: .8rem 1rem; background: #a4f0cb0d; }
+.module-next { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .7rem; margin: 1.5rem 0 .5rem; border-top: 1px solid #ffffff19; padding-top: 1rem; color: var(--muted); font-size: .88rem; }
+@media (max-width: 42rem) {
+  .role-grid, .format-grid { grid-template-columns: 1fr; }
+  .module-save { align-items: flex-start; flex-direction: column; }
+  .module-next { flex-direction: column; }
+}

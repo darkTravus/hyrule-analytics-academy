@@ -1,0 +1,23 @@
+{
+  "m0": {"min_ratio": 1.0, "must": [], "readme_lines": 10, "dirs": ["data", "notebooks", "src"]},
+  "m1": {"min_ratio": 0.8, "must": ["E1.2", "E1.3"], "workbook": "m1/classeur.xlsx",
+         "sheets": ["Données brutes", "Nettoyage", "Synthèse"]},
+  "m2": {"min_exercises": 24, "sql_file": "m2/queries.sql", "database": "data/hqo_lite.sqlite", "comment_ratio": 0.8},
+  "m3": {"min_ratio": 0.8, "must": ["E3.4", "E3.7"], "notebook": "m3/stats_pratiques.ipynb",
+         "human_review": "mémo de 150 mots et explication orale du manque de puissance"},
+  "m4": {"min_ratio": 0.8, "must": ["E4.3", "E4.5", "E4.8"], "notebook": "m4/atlas_monstres.ipynb",
+         "human_review": "lisibilité de la conclusion pour un tiers"},
+  "m5": {"min_ratio": 0.8, "must": ["E5.2", "E5.3"], "files": ["m5/dashboard.pbix", "m5/capture.png", "m5/note.md"],
+         "note_words": 150, "human_review": "test d'utilisabilité avec un tiers et qualité de la note"},
+  "m6": {"min_ratio": 0.916, "cmd": "python src/clean.py --raw data/raw --out data/clean", "timeout_s": 120,
+         "clean_dir": "data/clean", "files": ["README.md", "requirements.txt"], "dirs": ["src", "tests"],
+         "human_review": "un tiers reproduit les résultats avec le seul README"},
+  "m7": {"min_ratio": 0.8, "must": ["E7.4"], "notebook": "m7/churn.ipynb",
+         "ranges": {"E7.3.auc": [0.72, 0.90], "E7.5.auc": [0.76, 0.82]},
+         "human_review": "épreuve des 10 scénarios, synthèse de 2 pages (AUC déclarées par l'élève, non recalculées)"},
+  "m8": {"min_ratio": 0.8, "predictions": "m8/predictions.csv", "gold": "data/reviews/reviews_gold_hashed.json",
+         "rows": 200, "accuracy_min": 0.70, "notebook": "m8/classification.ipynb",
+         "human_review": "rapport d'audit de l'analyse piégée"},
+  "m9": {"structure_only": true, "readme_lines": 40, "files": ["requirements.txt"], "dirs": ["tests"],
+         "human_review": "grille sur 100 (seuil 70) et présentation orale : correction humaine uniquement"}
+}

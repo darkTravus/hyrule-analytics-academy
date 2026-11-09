@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prépare ton poste, découvre Git et réalise tes premières explorations de données et d'API.">
+  <title>M0 — L'Éveil du héros | Chroniques d'Hyrule Analytics</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="stylesheet" href="./module.css">
+  <script type="module" src="./module.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html" aria-label="Chroniques d'Hyrule Analytics, accueil">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>CHRONIQUES <b>DATA GUILD</b></span>
+    </a>
+    <nav aria-label="Navigation principale">
+      <a href="../../index.html#parcours">La carte</a>
+      <a href="#activites">Activités</a>
+      <a href="#livrable">Livrable</a>
+    </nav>
+  </header>
+
+  <main id="contenu" class="module-main">
+    <nav class="breadcrumbs" aria-label="Fil d'Ariane">
+      <a href="../../index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Module 0</span>
+    </nav>
+
+    <section class="module-hero" aria-labelledby="module-title">
+      <p class="eyebrow">MODULE 00 · SEMAINE 1</p>
+      <h1 id="module-title">L'Éveil du héros</h1>
+      <p class="module-lead">Prépare ton poste d'analyste et envoie ta première requête vers l'encyclopédie du royaume.</p>
+      <p class="project-disclaimer">Projet pédagogique indépendant, créé à des fins d’apprentissage. Il n’est ni associé à The Legend of Zelda ni affilié à Nintendo, et n’est ni approuvé ni commandité par Nintendo.</p>
+      <ul class="objective-list" aria-label="Objectifs du module">
+        <li>Préparer Python, Git et VS Code</li>
+        <li>Créer un dépôt et suivre ses changements</li>
+        <li>Lire des fichiers CSV et JSON, et comprendre leur grain</li>
+        <li>Interroger une API et vérifier une réponse</li>
+        <li>Utiliser l'IA avec méthode et prudence</li>
+      </ul>
+      <div class="module-save">
+        <p id="module-progress" role="status" aria-live="polite">Chargement de ta progression…</p>
+        <a class="button button--secondary" href="../../index.html#progression">Créer ou importer ma progression</a>
+      </div>
+    </section>
+
+    <section class="lesson-list" aria-label="Leçons du module">
+      <article class="lesson-card" id="L0.1">
+        <p class="lesson-number">L0.1 · MÉTIERS DE LA DATA</p>
+        <h2>Qui fait quoi dans une équipe data ?</h2>
+        <p>Une équipe transforme une question métier en décision. Plusieurs métiers collaborent, avec des responsabilités différentes.</p>
+        <div class="role-grid">
+          <div><h3>Analyste de données</h3><p>Explore les données, répond aux questions et partage des indicateurs.</p></div>
+          <div><h3>Data engineer</h3><p>Construit et entretient les flux qui rendent les données accessibles.</p></div>
+          <div><h3>Data scientist</h3><p>Utilise des méthodes statistiques et des modèles pour étudier des phénomènes.</p></div>
+          <div><h3>ML engineer</h3><p>Met en production et surveille des modèles de machine learning.</p></div>
+          <div><h3>AI engineer</h3><p>Conçoit des applications qui s'appuient sur des modèles d'intelligence artificielle.</p></div>
+          <div><h3>Gouvernance des données</h3><p>Définit des règles de qualité, d'accès, de documentation et de protection.</p></div>
+        </div>
+        <p class="callout">Ces rôles se recouvrent parfois. Dans ce parcours, tu apprendras d'abord à poser une question claire, vérifier les données et expliquer tes conclusions.</p>
+      </article>
+
+      <article class="lesson-card" id="L0.2">
+        <p class="lesson-number">L0.2 · TON POSTE DE TRAVAIL</p>
+        <h2>Installer et vérifier les outils</h2>
+        <p>Tu as besoin d'un éditeur, de Python et de Git sur ton ordinateur. Le site du cours ne nécessite pas ces installations pour consulter les leçons.</p>
+        <ol class="install-list">
+          <li><a href="https://code.visualstudio.com/download" target="_blank" rel="noreferrer">Installe Visual Studio Code</a>, ton éditeur de fichiers et de code.</li>
+          <li><a href="https://www.python.org/downloads/" target="_blank" rel="noreferrer">Installe Python 3</a>. Sous Windows, coche « Add Python to PATH » si l'option apparaît.</li>
+          <li><a href="https://git-scm.com/downloads" target="_blank" rel="noreferrer">Installe Git</a>, qui conserve l'historique de ton travail.</li>
+          <li>Ouvre un nouveau terminal et vérifie les versions avec les commandes ci-dessous.</li>
+        </ol>
+        <pre><code># Windows — essaie py si python n'est pas reconnu
+py --version
+git --version
+
+# macOS ou Linux
+python3 --version
+git --version</code></pre>
+        <p>Tu dois voir un numéro de version pour Python et Git. Si la commande n'est pas reconnue, ferme et rouvre le terminal après l'installation.</p>
+        <p class="callout">N'installe pas de paquet Python pour suivre les exercices de ce module : ils s'exécutent dans le navigateur. Les outils locaux serviront aux projets suivants.</p>
+      </article>
+
+      <article class="lesson-card" id="L0.3">
+        <p class="lesson-number">L0.3 · SIX COMMANDES GIT</p>
+        <h2>Garder une histoire claire de ton travail</h2>
+        <p>Git est un outil de versionnement : il garde des points de repère de tes fichiers. GitHub héberge une copie distante que tu peux partager.</p>
+        <ol class="command-list">
+          <li><code>git clone URL</code><span>Copie un dépôt distant sur ton ordinateur.</span></li>
+          <li><code>git status</code><span>Montre les fichiers modifiés, préparés ou non suivis.</span></li>
+          <li><code>git add README.md</code><span>Prépare les changements sélectionnés pour le prochain commit.</span></li>
+          <li><code>git commit -m "Décris le changement"</code><span>Enregistre un instantané local des changements préparés.</span></li>
+          <li><code>git push</code><span>Envoie tes commits vers le dépôt distant.</span></li>
+          <li><code>git pull</code><span>Récupère et intègre les changements du dépôt distant.</span></li>
+        </ol>
+        <p>Le cycle habituel est <code>status</code>, <code>add</code>, <code>commit</code>, puis <code>push</code>. Le commit reste local tant que tu ne le pousses pas.</p>
+        <details class="hint-box">
+          <summary>À quoi sert le fichier .gitignore ?</summary>
+          <p>Il indique à Git quels fichiers locaux ne doivent pas être suivis, par exemple un environnement virtuel ou des paramètres privés. Vérifie toujours le contenu avant de publier : .gitignore ne retire pas un secret déjà commité.</p>
+        </details>
+      </article>
+
+      <article class="lesson-card" id="L0.4">
+        <p class="lesson-number">L0.4 · ORGANISER UN PROJET</p>
+        <h2>Ranger tes fichiers pour les retrouver</h2>
+        <p>Un dépôt simple sépare les données, les analyses et le code réutilisable. Choisis des noms explicites et explique le projet dans README.md.</p>
+        <pre><code>data-portfolio/
+├── README.md
+├── data/
+├── notebooks/
+└── src/</code></pre>
+        <ul>
+          <li><code>data/</code> contient les fichiers de données autorisés.</li>
+          <li><code>notebooks/</code> contient les explorations et analyses.</li>
+          <li><code>src/</code> contient le code Python réutilisable.</li>
+          <li><code>README.md</code> présente le but, les étapes et les limites du projet.</li>
+        </ul>
+        <p>Ne publie jamais de mot de passe, clé d'API, donnée personnelle ou fichier dont tu n'as pas le droit de partage.</p>
+      </article>
+
+      <article class="lesson-card" id="L0.5">
+        <p class="lesson-number">L0.5 · CSV, JSON ET GRAIN</p>
+        <h2>Demander : « une ligne représente quoi ? »</h2>
+        <p>Le <strong>grain</strong> d'une table est l'objet représenté par une ligne. Le définir évite de confondre le nombre de commandes avec le nombre de clients.</p>
+        <div class="format-grid">
+          <div><h3>CSV</h3><p>Des lignes et colonnes en texte, adaptées aux tableaux simples. Le format ne conserve pas les formules ou la mise en forme d'un tableur.</p></div>
+          <div><h3>JSON</h3><p>Des objets et des listes structurés, souvent utilisés pour les réponses d'API. Les objets peuvent être imbriqués.</p></div>
+        </div>
+        <p>Exemple : si une table contient une ligne par article commandé, une commande avec trois articles produit trois lignes. Pour compter les commandes, compte les identifiants de commande distincts.</p>
+        <pre><code>order_id,product,quantity
+O-101,shield,1
+O-101,potion,2</code></pre>
+        <p>Dans cet extrait, le grain est l'article commandé. Les deux lignes peuvent appartenir à la même commande.</p>
+      </article>
+
+      <article class="lesson-card" id="L0.6">
+        <p class="lesson-number">L0.6 · PREMIER APPEL D'API</p>
+        <h2>Lire une réponse du Compendium</h2>
+        <p>Une API expose des données par des requêtes. Une requête <code>GET</code> demande une ressource ; la réponse contient un statut HTTP et, souvent, un document JSON.</p>
+        <ol>
+          <li>Construis l'adresse d'une ressource documentée.</li>
+          <li>Envoie la requête GET et vérifie son statut.</li>
+          <li>Lis les clés du JSON au lieu de supposer sa structure.</li>
+          <li>Traite les valeurs absentes et les erreurs réseau.</li>
+        </ol>
+        <pre><code>https://api.hyrule-compendium.com/v3/compendium/entry/white-maned_lynel</code></pre>
+        <p>Dans l'exercice, <code>get_json(url)</code> renvoie le JSON de la réponse. Le cours tente l'API en ligne, puis utilise le miroir local si le service est indisponible.</p>
+        <p class="callout">Un statut réussi ne garantit pas que la liste renvoyée contient des éléments. Vérifie le contenu et le contexte de la réponse.</p>
+      </article>
+
+      <article class="lesson-card" id="L0.7">
+        <p class="lesson-number">L0.7 · BIEN UTILISER L'IA</p>
+        <h2>Garder le contrôle de ton analyse</h2>
+        <ul>
+          <li>Essaie seul pendant quinze minutes avant de demander un indice.</li>
+          <li>Demande une explication ou une piste, pas seulement une réponse finale.</li>
+          <li>Vérifie chaque chiffre avec les données, le code et une source fiable.</li>
+          <li>Ne transmets jamais de données personnelles, mot de passe ou clé secrète.</li>
+          <li>Note ce que l'outil a proposé et ce que tu as vérifié toi-même.</li>
+        </ul>
+        <p>Tu restes responsable du résultat remis. Une réponse formulée avec assurance peut malgré tout être fausse, incomplète ou inadaptée.</p>
+      </article>
+    </section>
+
+    <section id="activites" class="activity-section" aria-labelledby="activities-title">
+      <p class="eyebrow">MISE EN PRATIQUE</p>
+      <h2 id="activities-title">À toi de jouer</h2>
+      <p class="activity-intro">Essaie chaque défi pendant quinze minutes avant d'ouvrir ses indices. Les exercices Python chargent Pyodide au premier lancement et nécessitent une connexion Internet.</p>
+
+      <article class="exercise-card">
+        <div class="exercise-heading"><span>E0.1 · 10 XP</span><h3>Interroger le Compendium</h3></div>
+        <p>Récupère une entrée, vérifie sa catégorie et calcule le nombre de butins.</p>
+        <div id="exercise-E0.1" class="exercise-root"></div>
+        <details class="hint-box"><summary>Indice 1</summary><p>Une URL d'API se passe à <code>get_json</code> et sa réponse est un objet Python.</p></details>
+        <details class="hint-box"><summary>Indice 2</summary><p>La ressource renvoie les données dans une clé nommée <code>data</code>. Vérifie aussi la catégorie.</p></details>
+        <details class="hint-box"><summary>Indice 3</summary><p>Une liste absente peut être traitée comme une liste vide avec <code>entry.get("drops") or []</code>.</p></details>
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>response_data = await get_json(url)
+entry = response_data["data"]
+drops = entry.get("drops") or []
+result = f"{entry['category']}|{len(drops)}"</code></pre></details>
+      </article>
+
+      <article class="exercise-card">
+        <div class="exercise-heading"><span>E0.2 · 15 XP</span><h3>Compter les catégories</h3></div>
+        <p>Lis le snapshot local et compte combien d'entrées appartiennent à chaque catégorie.</p>
+        <div id="exercise-E0.2" class="exercise-root"></div>
+        <details class="hint-box"><summary>Indice 1</summary><p>Utilise le module standard <code>json</code> et ouvre le chemin fourni dans le code de départ.</p></details>
+        <details class="hint-box"><summary>Indice 2</summary><p>Parcours <code>snapshot["entries"]</code>, puis lis la clé <code>category</code> de chaque entrée.</p></details>
+        <details class="hint-box"><summary>Indice 3</summary><p>Un dictionnaire peut stocker un compteur par catégorie avec <code>counts.get(category, 0) + 1</code>.</p></details>
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>counts = {}
+for entry in snapshot["entries"]:
+    category = entry["category"]
+    counts[category] = counts.get(category, 0) + 1
+result = sum(counts.values())</code></pre></details>
+      </article>
+
+      <article class="exercise-card">
+        <div class="exercise-heading"><span>E0.3 · 15 XP</span><h3>Comparer les lieux des monstres</h3></div>
+        <p>Classe les monstres par nombre de lieux connus. Traite les valeurs nulles et départage les égalités par nom.</p>
+        <div id="exercise-E0.3" class="exercise-root"></div>
+        <details class="hint-box"><summary>Indice 1</summary><p>Filtre les entrées dont la catégorie est <code>monsters</code>.</p></details>
+        <details class="hint-box"><summary>Indice 2</summary><p>Utilise <code>entry.get("common_locations") or []</code> avant de compter.</p></details>
+        <details class="hint-box"><summary>Indice 3</summary><p>Pour un tri décroissant par nombre puis alphabétique, la clé peut être <code>(-nombre, nom)</code>.</p></details>
+        <details class="hint-box"><summary>Solution commentée</summary><pre><code>ranked = sorted(
+    monsters,
+    key=lambda entry: (-len(entry.get("common_locations") or []), entry["name"]),
+)
+top_five = [entry["name"] for entry in ranked[:5]]
+result = json.dumps(top_five, ensure_ascii=False)</code></pre></details>
+      </article>
+    </section>
+
+    <section id="livrable" class="deliverable-section" aria-labelledby="deliverable-title">
+      <p class="eyebrow">TON LIVRABLE</p>
+      <h2 id="deliverable-title">Créer ton dépôt data-portfolio</h2>
+      <ol>
+        <li>Sur GitHub, crée un dépôt appelé <code>data-portfolio</code>.</li>
+        <li>Ajoute un README.md qui présente ton objectif, tes outils et tes règles de protection des données. Écris au moins dix lignes non vides.</li>
+        <li>Clone le dépôt, modifie le README, puis utilise <code>git status</code>, <code>git add</code>, <code>git commit</code> et <code>git push</code>.</li>
+        <li>Vérifie que la page du dépôt affiche bien ta dernière version.</li>
+      </ol>
+      <p>Ne publie aucune donnée privée ou confidentielle. Tu peux documenter un projet sans y déposer de données sensibles.</p>
+      <form id="deliverable-form" class="deliverable-form">
+        <label for="deliverable-url">URL GitHub du dépôt</label>
+        <input id="deliverable-url" name="url" type="url" placeholder="https://github.com/ton-compte/data-portfolio" autocomplete="url" required>
+        <label class="confirmation-label"><input id="readme-confirmation" type="checkbox" required> Je confirme que mon README contient au moins dix lignes non vides et ne révèle aucun secret.</label>
+        <button class="button button--primary" type="submit">Vérifier le format et enregistrer</button>
+        <p id="deliverable-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="callout">La page vérifie le format de l'URL et ta confirmation. Elle ne contacte pas GitHub et ne vérifie pas le contenu du dépôt.</p>
+    </section>
+
+    <section class="fight-section" aria-labelledby="fight-title">
+      <p class="eyebrow">COMBAT DE BOSS · VALIDATION DU MODULE</p>
+      <h2 id="fight-title">Défie ton adversaire</h2>
+      <p>Le combat reprend les notions de Git, formats de fichiers, grain, API et usage responsable de l'IA. Tu peux le recommencer pour t'entraîner.</p>
+      <button id="start-fight" class="button button--primary" type="button">Commencer le combat</button>
+      <div id="fight-root" class="fight-root"></div>
+    </section>
+
+    <section class="fight-section" aria-labelledby="dungeon-title">
+      <p class="eyebrow">ÉPREUVE DU DONJON B0 · FACULTATIVE</p>
+      <h2 id="dungeon-title">Le Gardien de l'entrée</h2>
+      <p>Réponds à dix questions en quinze minutes, sans indice ni solution. Une tentative est enregistrée par jour sur cet appareil. Cette épreuve ne donne pas d'XP.</p>
+      <button id="start-dungeon" class="button button--secondary" type="button">Commencer l'épreuve du donjon</button>
+      <div id="dungeon-root" class="fight-root"></div>
+    </section>
+
+    <nav class="module-next" aria-label="Navigation du module">
+      <a href="../../index.html#parcours">← Retour à la carte</a>
+      <span>Module 1 : prochaine étape du parcours</span>
+    </nav>
+    <p id="module-status" class="module-status" role="status" aria-live="polite"></p>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand brand--footer" href="../../index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>CHRONIQUES <b>DATA GUILD</b></span></a>
+    <p>Projet pédagogique indépendant, non affilié à Nintendo. Zelda est une marque de Nintendo.</p>
+  </footer>
+</body>
+</html>

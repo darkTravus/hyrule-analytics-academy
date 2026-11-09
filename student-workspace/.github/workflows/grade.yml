@@ -1,0 +1,66 @@
+# À placer dans le dépôt-modèle élève (template). Corrige les modules dont les fichiers ont changé.
+# Gratuit : dépôt public = minutes illimitées ; dépôt privé = quota mensuel du plan GitHub Free.
+name: Correction automatique
+
+on:
+  push:
+    paths: ['m[0-9]/**', 'src/**', 'tests/**', 'data/**']
+  workflow_dispatch:
+    inputs:
+      module:
+        description: 'Module à corriger (ex. m2)'
+        required: true
+
+permissions:
+  contents: read          # aucun secret, aucun droit d'écriture
+
+env:
+  ACADEMY_REPO: TON-COMPTE/hyrule-analytics-academy   # dépôt public du cours
+  ACADEMY_REF: v1.0.0                                  # étiquette figée : les seuils ne changent pas en cours de route
+
+jobs:
+  detect:
+    runs-on: ubuntu-24.04
+    outputs:
+      modules: ${{ steps.pick.outputs.modules }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - id: pick
+        env:
+          INPUT_MODULE: ${{ inputs.module }}
+        run: |
+          if [ -n "$INPUT_MODULE" ]; then list="$INPUT_MODULE"
+          else list=$( (git diff --name-only HEAD^ HEAD 2>/dev/null || git ls-files) | grep -oE '^m[0-9]' | sort -u | tr '\n' ' ')
+          fi
+          json=$(printf '%s\n' $list | grep -E '^m[0-9]$' | jq -R . | jq -sc .)
+          echo "modules=${json}" >> "$GITHUB_OUTPUT"
+
+  grade:
+    needs: detect
+    if: needs.detect.outputs.modules != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        module: ${{ fromJson(needs.detect.outputs.modules) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.ACADEMY_REPO }}
+          ref: ${{ env.ACADEMY_REF }}
+          path: .academy
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: .academy/grading/requirements.txt
+      - run: pip install -r .academy/grading/requirements.txt -r requirements.txt || pip install -r .academy/grading/requirements.txt
+      - run: python .academy/grading/grade.py --module ${{ matrix.module }} --workspace . --academy .academy --report report-${{ matrix.module }}.json
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapport-${{ matrix.module }}
+          path: report-${{ matrix.module }}.json

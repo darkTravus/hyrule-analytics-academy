@@ -1,0 +1,22 @@
+{
+  "id": "m0",
+  "title": "L'Éveil du héros",
+  "status": "available",
+  "lessons": [
+    "L0.1",
+    "L0.2",
+    "L0.3",
+    "L0.4",
+    "L0.5",
+    "L0.6",
+    "L0.7"
+  ],
+  "exercises": [
+    "E0.1",
+    "E0.2",
+    "E0.3",
+    "E0.4"
+  ],
+  "combat": "boss-fight",
+  "dungeon": "B0"
+}

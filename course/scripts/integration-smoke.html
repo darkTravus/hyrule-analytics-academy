@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<title>Integration smoke test</title>
+<pre id="result">running</pre>
+<script type="module">
+import { createCourseRuntime } from '../assets/js/core/course-runtime.js';
+import { checkExerciseResult } from '../assets/js/core/quiz.js';
+import { hashRows } from '../assets/js/core/canon.js';
+
+const output = document.querySelector('#result');
+const report = {};
+let runtime;
+let python;
+try {
+  output.textContent = 'loading runtime';
+  runtime = await createCourseRuntime({ mockOptions: { latency: false, random: () => 0.9 } });
+  output.textContent = 'testing SQL';
+  report.database = await runtime.sql.execute('SELECT COUNT(*) AS player_count FROM players', { includeQueryPlan: false });
+
+  output.textContent = 'testing Compendium mirror';
+  const mirror = await runtime.getCompendiumJson(
+    'https://api.hyrule-compendium.com/v3/compendium/all',
+    { fetchImpl: url => runtime.api.mirrorFetch(new URL(url)) },
+  );
+  report.compendium = { source: mirror.source, count: mirror.data.data.length };
+
+  output.textContent = 'testing mock API';
+  const apiResponse = await runtime.apiFetch('https://api.hqo-studio.test/v1/players?limit=2', {
+    headers: { 'X-API-Key': 'hqo_demo_key_2026' },
+  });
+  report.mockApi = { status: apiResponse.status, count: (await apiResponse.json()).data.length };
+
+  output.textContent = 'loading Python';
+  python = runtime.createPythonRunner();
+  output.textContent = 'testing Python API bridge';
+  report.python = await python.run({
+    code: [
+      'from hqo_client import HQOClient',
+      'client = HQOClient(request=_hqo_request, max_retries=0)',
+      'players = [player async for player in client.paginate("/v1/players", {"limit": 500})]',
+      'answer = len(players)',
+    ].join('\n'),
+    tests: 'assert answer == 2000',
+    answerExpression: 'answer',
+  });
+  const id = 'E0.99';
+  const expectedRows = [['test', 1]];
+  const key = { salt: 'integration', items: { [id]: {
+    kind: 'sql',
+    hash: await hashRows(id, expectedRows, 'integration'),
+    order_matters: false,
+  } } };
+  report.answerCheck = await checkExerciseResult({ id, type: 'sql' }, { rows: expectedRows }, key);
+  output.textContent = JSON.stringify(report);
+} catch (error) {
+  output.textContent = JSON.stringify({ ...report, error: `${error.name}: ${error.message}` });
+} finally {
+  python?.dispose();
+  runtime?.dispose();
+}
+</script>

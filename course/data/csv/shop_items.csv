@@ -1,0 +1,81 @@
+item_id,item_name,category,rarity,price_rupees,price_eur,compendium_name
+1,Potion 01,potion,commun,30.0,,meteor rod
+2,Potion 02,potion,rare,75.0,,
+3,Potion 03,potion,épique,120.0,,mighty lynel crusher
+4,Potion 04,potion,légendaire,165.0,,
+5,Potion 05,potion,commun,210.0,,
+6,Potion 06,potion,rare,255.0,,
+7,Potion 07,potion,épique,300.0,,
+8,Potion 08,potion,légendaire,345.0,,
+9,Potion 09,potion,commun,390.0,,electric chuchu
+10,Potion 10,potion,rare,435.0,,guardian shield
+11,Potion 11,potion,épique,30.0,,sentry
+12,Potion 12,potion,légendaire,75.0,,
+13,Potion 13,potion,commun,120.0,,traveler's bow
+14,Potion 14,potion,rare,165.0,,traveler's claymore
+15,Potion 15,potion,épique,210.0,,
+16,Potion 16,potion,légendaire,255.0,,
+17,Potion 17,potion,commun,300.0,,red-tusked boar
+18,Potion 18,potion,rare,345.0,,
+19,Potion 19,potion,épique,390.0,,
+20,Potion 20,potion,légendaire,435.0,,white horse
+21,Arme 01,arme,commun,30.0,,savage lynel spear
+22,Arme 02,arme,rare,75.0,,keese
+23,Arme 03,arme,épique,120.0,,
+24,Arme 04,arme,légendaire,165.0,,
+25,Arme 05,arme,commun,210.0,,boat oar
+26,Arme 06,arme,rare,255.0,,thunderstorm rod
+27,Arme 07,arme,épique,300.0,,
+28,Arme 08,arme,légendaire,345.0,,
+29,Arme 09,arme,commun,390.0,,moonlight scimitar
+30,Arme 10,arme,rare,435.0,,stone talus (rare)
+31,Arme 11,arme,épique,30.0,,
+32,Arme 12,arme,légendaire,75.0,,
+33,Arme 13,arme,commun,120.0,,dragonbone moblin spear
+34,Arme 14,arme,rare,165.0,,
+35,Arme 15,arme,épique,210.0,,strengthened lizal bow
+36,Arme 16,arme,légendaire,255.0,,
+37,Arme 17,arme,commun,300.0,,
+38,Arme 18,arme,rare,345.0,,
+39,Arme 19,arme,épique,390.0,,
+40,Arme 20,arme,légendaire,435.0,,
+41,Armure 01,armure,commun,30.0,,dragonbone boko spear
+42,Armure 02,armure,rare,75.0,,mountain buck
+43,Armure 03,armure,épique,120.0,,donkey
+44,Armure 04,armure,légendaire,165.0,,grassland fox
+45,Armure 05,armure,commun,210.0,,hunter's shield
+46,Armure 06,armure,rare,255.0,,
+47,Armure 07,armure,épique,300.0,,giant horse
+48,Armure 08,armure,légendaire,345.0,,sand sparrow
+49,Armure 09,armure,commun,390.0,,
+50,Armure 10,armure,rare,435.0,,soldier's bow
+51,Armure 11,armure,épique,30.0,,
+52,Armure 12,armure,légendaire,75.0,,ancient spear
+53,Armure 13,armure,commun,120.0,,
+54,Armure 14,armure,rare,165.0,,
+55,Armure 15,armure,épique,210.0,,shield of the mind's eye
+56,Cosmétique 01,cosmétique,commun,30.0,,
+57,Cosmétique 02,cosmétique,rare,75.0,,
+58,Cosmétique 03,cosmétique,épique,120.0,,hylian shield
+59,Cosmétique 04,cosmétique,légendaire,165.0,,dragonbone boko club
+60,Cosmétique 05,cosmétique,commun,210.0,,eldin ostrich
+61,Cosmétique 06,cosmétique,rare,255.0,,bladed rhino beetle
+62,Cosmétique 07,cosmétique,épique,300.0,,hearty lizard
+63,Cosmétique 08,cosmétique,légendaire,345.0,,
+64,Cosmétique 09,cosmétique,commun,390.0,,swallow bow
+65,Cosmétique 10,cosmétique,rare,435.0,,
+66,Cosmétique 11,cosmétique,épique,30.0,,spiked boko bat
+67,Cosmétique 12,cosmétique,légendaire,75.0,,
+68,Cosmétique 13,cosmétique,commun,120.0,,knight's shield
+69,Cosmétique 14,cosmétique,rare,165.0,,black bokoblin
+70,Cosmétique 15,cosmétique,épique,210.0,,black hinox
+71,Pack Rupees 01,pack_rupees,commun,,1.99,
+72,Pack Rupees 02,pack_rupees,rare,,4.99,
+73,Pack Rupees 03,pack_rupees,épique,,9.99,
+74,Pack Rupees 04,pack_rupees,légendaire,,19.99,blue sparrow
+75,Pack Rupees 05,pack_rupees,commun,,49.99,
+76,Pack Rupees 06,pack_rupees,rare,,99.99,
+77,Pack Aventurier 01,pack_aventurier,commun,,2.99,
+78,Pack Aventurier 02,pack_aventurier,rare,,7.99,
+79,Pack Aventurier 03,pack_aventurier,épique,,12.99,voltfruit
+80,Pack Aventurier 04,pack_aventurier,légendaire,,17.99,iron sledgehammer

@@ -1,0 +1,505 @@
+{
+  "module": "m3",
+  "questions": [
+    {
+      "id": "Q3.1",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Dans une distribution très asymétrique à droite, quelle statistique décrit généralement mieux le centre typique ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La médiane"
+        },
+        {
+          "id": "b",
+          "text": "Le maximum"
+        },
+        {
+          "id": "c",
+          "text": "La variance"
+        },
+        {
+          "id": "d",
+          "text": "Le nombre de lignes"
+        }
+      ],
+      "explanation": "La médiane résiste davantage aux valeurs extrêmes qui tirent la moyenne vers la droite."
+    },
+    {
+      "id": "Q3.2",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "La variance d'un échantillon décrit principalement…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Le niveau de causalité"
+        },
+        {
+          "id": "b",
+          "text": "La dispersion autour de la moyenne"
+        },
+        {
+          "id": "c",
+          "text": "La taille de la population"
+        },
+        {
+          "id": "d",
+          "text": "La précision d'une étiquette"
+        }
+      ],
+      "explanation": "La variance résume la dispersion quadratique des observations autour de leur moyenne."
+    },
+    {
+      "id": "Q3.3",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Si la moyenne est nettement supérieure à la médiane, quel profil est plausible ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une loi uniforme obligatoire"
+        },
+        {
+          "id": "b",
+          "text": "Une absence de valeurs élevées"
+        },
+        {
+          "id": "c",
+          "text": "Une asymétrie à droite"
+        },
+        {
+          "id": "d",
+          "text": "Une corrélation nulle"
+        }
+      ],
+      "explanation": "Quelques valeurs hautes peuvent augmenter la moyenne davantage que la médiane."
+    },
+    {
+      "id": "Q3.4",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Le théorème central limite indique que, sous ses conditions, la distribution des moyennes d'échantillons…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Devient toujours uniforme"
+        },
+        {
+          "id": "b",
+          "text": "Est identique à la distribution des données brutes"
+        },
+        {
+          "id": "c",
+          "text": "Prouve la causalité"
+        },
+        {
+          "id": "d",
+          "text": "Se rapproche d'une loi normale quand la taille augmente"
+        }
+      ],
+      "explanation": "La distribution d'échantillonnage de la moyenne tend vers la normalité, avec une erreur-type qui diminue."
+    },
+    {
+      "id": "Q3.5",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Dans le calcul de P(bot | alerte), que faut-il connaître en plus de la sensibilité ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "La prévalence et la spécificité"
+        },
+        {
+          "id": "b",
+          "text": "Uniquement le nombre de variables"
+        },
+        {
+          "id": "c",
+          "text": "Le R² d'une régression"
+        },
+        {
+          "id": "d",
+          "text": "La médiane des sessions"
+        }
+      ],
+      "explanation": "Bayes combine le taux de base, la sensibilité et le taux de faux positifs lié à la spécificité."
+    },
+    {
+      "id": "Q3.6",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "La loi binomiale modélise le nombre de succès lorsque…",
+      "options": [
+        {
+          "id": "a",
+          "text": "La moyenne change à chaque essai sans modèle"
+        },
+        {
+          "id": "b",
+          "text": "On répète un nombre fixé d'essais de Bernoulli indépendants à probabilité constante"
+        },
+        {
+          "id": "c",
+          "text": "On observe seulement des durées continues"
+        },
+        {
+          "id": "d",
+          "text": "Les essais sont forcément dépendants"
+        }
+      ],
+      "explanation": "La binomiale compte les succès d'essais indépendants ayant la même probabilité."
+    },
+    {
+      "id": "Q3.7",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "Un intervalle de confiance à 95 % est une procédure qui…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Donne 95 % de probabilité que les données soient vraies"
+        },
+        {
+          "id": "b",
+          "text": "Garantit que l'effet est utile"
+        },
+        {
+          "id": "c",
+          "text": "Couvrirait le paramètre dans environ 95 % des répétitions de l'étude"
+        },
+        {
+          "id": "d",
+          "text": "Exclut toute erreur d'échantillonnage"
+        }
+      ],
+      "explanation": "Dans l'interprétation fréquentiste, le taux de couverture porte sur la procédure répétée."
+    },
+    {
+      "id": "Q3.8",
+      "difficulty": 1,
+      "type": "single",
+      "prompt": "À quoi sert une régression linéaire multiple ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "À prouver qu'un prédicteur cause la réponse"
+        },
+        {
+          "id": "b",
+          "text": "À classer uniquement des images"
+        },
+        {
+          "id": "c",
+          "text": "À remplacer la validation des données"
+        },
+        {
+          "id": "d",
+          "text": "À modéliser une réponse numérique selon plusieurs prédicteurs"
+        }
+      ],
+      "explanation": "Une régression décrit une association conditionnelle; elle ne suffit pas à établir la causalité."
+    },
+    {
+      "id": "Q3.9",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Une p-value de 0,03 signifie, sous l'hypothèse nulle et le modèle du test…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Une probabilité de 3 % d'observer un résultat au moins aussi extrême"
+        },
+        {
+          "id": "b",
+          "text": "Une probabilité de 97 % que l'hypothèse alternative soit vraie"
+        },
+        {
+          "id": "c",
+          "text": "Un effet de 3 points"
+        },
+        {
+          "id": "d",
+          "text": "Une probabilité de 3 % que les données soient fausses"
+        }
+      ],
+      "explanation": "La p-value est calculée conditionnellement à H0; ce n'est pas P(H0 | données)."
+    },
+    {
+      "id": "Q3.10",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Que signifie une erreur de type I ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ne pas rejeter H0 alors qu'elle est fausse"
+        },
+        {
+          "id": "b",
+          "text": "Rejeter H0 alors qu'elle est vraie"
+        },
+        {
+          "id": "c",
+          "text": "Utiliser une mauvaise unité"
+        },
+        {
+          "id": "d",
+          "text": "Oublier un graphique"
+        }
+      ],
+      "explanation": "Le seuil alpha contrôle le risque de faux positif sous les conditions du test."
+    },
+    {
+      "id": "Q3.11",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Que signifie une erreur de type II ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Rejeter H0 alors qu'elle est vraie"
+        },
+        {
+          "id": "b",
+          "text": "Avoir trop de données"
+        },
+        {
+          "id": "c",
+          "text": "Ne pas rejeter H0 alors qu'un effet existe"
+        },
+        {
+          "id": "d",
+          "text": "Obtenir un intervalle étroit"
+        }
+      ],
+      "explanation": "Le risque beta est de manquer un effet réel; la puissance vaut 1 − beta."
+    },
+    {
+      "id": "Q3.12",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Toutes choses égales par ailleurs, augmenter la taille d'échantillon tend à…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Augmenter automatiquement l'effet causal"
+        },
+        {
+          "id": "b",
+          "text": "Éliminer les biais de sélection"
+        },
+        {
+          "id": "c",
+          "text": "Garantir une p-value significative"
+        },
+        {
+          "id": "d",
+          "text": "Réduire l'erreur-type et augmenter la puissance"
+        }
+      ],
+      "explanation": "Un échantillon plus grand améliore souvent la précision et la puissance, sans supprimer les biais."
+    },
+    {
+      "id": "Q3.13",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Pourquoi corriger les comparaisons multiples ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pour limiter l'augmentation du risque de faux positifs lors de nombreux tests"
+        },
+        {
+          "id": "b",
+          "text": "Pour garantir que toutes les hypothèses soient vraies"
+        },
+        {
+          "id": "c",
+          "text": "Pour augmenter la taille de l'effet"
+        },
+        {
+          "id": "d",
+          "text": "Pour rendre les groupes comparables après coup"
+        }
+      ],
+      "explanation": "Avec de nombreux tests, la probabilité d'au moins un faux positif augmente sans stratégie adaptée."
+    },
+    {
+      "id": "Q3.14",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Dans une régression, R² mesure principalement…",
+      "options": [
+        {
+          "id": "a",
+          "text": "La probabilité que le modèle soit causal"
+        },
+        {
+          "id": "b",
+          "text": "La part de variabilité observée expliquée par le modèle dans l'échantillon"
+        },
+        {
+          "id": "c",
+          "text": "Le taux d'erreur de type I"
+        },
+        {
+          "id": "d",
+          "text": "La pente en unité métier"
+        }
+      ],
+      "explanation": "R² décrit l'ajustement à l'échantillon; un R² élevé ne prouve ni causalité ni bonne généralisation."
+    },
+    {
+      "id": "Q3.15",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Un facteur de confusion est une variable qui…",
+      "options": [
+        {
+          "id": "a",
+          "text": "Est toujours causée par le résultat"
+        },
+        {
+          "id": "b",
+          "text": "Est nécessairement une erreur de mesure"
+        },
+        {
+          "id": "c",
+          "text": "Est liée à l'exposition et au résultat et peut biaiser leur association"
+        },
+        {
+          "id": "d",
+          "text": "Ne peut apparaître que dans un essai randomisé"
+        }
+      ],
+      "explanation": "Un confondeur peut créer ou déformer une association observée s'il n'est pas pris en compte correctement."
+    },
+    {
+      "id": "Q3.16",
+      "difficulty": 2,
+      "type": "single",
+      "prompt": "Pourquoi la randomisation aide-t-elle à estimer un effet causal ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Elle garantit qu'aucune donnée ne manque"
+        },
+        {
+          "id": "b",
+          "text": "Elle augmente toujours la rétention"
+        },
+        {
+          "id": "c",
+          "text": "Elle transforme une corrélation en certitude"
+        },
+        {
+          "id": "d",
+          "text": "Elle rend les groupes comparables en moyenne au départ"
+        }
+      ],
+      "explanation": "L'affectation aléatoire réduit le biais de confusion en équilibrant les causes potentielles en moyenne."
+    },
+    {
+      "id": "Q3.17",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "B gagne globalement mais perd dans chaque plateforme. Quelle explication est prioritaire à vérifier ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Les groupes ont des compositions de plateformes différentes"
+        },
+        {
+          "id": "b",
+          "text": "La médiane est forcément négative"
+        },
+        {
+          "id": "c",
+          "text": "Le p-value devient une probabilité causale"
+        },
+        {
+          "id": "d",
+          "text": "La randomisation garantit ce paradoxe"
+        }
+      ],
+      "explanation": "Un mélange différent de strates peut inverser une comparaison agrégée, comme dans le paradoxe de Simpson."
+    },
+    {
+      "id": "Q3.18",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Une expérience a une faible puissance et ne rejette pas H0. Quelle conclusion est la plus défendable ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "L'effet est exactement nul"
+        },
+        {
+          "id": "b",
+          "text": "Les données ne permettent pas de distinguer clairement l'absence d'effet d'un effet manqué"
+        },
+        {
+          "id": "c",
+          "text": "Le traitement est forcément nocif"
+        },
+        {
+          "id": "d",
+          "text": "L'hypothèse nulle est prouvée"
+        }
+      ],
+      "explanation": "Un test non significatif avec faible puissance est peu informatif sur l'absence d'effet."
+    },
+    {
+      "id": "Q3.19",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Une association statistique devient-elle causale si la p-value est très petite ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Oui, si p < 0,001"
+        },
+        {
+          "id": "b",
+          "text": "Oui, dès que R² dépasse 0,5"
+        },
+        {
+          "id": "c",
+          "text": "Non; il faut un plan d'identification et examiner biais et confondeurs"
+        },
+        {
+          "id": "d",
+          "text": "Oui, si la moyenne est supérieure à la médiane"
+        }
+      ],
+      "explanation": "La significativité décrit la compatibilité des données avec H0 sous un modèle, pas l'identification causale."
+    },
+    {
+      "id": "Q3.20",
+      "difficulty": 3,
+      "type": "single",
+      "prompt": "Quelle recommandation communique le mieux un résultat d'expérience ?",
+      "options": [
+        {
+          "id": "a",
+          "text": "N'indiquer que la p-value"
+        },
+        {
+          "id": "b",
+          "text": "Masquer l'intervalle si le résultat est incertain"
+        },
+        {
+          "id": "c",
+          "text": "Promettre le même effet à tous les joueurs"
+        },
+        {
+          "id": "d",
+          "text": "Donner population, effet estimé, incertitude, limites et décision proportionnée"
+        }
+      ],
+      "explanation": "Une recommandation utile présente l'ampleur et l'incertitude de l'effet, son périmètre et les limites."
+    }
+  ]
+}
