@@ -41,7 +41,7 @@ Ne pas considérer un élément comme terminé uniquement parce qu'un fichier po
 
 ### Informations communiquées par l'utilisateur
 
-- Dépôt du cours cible : [darkTravus/hyrule-analytics-academy](https://github.com/darkTravus/hyrule-analytics-academy). L'utilisateur a choisi un dépôt source public et un site public, sans domaine personnalisé. Le dossier local n'a toujours pas de remote configuré ; aucun commit, push ni déploiement n'a été exécuté.
+- Dépôt du cours : [darkTravus/hyrule-analytics-academy](https://github.com/darkTravus/hyrule-analytics-academy), public. Le site élève est publié sur [GitHub Pages](https://darktravus.github.io/hyrule-analytics-academy/) ; le dépôt local suit `origin/main`.
 - Dépôt individuel de l'élève : chaque élève le créera ; les consignes de création sont à rédiger. L'utilisateur ne souhaite pas de dépôt-modèle distinct.
 - Visibilité prévue : dépôt du cours et dépôts individuels des élèves publics.
 - Choix initial de l'utilisateur : conserver l'habillage Zelda pendant le travail privé, puis le remplacer avant publication. Cette ancienne consigne a été explicitement remplacée pendant l'implémentation de M3.
@@ -49,7 +49,7 @@ Ne pas considérer un élément comme terminé uniquement parce qu'un fichier po
 
 ## Décisions déjà actées dans l'avenant
 
-**Mise à jour de statut :** le 9 novembre 2026, l'utilisateur a confirmé vouloir conserver l'habillage et les références Zelda/Hyrule, et a choisi GitHub Pages gratuit avec un dépôt source public, un site public et aucun domaine personnalisé. La préparation locale est en cours ; toute action distante (création/configuration du dépôt, push ou publication) reste à confirmer avant exécution.
+**Mise à jour de statut :** le 9 novembre 2026, l'utilisateur a confirmé vouloir conserver l'habillage et les références Zelda/Hyrule, et a choisi GitHub Pages gratuit avec un dépôt source public, un site public et aucun domaine personnalisé. Le dépôt a été poussé sur `main`, Pages est configuré sur GitHub Actions et le premier déploiement a réussi.
 
 ## Préparation des outils et de l'environnement
 
@@ -308,3 +308,12 @@ Ne pas bloquer la préparation technique sur des visuels facultatifs. Ne jamais 
 - **Vérifications :** 6 tests ciblés du build/M3 réussissent ; les pages d'accueil et des modules M0–M3 ainsi que les fichiers XLSX et SQLite répondent en HTTP 200 sous le préfixe de projet Pages. L'artefact contient 70 fichiers (17 953 535 octets) et ne contient aucun fichier enseignant/cache ciblé.
 - **État externe :** aucun remote Git n'est configuré. Aucun commit, push, changement de paramètres GitHub ou publication n'a eu lieu. Le dépôt public exposera l'ensemble des sources versionnées, contrairement à l'artefact Pages qui suit la liste blanche.
 - **Prochaine étape :** après confirmation explicite de l'utilisateur, relier le dépôt local au dépôt GitHub cible et publier le code source ; configurer ensuite Pages sur GitHub Actions et lancer manuellement le workflow.
+
+### Conversation 17 — première publication du site
+
+- **Dépôt public :** premier commit `2e92a33` poussé sur `main` du dépôt `darkTravus/hyrule-analytics-academy`; le worktree est propre.
+- **GitHub Pages :** source réglée sur **GitHub Actions**. Le workflow manuel a été lancé sur `main` (run 1) et s'est terminé avec succès.
+- **URL publique :** https://darktravus.github.io/hyrule-analytics-academy/ ; la page d'accueil et les modules M0 à M3 répondent en HTTP 200.
+- **Recette de publication :** avis d'indépendance visible sur l'accueil et sur M0–M3 à l'URL directe. Les runners SQL/Python, la base SQLite, le classeur XLSX et le CSV `exp_boss.csv` sont servis en HTTP 200 sous le préfixe du dépôt. À 360 px, le document d'accueil ne déborde pas horizontalement.
+- **Redéploiement :** le workflow reste manuel (`workflow_dispatch`); un push ultérieur seul ne déclenche pas de publication.
+- **Prochaine étape :** poursuivre la recette pédagogique et enrichir les modules suivants; déclencher manuellement Pages après tout changement destiné aux élèves.

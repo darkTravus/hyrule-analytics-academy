@@ -4,14 +4,14 @@ Un parcours progressif pour apprendre l'analyse de données par la pratique.
 
 ## Accéder au cours
 
-- **Objectif MVP :** suivre le cours depuis une adresse web, dans un navigateur. Les élèves n'auront pas à cloner ce dépôt ni à lancer un serveur local.
-- **Publication :** le site n'est pas encore déployé et le dépôt du cours est actuellement privé. L'adresse sera ajoutée ici une fois la préparation à la diffusion terminée.
+- **Site élève :** [ouvrir Chroniques d'Hyrule Analytics](https://darktravus.github.io/hyrule-analytics-academy/). Les élèves n'ont pas à cloner ce dépôt ni à lancer un serveur local.
+- **Dépôt source public :** [darkTravus/hyrule-analytics-academy](https://github.com/darkTravus/hyrule-analytics-academy). Le site est hébergé gratuitement sur GitHub Pages, sans domaine personnalisé.
 - En attendant, le site de développement se trouve dans [`course/`](./course/) et son lancement local est décrit dans le guide enseignant, non publié.
 - Tu créeras ton propre dépôt GitHub pour tes travaux en suivant les consignes du cours. Ne pousse jamais tes fichiers dans le dépôt du cours.
 
 ## Publication et données
 
-Le déploiement prévu utilise GitHub Pages, sans nom de domaine payant. Le dépôt source et le site seront publics ; la publication n'est pas encore activée. Le workflow Pages est manuel et ne publiera le site qu'après sa configuration dans les paramètres GitHub et son lancement explicite.
+Le site est publié sur GitHub Pages. Le workflow de redéploiement est manuel (`workflow_dispatch`) : un push de code ne publie pas automatiquement une nouvelle version.
 
 Le site publié est un sous-ensemble construit par `course/scripts/build_site.py` : il ne contient que l'accueil, les modules 0 à 3, leurs ressources d'exercice et les réponses sous forme d'empreintes. Les scripts de test, outils de correction et documents enseignant ne font pas partie de cet artefact. La progression reste dans le stockage local du navigateur ; le cours ne demande pas de compte élève ni de données personnelles.
 

@@ -34,12 +34,12 @@ Vérifications locales du 7 novembre 2026 :
 
 ## Dépôt et diffusion
 
-- Décision utilisateur du 9 novembre 2026 : utiliser GitHub Pages gratuit avec un dépôt source public, un site public et sans domaine personnalisé. L'URL prévue est `https://darktravus.github.io/hyrule-analytics-academy/`. Le dépôt local ne dispose pas de remote configuré ; aucun commit, push, réglage distant ou déploiement n'a été effectué.
+- Décision utilisateur du 9 novembre 2026 : utiliser GitHub Pages gratuit avec un dépôt source public, un site public et sans domaine personnalisé. Le premier commit est poussé sur `main`, Pages est configuré avec GitHub Actions et le site est publié à `https://darktravus.github.io/hyrule-analytics-academy/`.
 - Les élèves créeront chacun leur propre dépôt à partir des consignes du cours ; il n'y aura pas de dépôt-modèle distinct.
 - Toute opération dans l'interface ou le dépôt GitHub distant doit être confirmée par l'utilisateur avant exécution.
 - Décision utilisateur du 9 novembre 2026 : conserver l'habillage et les références Zelda/Hyrule tels qu'ils sont. Cette décision remplace les notes antérieures qui prévoyaient leur remplacement; ne pas les retirer dans le cadre du module 3 ni de la préparation du déploiement à venir.
-- L'accès élève visé est une URL web du MVP ; le serveur local sert au développement et n'est pas le mode de distribution prévu. La sortie statique à liste blanche est implémentée par `course/scripts/build_site.py` ; les choix d'hébergeur et de visibilité sont actés. La publication elle-même reste à effectuer après confirmation, création/configuration du dépôt et push initial.
-- Le workflow `.github/workflows/pages.yml` est manuel uniquement (`workflow_dispatch`). La sortie testée comprend 70 fichiers pour 17 953 535 octets ; les outils enseignant, scripts et caches sont exclus. Le projet reste sans collecte de compte élève et conserve sa progression dans le navigateur.
+- L'accès élève est l'URL web publiée ; le serveur local sert au développement et n'est pas le mode de distribution prévu. La sortie statique à liste blanche est construite par `course/scripts/build_site.py` et exclut outils enseignant, scripts et caches.
+- Le workflow `.github/workflows/pages.yml` est manuel uniquement (`workflow_dispatch`) ; son premier lancement a réussi. La sortie publiée comprend 70 fichiers pour 17 953 535 octets. L'accueil, les modules M0–M3, leurs données clés et runners SQL/Python ont été vérifiés en HTTP sous le sous-chemin du dépôt. Le projet ne collecte pas de compte élève et conserve la progression dans le navigateur.
 - Les données du Compendium ne doivent pas redistribuer les champs `description` et `image`. Ne créer aucun visuel officiel ; privilégier des illustrations originales ou des pictogrammes.
 
 ## Hyrule Compendium API
